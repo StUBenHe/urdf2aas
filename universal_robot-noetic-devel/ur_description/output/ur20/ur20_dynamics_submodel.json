@@ -1,0 +1,174 @@
+{
+  "idShort": "DynamicsSubmodel",
+  "submodelElements": [
+    {
+      "idShort": "Dynamics_base_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_base_link_inertia",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 4.0,
+        "inertia": {
+          "ixx": "0.0061063308908",
+          "ixy": "0.0",
+          "ixz": "0.0",
+          "iyy": "0.0061063308908",
+          "iyz": "0.0",
+          "izz": "0.01125"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "0 0 0"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_shoulder_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 16.343,
+        "inertia": {
+          "ixx": "0.08866",
+          "ixy": "-0.00011",
+          "ixz": "-0.00011",
+          "iyy": "0.07632",
+          "iyz": "0.0072",
+          "izz": "0.08418"
+        },
+        "origin": {
+          "rpy": "1.570796326794897 0 0",
+          "xyz": "0.0 -0.0062 -0.061"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_upper_arm_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 29.632,
+        "inertia": {
+          "ixx": "0.1467",
+          "ixy": "0.00019",
+          "ixz": "-0.05163",
+          "iyy": "4.6659",
+          "iyz": "4e-05",
+          "izz": "4.6348"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "-0.3394 0.0 0.2098"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_forearm_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 7.879,
+        "inertia": {
+          "ixx": "0.02612",
+          "ixy": "-5e-05",
+          "ixz": "-0.02898",
+          "iyy": "0.75763",
+          "iyz": "-1e-05",
+          "izz": "0.75327"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "-0.4053 0.0 0.0604"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_1_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 3.054,
+        "inertia": {
+          "ixx": "0.00555",
+          "ixy": "-1e-05",
+          "ixz": "-2e-05",
+          "iyy": "0.00537",
+          "iyz": "0.00036",
+          "izz": "0.00402"
+        },
+        "origin": {
+          "rpy": "1.570796326794897 0 0",
+          "xyz": "0.0 -0.0393 -0.0026"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_2_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 3.126,
+        "inertia": {
+          "ixx": "0.00586",
+          "ixy": "-1e-05",
+          "ixz": "-2e-05",
+          "iyy": "0.00578",
+          "iyz": "-0.00037",
+          "izz": "0.00427"
+        },
+        "origin": {
+          "rpy": "-1.570796326794897 0 0",
+          "xyz": "0.0 0.0379 -0.0024"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_3_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 0.926,
+        "inertia": {
+          "ixx": "0.00092",
+          "ixy": "0.0",
+          "ixz": "0.0",
+          "iyy": "0.00091",
+          "iyz": "0.0",
+          "izz": "0.00117"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "0.0 0.0 -0.0293"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_base",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_flange",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_tool0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    }
+  ]
+}

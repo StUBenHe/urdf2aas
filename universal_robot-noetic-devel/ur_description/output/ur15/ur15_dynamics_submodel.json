@@ -1,0 +1,174 @@
+{
+  "idShort": "DynamicsSubmodel",
+  "submodelElements": [
+    {
+      "idShort": "Dynamics_base_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_base_link_inertia",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 4.0,
+        "inertia": {
+          "ixx": "0.032233320440000005",
+          "ixy": "0.0",
+          "ixz": "0.0",
+          "iyy": "0.032233320440000005",
+          "iyz": "0.0",
+          "izz": "0.05780000000000001"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "0 0 0"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_shoulder_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 9.9883,
+        "inertia": {
+          "ixx": "0.051334",
+          "ixy": "2.5e-05",
+          "ixz": "-1.6e-05",
+          "iyy": "0.047702",
+          "iyz": "0.008805",
+          "izz": "0.034263"
+        },
+        "origin": {
+          "rpy": "1.570796326794897 0 0",
+          "xyz": "2.4e-05 -0.025304 -0.033309"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_upper_arm_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 14.9255,
+        "inertia": {
+          "ixx": "0.048202",
+          "ixy": "0.000232",
+          "ixz": "-0.032135",
+          "iyy": "1.188499",
+          "iyz": "-1.7e-05",
+          "izz": "1.182771"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "-0.228491 -8.3e-05 0.192787"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_forearm_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 6.1015,
+        "inertia": {
+          "ixx": "0.018481",
+          "ixy": "-5e-06",
+          "ixz": "0.013601",
+          "iyy": "0.303502",
+          "iyz": "3e-06",
+          "izz": "0.296843"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "-0.210929 1.9e-05 0.070552"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_1_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 2.089,
+        "inertia": {
+          "ixx": "0.004339",
+          "ixy": "1.9e-05",
+          "ixz": "1e-06",
+          "iyy": "0.002548",
+          "iyz": "0.000706",
+          "izz": "0.003912"
+        },
+        "origin": {
+          "rpy": "1.570796326794897 0 0",
+          "xyz": "2.5e-05 -0.016413 -0.019695"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_2_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 2.0869,
+        "inertia": {
+          "ixx": "0.004288",
+          "ixy": "1.7e-05",
+          "ixz": "-3e-06",
+          "iyy": "0.002566",
+          "iyz": "-0.000716",
+          "izz": "0.003927"
+        },
+        "origin": {
+          "rpy": "-1.570796326794897 0 0",
+          "xyz": "2.5e-05 0.015886 -0.01996"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_wrist_3_link",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": 1.0666,
+        "inertia": {
+          "ixx": "0.001406",
+          "ixy": "-3e-06",
+          "ixz": "1e-05",
+          "iyy": "0.001404",
+          "iyz": "-2.4e-05",
+          "izz": "0.001002"
+        },
+        "origin": {
+          "rpy": "0 0 0",
+          "xyz": "-1.8e-05 -0.000112 -0.053397"
+        }
+      }
+    },
+    {
+      "idShort": "Dynamics_base",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_flange",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    },
+    {
+      "idShort": "Dynamics_tool0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mass": null,
+        "inertia": null,
+        "origin": null
+      }
+    }
+  ]
+}

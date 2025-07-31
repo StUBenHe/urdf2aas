@@ -13,13 +13,15 @@ import json
 # 从指定路径加载 YAML 文件，如果文件不存在则返回空字典。
 
 
-# 注册 !degrees 标签的解释器：将角度转换为弧度
+# 定义 !degrees 标签的解释器：将角度转换为弧度，
 def degrees_constructor(loader, node):
     value = loader.construct_scalar(node)
     return float(value) * math.pi / 180.0
 
 yaml.SafeLoader.add_constructor('!degrees', degrees_constructor)
 
+
+# 加载yaml文件
 def load_yaml(path):
     return yaml.safe_load(open(path, "r", encoding="utf-8")) if os.path.exists(path) else {}
 
@@ -45,7 +47,7 @@ def generate_structure_submodel(urdf_root):
         })
     return {"idShort": "StructureSubmodel", "submodelElements": elements}
 
-# 生成控制子模型，包括每个关节的控制参数（如力矩、速度、上下限）。
+# 生成控制子模型，包括每个关节的控制参数（如力矩effort、速度velocity、上下限）。
 # 参数优先从 URDF 的 <limit> 标签中读取，缺失时从 joint_limits.yaml 补全。
 def generate_control_submodel(urdf_root, joint_limits_yaml):
     elements = []
@@ -65,7 +67,7 @@ def generate_control_submodel(urdf_root, joint_limits_yaml):
         })
     return {"idShort": "ControlSubmodel", "submodelElements": elements}
 
-# 生成运动学子模型，每个关节一个元素，参数来自 default_kinematics.yaml。
+# 生成运动学子模型，每个关节一个元素,DH-parament，参数来自 default_kinematics.yaml。
 def generate_kinematics_submodel(kinematics_yaml):
     elements = []
     for joint, params in kinematics_yaml.items():
@@ -76,7 +78,7 @@ def generate_kinematics_submodel(kinematics_yaml):
         })
     return {"idShort": "KinematicsSubmodel", "submodelElements": elements}
 
-# 生成动力学子模型，提取 link 的质量、惯性矩阵和原点坐标。
+# 生成动力学子模型，提取 link 的质量mass、惯性矩阵inertia和原点坐标origin。
 # 优先从 URDF 中读取，若缺失则从 physical_parameters.yaml 获取补充。
 def generate_dynamics_submodel(urdf_root, physical_yaml):
     elements = []

@@ -1,0 +1,317 @@
+{
+  "modelType": "Submodel",
+  "id": "urn:aas:submodel:ur12e:control:x_1_0",
+  "idShort": "ur12e_control_",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_base_link_base_link_inertia_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:string",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_shoulder_pan_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "330.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "2.0943951023931953"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_shoulder_lift_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "330.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "2.0943951023931953"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_elbow_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-3.141592653589793"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "3.141592653589793"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "150.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "3.141592653589793"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_wrist_1_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "54.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "3.141592653589793"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_wrist_2_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "54.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "3.141592653589793"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_wrist_3_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:double",
+          "value": "-6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:double",
+          "value": "6.283185307179586"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:double",
+          "value": "54.0"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:double",
+          "value": "3.141592653589793"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_base_link_base_fixed_joint_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:string",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_wrist_3_flange_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:string",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joint_flange_tool0_Control",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "lower",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "upper",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "effort",
+          "valueType": "xs:string",
+          "value": ""
+        },
+        {
+          "modelType": "Property",
+          "idShort": "velocity",
+          "valueType": "xs:string",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "semanticId": {
+    "type": "ModelReference",
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "urn:sem:robot:control"
+      }
+    ]
+  }
+}

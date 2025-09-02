@@ -1,0 +1,27 @@
+<xacro:macro name="spawn_ur" params="
+    instance:=robot1
+    type:=ur5e
+    xyz:='0 0 0' rpy:='0 0 0'
+    ip:='192.168.88.101'
+    base_port:=50000">
+
+  <xacro:ur_robot
+    name="${instance}"
+    tf_prefix="${instance}/"
+    parent="world"
+    joint_limits_parameters_file="$(find ur_description)/config/${type}/joint_limits.yaml"
+    kinematics_parameters_file="$(find ur_description)/config/${type}/default_kinematics.yaml"
+    physical_parameters_file="$(find ur_description)/config/${type}/physical_parameters.yaml"
+    visual_parameters_file="$(find ur_description)/config/${type}/visual_parameters.yaml"
+    robot_ip="${ip}"
+    script_filename="$(find ur_robot_driver)/resources/ros_control.urscript"
+    output_recipe_filename="$(find ur_robot_driver)/resources/rtde_output_recipe.txt"
+    input_recipe_filename="$(find ur_robot_driver)/resources/rtde_input_recipe.txt"
+    reverse_ip="0.0.0.0"
+    script_command_port="${base_port+4}"
+    reverse_port="${base_port+1}"
+    script_sender_port="${base_port+2}"
+    trajectory_port="${base_port+3}">
+    <origin xyz="${xyz}" rpy="${rpy}"/>
+  </xacro:ur_robot>
+</xacro:macro>

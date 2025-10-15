@@ -1,0 +1,2454 @@
+{
+  "modelType": "Submodel",
+  "id": "urn:submodel:robot:structure:UR3:safe:full",
+  "idShort": "UR3_StructureSafe",
+  "category": "Robot:UR3",
+  "submodelElements": [
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Links",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_base_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "base_link",
+              "valueType": "xs:string"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_base_link_inertia",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "base_link_inertia",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "2.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.0030531654454",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.0030531654454",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.005625",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/base.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/base.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_shoulder_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "shoulder_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "2.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "-0.02",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.008093166666666665",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.008093166666666665",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.005625",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/shoulder.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/shoulder.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_upper_arm_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "upper_arm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "3.42",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "-0.11365",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.1157",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.021728491912499998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.021728491912499998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.00961875",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/upperarm.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/upperarm.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_forearm_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "forearm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "1.26",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "-0.16325",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0238",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.0065468090625",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.0065468090625",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.00354375",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/forearm.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/forearm.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_wrist_1_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "wrist_1_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "0.8",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "-0.01",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.0016106414999999998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.0016106414999999998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.00225",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/wrist1.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/wrist1.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_wrist_2_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "wrist_2_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "0.8",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.01",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.0015721739999999998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.0015721739999999998",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.00225",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/wrist2.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/wrist2.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_wrist_3_link",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "wrist_3_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "inertial",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mass",
+                  "value": "0.35",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "com",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "-0.02",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "inertia",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixx",
+                      "value": "0.00013626666666666665",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyy",
+                      "value": "0.00013626666666666665",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "izz",
+                      "value": "0.0001792",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixy",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "ixz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "iyz",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "visuals",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "visual_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/vnd.collada+xml",
+                      "value": "./assets/ur_description/meshes/ur3/visual/wrist3.dae"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "collisions",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "collision_0",
+                  "value": [
+                    {
+                      "modelType": "File",
+                      "idShort": "mesh",
+                      "contentType": "model/stl",
+                      "value": "./assets/ur_description/meshes/ur3/collision/wrist3.stl"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_base",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "base",
+              "valueType": "xs:string"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_flange",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "flange",
+              "valueType": "xs:string"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Link_tool0",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "name",
+              "value": "tool0",
+              "valueType": "xs:string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Joints",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_base_link-base_link_inertia",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "fixed",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "base_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "base_link_inertia",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "3.141592653589793",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_shoulder_pan_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "base_link_inertia",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "shoulder_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.1519",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "3.141592653589793",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "56.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_shoulder_lift_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "shoulder_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "upper_arm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "1.570796327",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "3.141592653589793",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "56.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_elbow_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "upper_arm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "forearm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "-0.24365",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-3.141592653589793",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "3.141592653589793",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "3.141592653589793",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "28.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_wrist_1_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "forearm_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "wrist_1_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "-0.21325",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.11235",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "12.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_wrist_2_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "wrist_1_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "wrist_2_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "-0.08535",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "-1.750557762378351e-11",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "1.570796327",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "12.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_wrist_3_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "revolute",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "wrist_2_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "wrist_3_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0819",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "-1.679797079540562e-11",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "1.570796326589793",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "3.141592653589793",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "3.141592653589793",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "limits",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "lower",
+                  "value": "-6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "upper",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "velocity",
+                  "value": "6.283185307179586",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "effort",
+                  "value": "12.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "dynamics",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "damping",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "friction",
+                  "value": "0.0",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_base_link-base_fixed_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "fixed",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "base_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "base",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "3.141592653589793",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_wrist_3-flange",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "fixed",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "wrist_3_link",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "flange",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "-1.5707963267948966",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "-1.5707963267948966",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Joint_flange-tool0",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "fixed",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "value": "flange",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "value": "tool0",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "origin",
+              "value": [
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "xyz",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "x",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "z",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                },
+                {
+                  "modelType": "SubmodelElementCollection",
+                  "idShort": "rpy",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "r",
+                      "value": "1.5707963267948966",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "p",
+                      "value": "0.0",
+                      "valueType": "xs:double"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "y",
+                      "value": "1.5707963267948966",
+                      "valueType": "xs:double"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "axis",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "x",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "y",
+                  "value": "0",
+                  "valueType": "xs:double"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "z",
+                  "value": "1",
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Transmissions",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_shoulder_pan_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "shoulder_pan_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "shoulder_pan_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_shoulder_lift_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "shoulder_lift_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "shoulder_lift_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_elbow_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "elbow_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "elbow_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_wrist_1_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "wrist_1_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "wrist_1_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_wrist_2_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "wrist_2_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "wrist_2_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "Transmission_wrist_3_trans",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "value": "transmission_interface/SimpleTransmission",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "jointRef",
+              "value": "wrist_3_joint",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "actuator",
+              "value": "wrist_3_motor",
+              "valueType": "xs:string"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mechanicalReduction",
+              "value": "1.0",
+              "valueType": "xs:double"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "kind": "Template",
+  "semanticId": {
+    "type": "ExternalReference",
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "urn:robot:submodel:Structure:1:0"
+      }
+    ]
+  }
+}

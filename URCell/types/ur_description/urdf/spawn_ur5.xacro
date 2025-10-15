@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="spawn_ur">
+
+  <!-- === Projektwurzelpfad === -->
+  <xacro:arg name="urcell_root" default="../../../"/>
+
+  <!-- === Makrodefinition === -->
+  <xacro:macro name="spawn_ur" params="
+      parent:=world
+      instance:=ur_instance
+      model:=ur5
+      xyz:='0 0 0'
+      rpy:='0 0 0'
+      base_link:=base_link
+      robot_ip:='192.168.0.1'
+      base_port:='50000'
+      prefix:=''
+    ">
+
+    <!-- Auswahl des UR-Modells -->
+    <xacro:choose>
+      <xacro:when value="${model == 'ur3'}">
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur3.urdf.xacro'/>
+      </xacro:when>
+      <xacro:when value="${model == 'ur3e'}">
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur3e.urdf.xacro'/>
+      </xacro:when>
+      <xacro:when value="${model == 'ur5'}">
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur5.urdf.xacro'/>
+      </xacro:when>
+      <xacro:when value="${model == 'ur5e'}">
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur5e.urdf.xacro'/>
+      </xacro:when>
+      <xacro:when value="${model == 'ur10'}">
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur10.urdf.xacro'/>
+      </xacro:when>
+      <xacro:otherwise>
+        <xacro:include filename='${urcell_root}/types/ur_description/urdf/ur5.urdf.xacro'/>
+      </xacro:otherwise>
+    </xacro:choose>
+
+    <!-- Feste Verbindung mit dem Weltkoordinatensystem -->
+    <link name="${parent}"/>
+    <joint name="${parent}_to_${instance}_${base_link}" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${instance}_${base_link}"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+    </joint>
+
+    <!-- Geräteeigenschaften (für AAS / Steuerungssysteme nutzbar) -->
+    <xacro:property name="robot_ip" value="${robot_ip}"/>
+    <xacro:property name="base_port" value="${base_port}"/>
+
+  </xacro:macro>
+</robot>

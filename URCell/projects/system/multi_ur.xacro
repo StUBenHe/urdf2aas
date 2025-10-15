@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="multi_ur">
+
+  <!--
+    multi_ur.xacro — 多机 UR 场景（按你的示例风格，完整读取参数文件）
+    multi_ur.xacro — Mehrroboter-UR-Szene (nach deinem Beispielstil, mit vollständigem Laden der Parameterdateien)
+    
+    - 通过 xacro:arg 读取 ur_description/config/<ur_type> 下的 joint/kinematics/physical/visual 等参数  
+      Liest Parameter über xacro:arg aus den Dateien unter ur_description/config/<ur_type>, 
+      einschließlich joint-, kinematics-, physical- und visual-Parametern.
+    
+    - 每台机器人用相同参数集，单独设置 IP / 位姿 / 端口基数（自动映射四个端口）  
+      Alle Roboter verwenden denselben Parametersatz, jedoch mit individuellen IP-Adressen, 
+      Positionen (xyz/rpy) und Basisports (automatische Zuordnung von vier Ports).
+    
+    - 默认启用 ur_1、ur_2，其它关闭；可按需要开启并修改参数  
+      Standardmäßig sind ur_1 und ur_2 aktiviert; die übrigen Roboter sind deaktiviert 
+      und können bei Bedarf aktiviert und angepasst werden.
+  -->
+
+  <!-- === 项目根（URCell）作为相对路径锚点 === -->
+  <!-- === Projektwurzel (URCell) als relativer Pfadanker === -->
+  <xacro:arg name="urcell_root" default="../../../"/>
+
+  <!-- ================= Robot 1 ================= -->
+  <!-- ================= Roboter 1 ================= -->
+  <xacro:arg name="robot1_enable" default="true"/>
+  <xacro:arg name="robot1_instance" default="ur_1"/>
+  <xacro:arg name="robot1_xyz" default="0 1 0"/>
+  <xacro:arg name="robot1_rpy" default="0 0 0"/>
+  <xacro:arg name="robot1_ip" default="192.168.88.101"/>
+  <xacro:arg name="robot1_base_port" default="50000"/>
+  <xacro:if value="$(arg robot1_enable)">
+    <xacro:spawn_ur instance="$(arg robot1_instance)" xyz="$(arg robot1_xyz)" rpy="$(arg robot1_rpy)"
+                    robot_ip="$(arg robot1_ip)" base_port="$(arg robot1_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= IGUS Rebel 示例（Robot 1） ================= -->
+  <!-- ================= IGUS Rebel Beispiel (Roboter 1) ================= -->
+  <xacro:arg name="robot1_enable" default="true"/>
+  <xacro:arg name="robot1_instance" default="ur_1"/>
+  <xacro:arg name="robot1_xyz" default="0 1 0"/>
+  <xacro:arg name="robot1_rpy" default="0 0 0"/>
+  <xacro:arg name="robot1_ip" default="192.168.88.101"/>
+  <xacro:arg name="robot1_base_port" default="50000"/>
+  <xacro:if value="$(arg robot1_enable)">
+    <xacro:spawn_igus_rebel instance="$(arg robot1_instance)" xyz="$(arg robot1_xyz)" rpy="$(arg robot1_rpy)"
+                             robot_ip="$(arg robot1_ip)" base_port="$(arg robot1_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= Robot 2 ================= -->
+  <!-- ================= Roboter 2 ================= -->
+  <xacro:arg name="robot2_enable" default="true"/>
+  <xacro:arg name="robot2_instance" default="ur_2"/>
+  <xacro:arg name="robot2_xyz" default="0 0 0"/>
+  <xacro:arg name="robot2_rpy" default="0 0 0"/>
+  <xacro:arg name="robot2_ip" default="192.168.88.102"/>
+  <xacro:arg name="robot2_base_port" default="60000"/>
+  <xacro:if value="$(arg robot2_enable)">
+    <xacro:spawn_ur instance="$(arg robot2_instance)" xyz="$(arg robot2_xyz)" rpy="$(arg robot2_rpy)"
+                    robot_ip="$(arg robot2_ip)" base_port="$(arg robot2_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= Robot 3 ================= -->
+  <!-- ================= Roboter 3 ================= -->
+  <xacro:arg name="robot3_enable" default="false"/>
+  <xacro:arg name="robot3_instance" default="ur_3"/>
+  <xacro:arg name="robot3_xyz" default="1 0 0"/>
+  <xacro:arg name="robot3_rpy" default="0 0 0"/>
+  <xacro:arg name="robot3_ip" default="192.168.88.103"/>
+  <xacro:arg name="robot3_base_port" default="60100"/>
+  <xacro:if value="$(arg robot3_enable)">
+    <xacro:spawn_ur instance="$(arg robot3_instance)" xyz="$(arg robot3_xyz)" rpy="$(arg robot3_rpy)"
+                    robot_ip="$(arg robot3_ip)" base_port="$(arg robot3_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= Robot 4 ================= -->
+  <!-- ================= Roboter 4 ================= -->
+  <xacro:arg name="robot4_enable" default="false"/>
+  <xacro:arg name="robot4_instance" default="ur_4"/>
+  <xacro:arg name="robot4_xyz" default="-1 0 0"/>
+  <xacro:arg name="robot4_rpy" default="0 0 0"/>
+  <xacro:arg name="robot4_ip" default="192.168.88.104"/>
+  <xacro:arg name="robot4_base_port" default="60200"/>
+  <xacro:if value="$(arg robot4_enable)">
+    <xacro:spawn_ur instance="$(arg robot4_instance)" xyz="$(arg robot4_xyz)" rpy="$(arg robot4_rpy)"
+                    robot_ip="$(arg robot4_ip)" base_port="$(arg robot4_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= Robot 5 ================= -->
+  <!-- ================= Roboter 5 ================= -->
+  <xacro:arg name="robot5_enable" default="false"/>
+  <xacro:arg name="robot5_instance" default="ur_5"/>
+  <xacro:arg name="robot5_xyz" default="0 2 0"/>
+  <xacro:arg name="robot5_rpy" default="0 0 0"/>
+  <xacro:arg name="robot5_ip" default="192.168.88.105"/>
+  <xacro:arg name="robot5_base_port" default="60300"/>
+  <xacro:if value="$(arg robot5_enable)">
+    <xacro:spawn_ur instance="$(arg robot5_instance)" xyz="$(arg robot5_xyz)" rpy="$(arg robot5_rpy)"
+                    robot_ip="$(arg robot5_ip)" base_port="$(arg robot5_base_port)"/>
+  </xacro:if>
+
+  <!-- ================= Robot 6 ================= -->
+  <!-- ================= Roboter 6 ================= -->
+  <xacro:arg name="robot6_enable" default="false"/>
+  <xacro:arg name="robot6_instance" default="ur_6"/>
+  <xacro:arg name="robot6_xyz" default="0 -2 0"/>
+  <xacro:arg name="robot6_rpy" default="0 0 0"/>
+  <xacro:arg name="robot6_ip" default="192.168.88.106"/>
+  <xacro:arg name="robot6_base_port" default="60400"/>
+  <xacro:if value="$(arg robot6_enable)">
+    <xacro:spawn_ur instance="$(arg robot6_instance)" xyz="$(arg robot6_xyz)" rpy="$(arg robot6_rpy)"
+                    robot_ip="$(arg robot6_ip)" base_port="$(arg robot6_base_port)"/>
+  </xacro:if>
+
+  <!-- 按需复制扩展：robot7、robot8、... -->
+  <!-- Erweiterung nach Bedarf: robot7, robot8, ... -->
+
+</robot>

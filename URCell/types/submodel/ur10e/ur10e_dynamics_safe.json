@@ -1,0 +1,234 @@
+{
+  "modelType": "Submodel",
+  "id": "urn:submodel:robot:dynamics:UR10e:safe",
+  "idShort": "UR10e_DynamicsSafe",
+  "category": "Robot:UR10e",
+  "submodelElements": [
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "Gravity",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "gx",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "gy",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "gz",
+          "value": "-9.80665",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "JointTorqueLimits",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_shoulder_pan_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "330.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_shoulder_lift_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "330.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_elbow_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "150.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_wrist_1_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "54.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_wrist_2_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "54.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "limit_wrist_3_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "value": "54.0",
+              "valueType": "xs:double"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "FrictionModel",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_shoulder_pan_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_shoulder_lift_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_elbow_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_wrist_1_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_wrist_2_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "fric_wrist_3_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "coulomb",
+              "value": "0.0",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "viscous",
+              "value": "0.0",
+              "valueType": "xs:double"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "kind": "Template",
+  "semanticId": {
+    "type": "ExternalReference",
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "urn:robot:submodel:Dynamics:1:0"
+      }
+    ]
+  }
+}

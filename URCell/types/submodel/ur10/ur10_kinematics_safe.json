@@ -1,0 +1,186 @@
+{
+  "modelType": "Submodel",
+  "id": "urn:submodel:robot:kinematics:UR10:safe",
+  "idShort": "UR10_KinematicsSafe",
+  "category": "Robot:UR10",
+  "submodelElements": [
+    {
+      "modelType": "Property",
+      "idShort": "BaseFrame",
+      "value": "base_link",
+      "valueType": "xs:string"
+    },
+    {
+      "modelType": "Property",
+      "idShort": "ToolFrame",
+      "value": "tool0",
+      "valueType": "xs:string"
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "ZeroConfiguration",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "shoulder_pan_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "shoulder_lift_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "elbow_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "wrist_1_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "wrist_2_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "wrist_3_joint",
+          "value": "0.0",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "JointRanges",
+      "value": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_shoulder_pan_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-6.283185307179586",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "6.283185307179586",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_shoulder_lift_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-6.283185307179586",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "6.283185307179586",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_elbow_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-3.141592653589793",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "3.141592653589793",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_wrist_1_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-6.283185307179586",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "6.283185307179586",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_wrist_2_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-6.283185307179586",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "6.283185307179586",
+              "valueType": "xs:double"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "range_wrist_3_joint",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "value": "-6.283185307179586",
+              "valueType": "xs:double"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "value": "6.283185307179586",
+              "valueType": "xs:double"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "kind": "Template",
+  "semanticId": {
+    "type": "ExternalReference",
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "urn:robot:submodel:Kinematics:1:0"
+      }
+    ]
+  }
+}

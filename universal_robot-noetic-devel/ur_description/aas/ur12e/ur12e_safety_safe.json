@@ -1,0 +1,116 @@
+{
+  "modelType": "Submodel",
+  "id": "urn:submodel:robot:safety:UR12e:safe",
+  "idShort": "UR12e_SafetySafe",
+  "category": "Robot:UR12e",
+  "submodelElements": [
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_shoulder_pan_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-6.283185307179586",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "6.283185307179586",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_shoulder_lift_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-6.283185307179586",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "6.283185307179586",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_elbow_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-3.141592653589793",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "3.141592653589793",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_wrist_1_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-6.283185307179586",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "6.283185307179586",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_wrist_2_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-6.283185307179586",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "6.283185307179586",
+          "valueType": "xs:double"
+        }
+      ]
+    },
+    {
+      "modelType": "SubmodelElementCollection",
+      "idShort": "SoftLimit_wrist_3_joint",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "softLower",
+          "value": "-6.283185307179586",
+          "valueType": "xs:double"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "softUpper",
+          "value": "6.283185307179586",
+          "valueType": "xs:double"
+        }
+      ]
+    }
+  ]
+}

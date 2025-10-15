@@ -1,0 +1,24 @@
+{
+  "modelType": "Submodel",
+  "idShort": "VisualizationSubmodel",
+  "id": "urn:aas:igus:rebel:bafe2e3f-5885-4f51-9a9a-9e5ace4b6406:VisualizationSubmodel",
+  "category": "CONSTANT",
+  "kind": "Instance",
+  "administration": {
+    "version": "0.1",
+    "revision": "0"
+  },
+  "description": [
+    {
+      "language": "en",
+      "text": "Visualization assets for RViz/Sim."
+    }
+  ],
+  "displayName": [
+    {
+      "language": "en",
+      "text": "VisualizationSubmodel"
+    }
+  ],
+  "submodelElements": []
+}

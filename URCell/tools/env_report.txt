@@ -1,0 +1,20 @@
+===================================================
+🔍 AAS & URCell Environment Check Utility
+Generated: 2025-11-03 18:44:23
+===================================================
+🐍 Python Version: 3.12.2
+💻 Platform: Windows 11
+---------------------------------------------------
+✅ urdfpy          v0.0.22
+✅ networkx        v3.5
+✅ numpy           v1.26.4
+✅ scipy           v1.16.0
+✅ pandas          v2.2.1
+✅ numba           v0.61.2
+✅ trimesh         v4.7.1
+✅ pyrender        v0.1.45
+✅ torch           v2.7.0+cpu
+✅ transformers    v4.54.1
+❌ PyYAML          NOT FOUND (No module named 'PyYAML')
+---------------------------------------------------
+⚠️ Environment check found missing packages.

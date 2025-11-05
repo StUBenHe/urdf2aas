@@ -15,11 +15,26 @@ URCell/
 ├─ tools
 │   ├─ README.txt
 │   ├─ add_kind_template.py
+│   ├─ check_env.py
+│   ├─ env_report.txt
 │   ├─ fix_aas_json.py
 │   ├─ generate_aas_environment_rebel_v3.py
-│   ├─ generate_aas_submodels_rebel.py
 │   ├─ generate_aas_submodels_ur.py
 │   ├─ generate_structure_doc.py
+│   ├─ kind_semantic_tool.py
+│   ├─ output
+│   │   ├─ debug_ur10_fixed.urdf
+│   │   ├─ debug_ur10e_fixed.urdf
+│   │   ├─ debug_ur12e_fixed.urdf
+│   │   ├─ debug_ur15_fixed.urdf
+│   │   ├─ debug_ur16e_fixed.urdf
+│   │   ├─ debug_ur20_fixed.urdf
+│   │   ├─ debug_ur30_fixed.urdf
+│   │   ├─ debug_ur3_fixed.urdf
+│   │   ├─ debug_ur3e_fixed.urdf
+│   │   ├─ debug_ur5_fixed.urdf
+│   │   ├─ debug_ur5e_fixed.urdf
+│   │   └─ debug_ur7e_fixed.urdf
 │   ├─ patch_aas_shells.py
 │   ├─ patch_env_json.py
 │   ├─ set_kind_and_semantic.py
@@ -42,101 +57,89 @@ URCell/
 │   │   ├─ igus_rebel
 │   │   │   └─ igus_rebel_environment.json
 │   │   ├─ ur10
-│   │   │   ├─ ur10_control_safe.json
-│   │   │   ├─ ur10_dynamics_safe.json
-│   │   │   ├─ ur10_environment.json
-│   │   │   ├─ ur10_kinematics_safe.json
-│   │   │   ├─ ur10_safety_safe.json
-│   │   │   ├─ ur10_structure_safe_full.json
-│   │   │   └─ ur10_visualization_safe.json
+│   │   │   ├─ ur10_control_submodel.json
+│   │   │   ├─ ur10_dynamics_submodel.json
+│   │   │   ├─ ur10_kinematics_submodel.json
+│   │   │   ├─ ur10_safety_submodel.json
+│   │   │   ├─ ur10_structure_submodel.json
+│   │   │   └─ ur10_visualization_submodel.json
 │   │   ├─ ur10e
-│   │   │   ├─ ur10e_control_safe.json
-│   │   │   ├─ ur10e_dynamics_safe.json
-│   │   │   ├─ ur10e_environment.json
-│   │   │   ├─ ur10e_kinematics_safe.json
-│   │   │   ├─ ur10e_safety_safe.json
-│   │   │   ├─ ur10e_structure_safe_full.json
-│   │   │   └─ ur10e_visualization_safe.json
+│   │   │   ├─ ur10e_control_submodel.json
+│   │   │   ├─ ur10e_dynamics_submodel.json
+│   │   │   ├─ ur10e_kinematics_submodel.json
+│   │   │   ├─ ur10e_safety_submodel.json
+│   │   │   ├─ ur10e_structure_submodel.json
+│   │   │   └─ ur10e_visualization_submodel.json
 │   │   ├─ ur12e
-│   │   │   ├─ ur12e_control_safe.json
-│   │   │   ├─ ur12e_dynamics_safe.json
-│   │   │   ├─ ur12e_environment.json
-│   │   │   ├─ ur12e_kinematics_safe.json
-│   │   │   ├─ ur12e_safety_safe.json
-│   │   │   ├─ ur12e_structure_safe_full.json
-│   │   │   └─ ur12e_visualization_safe.json
+│   │   │   ├─ ur12e_control_submodel.json
+│   │   │   ├─ ur12e_dynamics_submodel.json
+│   │   │   ├─ ur12e_kinematics_submodel.json
+│   │   │   ├─ ur12e_safety_submodel.json
+│   │   │   ├─ ur12e_structure_submodel.json
+│   │   │   └─ ur12e_visualization_submodel.json
 │   │   ├─ ur15
-│   │   │   ├─ ur15_control_safe.json
-│   │   │   ├─ ur15_dynamics_safe.json
-│   │   │   ├─ ur15_environment.json
-│   │   │   ├─ ur15_kinematics_safe.json
-│   │   │   ├─ ur15_safety_safe.json
-│   │   │   ├─ ur15_structure_safe_full.json
-│   │   │   └─ ur15_visualization_safe.json
+│   │   │   ├─ ur15_control_submodel.json
+│   │   │   ├─ ur15_dynamics_submodel.json
+│   │   │   ├─ ur15_kinematics_submodel.json
+│   │   │   ├─ ur15_safety_submodel.json
+│   │   │   ├─ ur15_structure_submodel.json
+│   │   │   └─ ur15_visualization_submodel.json
 │   │   ├─ ur16e
-│   │   │   ├─ ur16e_control_safe.json
-│   │   │   ├─ ur16e_dynamics_safe.json
-│   │   │   ├─ ur16e_environment.json
-│   │   │   ├─ ur16e_kinematics_safe.json
-│   │   │   ├─ ur16e_safety_safe.json
-│   │   │   ├─ ur16e_structure_safe_full.json
-│   │   │   └─ ur16e_visualization_safe.json
+│   │   │   ├─ ur16e_control_submodel.json
+│   │   │   ├─ ur16e_dynamics_submodel.json
+│   │   │   ├─ ur16e_kinematics_submodel.json
+│   │   │   ├─ ur16e_safety_submodel.json
+│   │   │   ├─ ur16e_structure_submodel.json
+│   │   │   └─ ur16e_visualization_submodel.json
 │   │   ├─ ur20
-│   │   │   ├─ ur20_control_safe.json
-│   │   │   ├─ ur20_dynamics_safe.json
-│   │   │   ├─ ur20_environment.json
-│   │   │   ├─ ur20_kinematics_safe.json
-│   │   │   ├─ ur20_safety_safe.json
-│   │   │   ├─ ur20_structure_safe_full.json
-│   │   │   └─ ur20_visualization_safe.json
+│   │   │   ├─ ur20_control_submodel.json
+│   │   │   ├─ ur20_dynamics_submodel.json
+│   │   │   ├─ ur20_kinematics_submodel.json
+│   │   │   ├─ ur20_safety_submodel.json
+│   │   │   ├─ ur20_structure_submodel.json
+│   │   │   └─ ur20_visualization_submodel.json
 │   │   ├─ ur3
-│   │   │   ├─ ur3_control.json
-│   │   │   ├─ ur3_dynamics.json
-│   │   │   ├─ ur3_environment.json
-│   │   │   ├─ ur3_kinematics.json
-│   │   │   ├─ ur3_safety.json
-│   │   │   ├─ ur3_structure.json
-│   │   │   └─ ur3_visualization.json
+│   │   │   ├─ ur3_control_submodel.json
+│   │   │   ├─ ur3_dynamics_submodel.json
+│   │   │   ├─ ur3_kinematics_submodel.json
+│   │   │   ├─ ur3_safety_submodel.json
+│   │   │   ├─ ur3_structure_submodel.json
+│   │   │   └─ ur3_visualization_submodel.json
 │   │   ├─ ur30
-│   │   │   ├─ ur30_control_safe.json
-│   │   │   ├─ ur30_dynamics_safe.json
-│   │   │   ├─ ur30_environment.json
-│   │   │   ├─ ur30_kinematics_safe.json
-│   │   │   ├─ ur30_safety_safe.json
-│   │   │   ├─ ur30_structure_safe_full.json
-│   │   │   └─ ur30_visualization_safe.json
+│   │   │   ├─ ur30_control_submodel.json
+│   │   │   ├─ ur30_dynamics_submodel.json
+│   │   │   ├─ ur30_kinematics_submodel.json
+│   │   │   ├─ ur30_safety_submodel.json
+│   │   │   ├─ ur30_structure_submodel.json
+│   │   │   └─ ur30_visualization_submodel.json
 │   │   ├─ ur3e
-│   │   │   ├─ ur3e_control_safe_prefixed.json
-│   │   │   ├─ ur3e_dynamics_safe_prefixed.json
-│   │   │   ├─ ur3e_environment_prefixed.json
-│   │   │   ├─ ur3e_kinematics_safe_prefixed.json
-│   │   │   ├─ ur3e_safety_safe_prefixed.json
-│   │   │   ├─ ur3e_structure_safe_full_prefixed.json
-│   │   │   └─ ur3e_visualization_safe_prefixed.json
+│   │   │   ├─ ur3e_control_submodel.json
+│   │   │   ├─ ur3e_dynamics_submodel.json
+│   │   │   ├─ ur3e_kinematics_submodel.json
+│   │   │   ├─ ur3e_safety_submodel.json
+│   │   │   ├─ ur3e_structure_submodel.json
+│   │   │   └─ ur3e_visualization_submodel.json
 │   │   ├─ ur5
-│   │   │   ├─ ur5_control_safe_prefixed.json
-│   │   │   ├─ ur5_dynamics_safe_prefixed.json
-│   │   │   ├─ ur5_environment_prefixed.json
-│   │   │   ├─ ur5_kinematics_safe_prefixed.json
-│   │   │   ├─ ur5_safety_safe_prefixed.json
-│   │   │   ├─ ur5_structure_safe_full_prefixed.json
-│   │   │   └─ ur5_visualization_safe_prefixed.json
+│   │   │   ├─ ur5_control_submodel.json
+│   │   │   ├─ ur5_dynamics_submodel.json
+│   │   │   ├─ ur5_kinematics_submodel.json
+│   │   │   ├─ ur5_safety_submodel.json
+│   │   │   ├─ ur5_structure_submodel.json
+│   │   │   └─ ur5_visualization_submodel.json
 │   │   ├─ ur5e
-│   │   │   ├─ ur5e_control_safe.json
-│   │   │   ├─ ur5e_dynamics_safe.json
-│   │   │   ├─ ur5e_environment.json
-│   │   │   ├─ ur5e_kinematics_safe.json
-│   │   │   ├─ ur5e_safety_safe.json
-│   │   │   ├─ ur5e_structure_safe_full.json
-│   │   │   └─ ur5e_visualization_safe.json
+│   │   │   ├─ ur5e_control_submodel.json
+│   │   │   ├─ ur5e_dynamics_submodel.json
+│   │   │   ├─ ur5e_kinematics_submodel.json
+│   │   │   ├─ ur5e_safety_submodel.json
+│   │   │   ├─ ur5e_structure_submodel.json
+│   │   │   └─ ur5e_visualization_submodel.json
 │   │   └─ ur7e
-│   │       ├─ ur7e_control_safe.json
-│   │       ├─ ur7e_dynamics_safe.json
-│   │       ├─ ur7e_environment.json
-│   │       ├─ ur7e_kinematics_safe.json
-│   │       ├─ ur7e_safety_safe.json
-│   │       ├─ ur7e_structure_safe_full.json
-│   │       └─ ur7e_visualization_safe.json
+│   │       ├─ ur7e_control_submodel.json
+│   │       ├─ ur7e_dynamics_submodel.json
+│   │       ├─ ur7e_kinematics_submodel.json
+│   │       ├─ ur7e_safety_submodel.json
+│   │       ├─ ur7e_structure_submodel.json
+│   │       └─ ur7e_visualization_submodel.json
 │   ├─ ur_description
 │   │   ├─ config
 │   │   ├─ doc

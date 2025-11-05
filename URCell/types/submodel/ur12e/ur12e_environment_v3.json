@@ -1,0 +1,6756 @@
+{
+  "assetAdministrationShells": [
+    {
+      "id": "urn:rob:ur:UR12E:2025",
+      "idShort": "UR12E",
+      "kind": "Template",
+      "assetInformation": {
+        "globalAssetId": "urn:rob:ur:UR12E",
+        "kind": "Template",
+        "assetKind": "Template"
+      },
+      "submodels": [
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:0"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:1"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:2"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:3"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:4"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:5"
+            }
+          ]
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:rob:ur:ur12e:6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "submodels": [
+    {
+      "idShort": "ControlSubmodel",
+      "submodelElements": [
+        {
+          "idShort": "Joint_base_link-base_link_inertia_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          }
+        },
+        {
+          "idShort": "Joint_shoulder_pan_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586,
+            "effort": 330.0,
+            "velocity": 2.0943951023931953
+          }
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586,
+            "effort": 330.0,
+            "velocity": 2.0943951023931953
+          }
+        },
+        {
+          "idShort": "Joint_elbow_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -3.141592653589793,
+            "upper": 3.141592653589793,
+            "effort": 150.0,
+            "velocity": 3.141592653589793
+          }
+        },
+        {
+          "idShort": "Joint_wrist_1_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586,
+            "effort": 54.0,
+            "velocity": 3.141592653589793
+          }
+        },
+        {
+          "idShort": "Joint_wrist_2_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586,
+            "effort": 54.0,
+            "velocity": 3.141592653589793
+          }
+        },
+        {
+          "idShort": "Joint_wrist_3_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586,
+            "effort": 54.0,
+            "velocity": 3.141592653589793
+          }
+        },
+        {
+          "idShort": "Joint_base_link-base_fixed_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          }
+        },
+        {
+          "idShort": "Joint_wrist_3-flange_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          }
+        },
+        {
+          "idShort": "Joint_flange-tool0_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": null,
+            "upper": null,
+            "effort": null,
+            "velocity": null
+          }
+        }
+      ]
+    },
+    {
+      "idShort": "DynamicsSubmodel",
+      "submodelElements": [
+        {
+          "idShort": "Dynamics_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 1.0,
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_base_link_inertia",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 4.0,
+            "inertia": [
+              [
+                0.0061063308908,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0061063308908,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.01125
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_shoulder_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 7.369,
+            "inertia": [
+              [
+                0.03408,
+                2e-05,
+                -0.00425
+              ],
+              [
+                2e-05,
+                0.03529,
+                8e-05
+              ],
+              [
+                -0.00425,
+                8e-05,
+                0.02156
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.021
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                -1.0,
+                -0.027
+              ],
+              [
+                -0.0,
+                1.0,
+                -3.8285686989269494e-16,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_upper_arm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 13.051,
+            "inertia": [
+              [
+                0.02814,
+                5e-05,
+                -0.01561
+              ],
+              [
+                5e-05,
+                0.77068,
+                2e-05
+              ],
+              [
+                -0.01561,
+                2e-05,
+                0.76943
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.2327
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_forearm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 3.989,
+            "inertia": [
+              [
+                0.01014,
+                8e-05,
+                0.00916
+              ],
+              [
+                8e-05,
+                0.30928,
+                0.0
+              ],
+              [
+                0.00916,
+                0.0,
+                0.30646
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.33155
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.068
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_wrist_1_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 2.1,
+            "inertia": [
+              [
+                0.00296,
+                -1e-05,
+                0.0
+              ],
+              [
+                -1e-05,
+                0.00222,
+                -0.00024
+              ],
+              [
+                0.0,
+                -0.00024,
+                0.00258
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                -1.0,
+                -0.018
+              ],
+              [
+                -0.0,
+                1.0,
+                -3.8285686989269494e-16,
+                0.007
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_wrist_2_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 1.98,
+            "inertia": [
+              [
+                0.00296,
+                -1e-05,
+                0.0
+              ],
+              [
+                -1e-05,
+                0.00222,
+                -0.00024
+              ],
+              [
+                0.0,
+                -0.00024,
+                0.00258
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                1.0,
+                0.018
+              ],
+              [
+                -0.0,
+                -1.0,
+                -3.8285686989269494e-16,
+                -0.007
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_wrist_3_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 0.615,
+            "inertia": [
+              [
+                0.0004,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.00041,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.00034
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                -0.026
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_base",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 1.0,
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_flange",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 1.0,
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Dynamics_tool0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mass": 1.0,
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "origin": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "assetAdministrationShells": [
+        {
+          "id": "urn:robot:aas:UR12E_001",
+          "idShort": "UR12E_Shell",
+          "assetInformation": {
+            "assetKind": "Instance",
+            "globalAssetId": "urn:robot:asset:UR12E"
+          },
+          "submodels": [
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:0"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:1"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:2"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:3"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:4"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:5"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "type": "Submodel",
+                  "value": "urn:robot:submodel:ur12e:6"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "submodels": [
+        {
+          "idShort": "ControlSubmodel",
+          "submodelElements": [
+            {
+              "idShort": "Joint_base_link-base_link_inertia_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": null,
+                "upper": null,
+                "effort": null,
+                "velocity": null
+              }
+            },
+            {
+              "idShort": "Joint_shoulder_pan_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586,
+                "effort": 330.0,
+                "velocity": 2.0943951023931953
+              }
+            },
+            {
+              "idShort": "Joint_shoulder_lift_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586,
+                "effort": 330.0,
+                "velocity": 2.0943951023931953
+              }
+            },
+            {
+              "idShort": "Joint_elbow_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -3.141592653589793,
+                "upper": 3.141592653589793,
+                "effort": 150.0,
+                "velocity": 3.141592653589793
+              }
+            },
+            {
+              "idShort": "Joint_wrist_1_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586,
+                "effort": 54.0,
+                "velocity": 3.141592653589793
+              }
+            },
+            {
+              "idShort": "Joint_wrist_2_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586,
+                "effort": 54.0,
+                "velocity": 3.141592653589793
+              }
+            },
+            {
+              "idShort": "Joint_wrist_3_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586,
+                "effort": 54.0,
+                "velocity": 3.141592653589793
+              }
+            },
+            {
+              "idShort": "Joint_base_link-base_fixed_joint_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": null,
+                "upper": null,
+                "effort": null,
+                "velocity": null
+              }
+            },
+            {
+              "idShort": "Joint_wrist_3-flange_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": null,
+                "upper": null,
+                "effort": null,
+                "velocity": null
+              }
+            },
+            {
+              "idShort": "Joint_flange-tool0_Control",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": null,
+                "upper": null,
+                "effort": null,
+                "velocity": null
+              }
+            }
+          ]
+        },
+        {
+          "idShort": "DynamicsSubmodel",
+          "submodelElements": [
+            {
+              "idShort": "Dynamics_base_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 1.0,
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_base_link_inertia",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 4.0,
+                "inertia": [
+                  [
+                    0.0061063308908,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0061063308908,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.01125
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_shoulder_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 7.369,
+                "inertia": [
+                  [
+                    0.03408,
+                    2e-05,
+                    -0.00425
+                  ],
+                  [
+                    2e-05,
+                    0.03529,
+                    8e-05
+                  ],
+                  [
+                    -0.00425,
+                    8e-05,
+                    0.02156
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.021
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    -1.0,
+                    -0.027
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    -3.8285686989269494e-16,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_upper_arm_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 13.051,
+                "inertia": [
+                  [
+                    0.02814,
+                    5e-05,
+                    -0.01561
+                  ],
+                  [
+                    5e-05,
+                    0.77068,
+                    2e-05
+                  ],
+                  [
+                    -0.01561,
+                    2e-05,
+                    0.76943
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.2327
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.158
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_forearm_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 3.989,
+                "inertia": [
+                  [
+                    0.01014,
+                    8e-05,
+                    0.00916
+                  ],
+                  [
+                    8e-05,
+                    0.30928,
+                    0.0
+                  ],
+                  [
+                    0.00916,
+                    0.0,
+                    0.30646
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.33155
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.068
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_wrist_1_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 2.1,
+                "inertia": [
+                  [
+                    0.00296,
+                    -1e-05,
+                    0.0
+                  ],
+                  [
+                    -1e-05,
+                    0.00222,
+                    -0.00024
+                  ],
+                  [
+                    0.0,
+                    -0.00024,
+                    0.00258
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    -1.0,
+                    -0.018
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    -3.8285686989269494e-16,
+                    0.007
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_wrist_2_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 1.98,
+                "inertia": [
+                  [
+                    0.00296,
+                    -1e-05,
+                    0.0
+                  ],
+                  [
+                    -1e-05,
+                    0.00222,
+                    -0.00024
+                  ],
+                  [
+                    0.0,
+                    -0.00024,
+                    0.00258
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    1.0,
+                    0.018
+                  ],
+                  [
+                    -0.0,
+                    -1.0,
+                    -3.8285686989269494e-16,
+                    -0.007
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_wrist_3_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 0.615,
+                "inertia": [
+                  [
+                    0.0004,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.00041,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.00034
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    -0.026
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_base",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 1.0,
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_flange",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 1.0,
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Dynamics_tool0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mass": 1.0,
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "assetAdministrationShells": [
+            {
+              "id": "urn:robot:aas:UR12E_001",
+              "idShort": "UR12E_Shell",
+              "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "urn:robot:asset:UR12E"
+              },
+              "submodels": [
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:0"
+                    }
+                  ]
+                },
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:1"
+                    }
+                  ]
+                },
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:2"
+                    }
+                  ]
+                },
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:3"
+                    }
+                  ]
+                },
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:4"
+                    }
+                  ]
+                },
+                {
+                  "keys": [
+                    {
+                      "type": "Submodel",
+                      "value": "urn:robot:submodel:ur12e:5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "submodels": [
+            {
+              "idShort": "ControlSubmodel",
+              "submodelElements": [
+                {
+                  "idShort": "Joint_base_link-base_link_inertia_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": null,
+                    "upper": null,
+                    "effort": null,
+                    "velocity": null
+                  }
+                },
+                {
+                  "idShort": "Joint_shoulder_pan_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586,
+                    "effort": 330.0,
+                    "velocity": 2.0943951023931953
+                  }
+                },
+                {
+                  "idShort": "Joint_shoulder_lift_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586,
+                    "effort": 330.0,
+                    "velocity": 2.0943951023931953
+                  }
+                },
+                {
+                  "idShort": "Joint_elbow_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -3.141592653589793,
+                    "upper": 3.141592653589793,
+                    "effort": 150.0,
+                    "velocity": 3.141592653589793
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_1_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586,
+                    "effort": 54.0,
+                    "velocity": 3.141592653589793
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_2_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586,
+                    "effort": 54.0,
+                    "velocity": 3.141592653589793
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_3_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586,
+                    "effort": 54.0,
+                    "velocity": 3.141592653589793
+                  }
+                },
+                {
+                  "idShort": "Joint_base_link-base_fixed_joint_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": null,
+                    "upper": null,
+                    "effort": null,
+                    "velocity": null
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_3-flange_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": null,
+                    "upper": null,
+                    "effort": null,
+                    "velocity": null
+                  }
+                },
+                {
+                  "idShort": "Joint_flange-tool0_Control",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": null,
+                    "upper": null,
+                    "effort": null,
+                    "velocity": null
+                  }
+                }
+              ]
+            },
+            {
+              "idShort": "DynamicsSubmodel",
+              "submodelElements": [
+                {
+                  "idShort": "Dynamics_base_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 1.0,
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_base_link_inertia",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 4.0,
+                    "inertia": [
+                      [
+                        0.0061063308908,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0061063308908,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.01125
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_shoulder_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 7.369,
+                    "inertia": [
+                      [
+                        0.03408,
+                        2e-05,
+                        -0.00425
+                      ],
+                      [
+                        2e-05,
+                        0.03529,
+                        8e-05
+                      ],
+                      [
+                        -0.00425,
+                        8e-05,
+                        0.02156
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.021
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        -1.0,
+                        -0.027
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        -3.8285686989269494e-16,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_upper_arm_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 13.051,
+                    "inertia": [
+                      [
+                        0.02814,
+                        5e-05,
+                        -0.01561
+                      ],
+                      [
+                        5e-05,
+                        0.77068,
+                        2e-05
+                      ],
+                      [
+                        -0.01561,
+                        2e-05,
+                        0.76943
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.2327
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.158
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_forearm_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 3.989,
+                    "inertia": [
+                      [
+                        0.01014,
+                        8e-05,
+                        0.00916
+                      ],
+                      [
+                        8e-05,
+                        0.30928,
+                        0.0
+                      ],
+                      [
+                        0.00916,
+                        0.0,
+                        0.30646
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.33155
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.068
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_wrist_1_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 2.1,
+                    "inertia": [
+                      [
+                        0.00296,
+                        -1e-05,
+                        0.0
+                      ],
+                      [
+                        -1e-05,
+                        0.00222,
+                        -0.00024
+                      ],
+                      [
+                        0.0,
+                        -0.00024,
+                        0.00258
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        -1.0,
+                        -0.018
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        -3.8285686989269494e-16,
+                        0.007
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_wrist_2_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 1.98,
+                    "inertia": [
+                      [
+                        0.00296,
+                        -1e-05,
+                        0.0
+                      ],
+                      [
+                        -1e-05,
+                        0.00222,
+                        -0.00024
+                      ],
+                      [
+                        0.0,
+                        -0.00024,
+                        0.00258
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        -0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        1.0,
+                        0.018
+                      ],
+                      [
+                        -0.0,
+                        -1.0,
+                        -3.8285686989269494e-16,
+                        -0.007
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_wrist_3_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 0.615,
+                    "inertia": [
+                      [
+                        0.0004,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.00041,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.00034
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        -0.026
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_base",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 1.0,
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_flange",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 1.0,
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Dynamics_tool0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mass": 1.0,
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "idShort": "KinematicsSubmodel",
+              "submodelElements": [
+                {
+                  "idShort": "Kinematics_kinematics",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "shoulder": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0.1807,
+                      "roll": 0,
+                      "pitch": 0,
+                      "yaw": 0
+                    },
+                    "upper_arm": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "roll": 1.570796327,
+                      "pitch": 0,
+                      "yaw": 0
+                    },
+                    "forearm": {
+                      "x": -0.6127,
+                      "y": 0,
+                      "z": 0,
+                      "roll": 0,
+                      "pitch": 0,
+                      "yaw": 0
+                    },
+                    "wrist_1": {
+                      "x": -0.57155,
+                      "y": 0,
+                      "z": 0.17415,
+                      "roll": 0,
+                      "pitch": 0,
+                      "yaw": 0
+                    },
+                    "wrist_2": {
+                      "x": 0,
+                      "y": -0.11985,
+                      "z": -2.458164590756244e-11,
+                      "roll": 1.570796327,
+                      "pitch": 0,
+                      "yaw": 0
+                    },
+                    "wrist_3": {
+                      "x": 0,
+                      "y": 0.11655,
+                      "z": -2.390480459346185e-11,
+                      "roll": 1.570796326589793,
+                      "pitch": 3.141592653589793,
+                      "yaw": 3.141592653589793
+                    },
+                    "hash": "calib_5119701370761913513"
+                  }
+                }
+              ]
+            },
+            {
+              "idShort": "SafetySubmodel",
+              "submodelElements": [
+                {
+                  "idShort": "Joint_shoulder_pan_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586
+                  }
+                },
+                {
+                  "idShort": "Joint_shoulder_lift_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586
+                  }
+                },
+                {
+                  "idShort": "Joint_elbow_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -3.141592653589793,
+                    "upper": 3.141592653589793
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_1_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_2_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_3_joint_Safety",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "lower": -6.283185307179586,
+                    "upper": 6.283185307179586
+                  }
+                }
+              ]
+            },
+            {
+              "idShort": "StructureSubmodelFull",
+              "submodelElements": [
+                {
+                  "idShort": "Link_base_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 1.0,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_base_link_inertia",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 4.0,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.0061063308908,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0061063308908,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.01125
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+                        "origin": [
+                          [
+                            -1.0,
+                            -1.2246467991473532e-16,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            1.2246467991473532e-16,
+                            -1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/base.stl",
+                        "origin": [
+                          [
+                            -1.0,
+                            -1.2246467991473532e-16,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            1.2246467991473532e-16,
+                            -1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_shoulder_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 7.369,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.021
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        -1.0,
+                        -0.027
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        -3.8285686989269494e-16,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.03408,
+                        2e-05,
+                        -0.00425
+                      ],
+                      [
+                        2e-05,
+                        0.03529,
+                        8e-05
+                      ],
+                      [
+                        -0.00425,
+                        8e-05,
+                        0.02156
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+                        "origin": [
+                          [
+                            -1.0,
+                            -1.2246467991473532e-16,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            1.2246467991473532e-16,
+                            -1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/shoulder.stl",
+                        "origin": [
+                          [
+                            -1.0,
+                            -1.2246467991473532e-16,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            1.2246467991473532e-16,
+                            -1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_upper_arm_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 13.051,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.2327
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.158
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.02814,
+                        5e-05,
+                        -0.01561
+                      ],
+                      [
+                        5e-05,
+                        0.77068,
+                        2e-05
+                      ],
+                      [
+                        -0.01561,
+                        2e-05,
+                        0.76943
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+                        "origin": [
+                          [
+                            6.123233995736766e-17,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -1.0,
+                            3.749399456654644e-33,
+                            -6.123233995736766e-17,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            0.1762
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/upperarm.stl",
+                        "origin": [
+                          [
+                            6.123233995736766e-17,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -1.0,
+                            3.749399456654644e-33,
+                            -6.123233995736766e-17,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            0.1762
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_forearm_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 3.989,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.33155
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.068
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.01014,
+                        8e-05,
+                        0.00916
+                      ],
+                      [
+                        8e-05,
+                        0.30928,
+                        0.0
+                      ],
+                      [
+                        0.00916,
+                        0.0,
+                        0.30646
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+                        "origin": [
+                          [
+                            6.123233995736766e-17,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -1.0,
+                            3.749399456654644e-33,
+                            -6.123233995736766e-17,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            0.0393
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/forearm.stl",
+                        "origin": [
+                          [
+                            6.123233995736766e-17,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -1.0,
+                            3.749399456654644e-33,
+                            -6.123233995736766e-17,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            0.0393
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_wrist_1_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 2.1,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        -1.0,
+                        -0.018
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        -3.8285686989269494e-16,
+                        0.007
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.00296,
+                        -1e-05,
+                        0.0
+                      ],
+                      [
+                        -1e-05,
+                        0.00222,
+                        -0.00024
+                      ],
+                      [
+                        0.0,
+                        -0.00024,
+                        0.00258
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            -0.135
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist1.stl",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            -0.135
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_wrist_2_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 1.98,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        -0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        -3.8285686989269494e-16,
+                        1.0,
+                        0.018
+                      ],
+                      [
+                        -0.0,
+                        -1.0,
+                        -3.8285686989269494e-16,
+                        -0.007
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.00296,
+                        -1e-05,
+                        0.0
+                      ],
+                      [
+                        -1e-05,
+                        0.00222,
+                        -0.00024
+                      ],
+                      [
+                        0.0,
+                        -0.00024,
+                        0.00258
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            -0.12
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist2.stl",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            0.0,
+                            1.0,
+                            -0.12
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_wrist_3_link",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 0.615,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        -0.026
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        0.0004,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.00041,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.00034
+                      ]
+                    ],
+                    "visuals": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            -0.1168
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ],
+                    "collisions": [
+                      {
+                        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist3.stl",
+                        "origin": [
+                          [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                          ],
+                          [
+                            0.0,
+                            6.123233995736766e-17,
+                            -1.0,
+                            0.0
+                          ],
+                          [
+                            -0.0,
+                            1.0,
+                            6.123233995736766e-17,
+                            -0.1168
+                          ],
+                          [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_base",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 1.0,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_flange",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 1.0,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Link_tool0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "link",
+                    "mass": 1.0,
+                    "com": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ],
+                    "inertia": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Joint_base_link-base_link_inertia",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "fixed",
+                    "parent": "base_link",
+                    "child": "base_link_inertia",
+                    "origin": {
+                      "xyz": [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Joint_shoulder_pan_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "base_link_inertia",
+                    "child": "shoulder_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -6.283185307179586,
+                      "upper": 6.283185307179586,
+                      "effort": 330.0,
+                      "velocity": 2.0943951023931953
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_shoulder_lift_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "shoulder_link",
+                    "child": "upper_arm_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        0.0,
+                        -2.0510342851533115e-10,
+                        -1.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -6.283185307179586,
+                      "upper": 6.283185307179586,
+                      "effort": 330.0,
+                      "velocity": 2.0943951023931953
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_elbow_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "upper_arm_link",
+                    "child": "forearm_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.6127
+                      ],
+                      "rpy": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -3.141592653589793,
+                      "upper": 3.141592653589793,
+                      "effort": 150.0,
+                      "velocity": 3.141592653589793
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_1_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "forearm_link",
+                    "child": "wrist_1_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        -0.57155
+                      ],
+                      "rpy": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -6.283185307179586,
+                      "upper": 6.283185307179586,
+                      "effort": 54.0,
+                      "velocity": 3.141592653589793
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_2_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "wrist_1_link",
+                    "child": "wrist_2_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        0.0,
+                        -2.0510342851533115e-10,
+                        -1.0,
+                        -0.11985
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -6.283185307179586,
+                      "upper": 6.283185307179586,
+                      "effort": 54.0,
+                      "velocity": 3.141592653589793
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_3_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "revolute",
+                    "parent": "wrist_2_link",
+                    "child": "wrist_3_link",
+                    "origin": {
+                      "xyz": [
+                        1.0,
+                        -1.2246467993985327e-16,
+                        1.2246467988961737e-16,
+                        0.0
+                      ],
+                      "rpy": [
+                        -1.2246467991473532e-16,
+                        -2.0510355098001109e-10,
+                        1.0,
+                        0.11655
+                      ]
+                    },
+                    "axis": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "limit": {
+                      "lower": -6.283185307179586,
+                      "upper": 6.283185307179586,
+                      "effort": 54.0,
+                      "velocity": 3.141592653589793
+                    },
+                    "dynamics": {
+                      "damping": 0.0,
+                      "friction": 0.0
+                    }
+                  }
+                },
+                {
+                  "idShort": "Joint_base_link-base_fixed_joint",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "fixed",
+                    "parent": "base_link",
+                    "child": "base",
+                    "origin": {
+                      "xyz": [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Joint_wrist_3-flange",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "fixed",
+                    "parent": "wrist_3_link",
+                    "child": "flange",
+                    "origin": {
+                      "xyz": [
+                        3.749399456654644e-33,
+                        1.0,
+                        -6.123233995736766e-17,
+                        0.0
+                      ],
+                      "rpy": [
+                        -6.123233995736766e-17,
+                        6.123233995736766e-17,
+                        1.0,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                },
+                {
+                  "idShort": "Joint_flange-tool0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "type": "fixed",
+                    "parent": "flange",
+                    "child": "tool0",
+                    "origin": {
+                      "xyz": [
+                        6.123233995736766e-17,
+                        -6.123233995736766e-17,
+                        1.0,
+                        0.0
+                      ],
+                      "rpy": [
+                        1.0,
+                        3.749399456654644e-33,
+                        -6.123233995736766e-17,
+                        0.0
+                      ]
+                    },
+                    "axis": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "idShort": "VisualizationSubmodel",
+              "submodelElements": [
+                {
+                  "idShort": "Visual_base_link_inertia_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_shoulder_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_upper_arm_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_forearm_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_wrist_1_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_wrist_2_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+                    "color": null,
+                    "material": null
+                  }
+                },
+                {
+                  "idShort": "Visual_wrist_3_link_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+                    "color": null,
+                    "material": null
+                  }
+                }
+              ]
+            }
+          ],
+          "conceptDescriptions": []
+        },
+        {
+          "idShort": "KinematicsSubmodel",
+          "submodelElements": [
+            {
+              "idShort": "Kinematics_kinematics",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "shoulder": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.1807,
+                  "roll": 0,
+                  "pitch": 0,
+                  "yaw": 0
+                },
+                "upper_arm": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0,
+                  "roll": 1.570796327,
+                  "pitch": 0,
+                  "yaw": 0
+                },
+                "forearm": {
+                  "x": -0.6127,
+                  "y": 0,
+                  "z": 0,
+                  "roll": 0,
+                  "pitch": 0,
+                  "yaw": 0
+                },
+                "wrist_1": {
+                  "x": -0.57155,
+                  "y": 0,
+                  "z": 0.17415,
+                  "roll": 0,
+                  "pitch": 0,
+                  "yaw": 0
+                },
+                "wrist_2": {
+                  "x": 0,
+                  "y": -0.11985,
+                  "z": -2.458164590756244e-11,
+                  "roll": 1.570796327,
+                  "pitch": 0,
+                  "yaw": 0
+                },
+                "wrist_3": {
+                  "x": 0,
+                  "y": 0.11655,
+                  "z": -2.390480459346185e-11,
+                  "roll": 1.570796326589793,
+                  "pitch": 3.141592653589793,
+                  "yaw": 3.141592653589793
+                },
+                "hash": "calib_5119701370761913513"
+              }
+            }
+          ]
+        },
+        {
+          "idShort": "SafetySubmodel",
+          "submodelElements": [
+            {
+              "idShort": "Joint_shoulder_pan_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586
+              }
+            },
+            {
+              "idShort": "Joint_shoulder_lift_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586
+              }
+            },
+            {
+              "idShort": "Joint_elbow_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -3.141592653589793,
+                "upper": 3.141592653589793
+              }
+            },
+            {
+              "idShort": "Joint_wrist_1_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586
+              }
+            },
+            {
+              "idShort": "Joint_wrist_2_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586
+              }
+            },
+            {
+              "idShort": "Joint_wrist_3_joint_Safety",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "lower": -6.283185307179586,
+                "upper": 6.283185307179586
+              }
+            }
+          ]
+        },
+        {
+          "idShort": "StructureSubmodelFull",
+          "submodelElements": [
+            {
+              "idShort": "Link_base_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 1.0,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Link_base_link_inertia",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 4.0,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.0061063308908,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0061063308908,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.01125
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+                    "origin": [
+                      [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/base.stl",
+                    "origin": [
+                      [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_shoulder_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 7.369,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.021
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    -1.0,
+                    -0.027
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    -3.8285686989269494e-16,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.03408,
+                    2e-05,
+                    -0.00425
+                  ],
+                  [
+                    2e-05,
+                    0.03529,
+                    8e-05
+                  ],
+                  [
+                    -0.00425,
+                    8e-05,
+                    0.02156
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+                    "origin": [
+                      [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/shoulder.stl",
+                    "origin": [
+                      [
+                        -1.0,
+                        -1.2246467991473532e-16,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        1.2246467991473532e-16,
+                        -1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_upper_arm_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 13.051,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.2327
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.158
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.02814,
+                    5e-05,
+                    -0.01561
+                  ],
+                  [
+                    5e-05,
+                    0.77068,
+                    2e-05
+                  ],
+                  [
+                    -0.01561,
+                    2e-05,
+                    0.76943
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+                    "origin": [
+                      [
+                        6.123233995736766e-17,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -1.0,
+                        3.749399456654644e-33,
+                        -6.123233995736766e-17,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        0.1762
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/upperarm.stl",
+                    "origin": [
+                      [
+                        6.123233995736766e-17,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -1.0,
+                        3.749399456654644e-33,
+                        -6.123233995736766e-17,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        0.1762
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_forearm_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 3.989,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.33155
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.068
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.01014,
+                    8e-05,
+                    0.00916
+                  ],
+                  [
+                    8e-05,
+                    0.30928,
+                    0.0
+                  ],
+                  [
+                    0.00916,
+                    0.0,
+                    0.30646
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+                    "origin": [
+                      [
+                        6.123233995736766e-17,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -1.0,
+                        3.749399456654644e-33,
+                        -6.123233995736766e-17,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        0.0393
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/forearm.stl",
+                    "origin": [
+                      [
+                        6.123233995736766e-17,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -1.0,
+                        3.749399456654644e-33,
+                        -6.123233995736766e-17,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        0.0393
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_wrist_1_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 2.1,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    -1.0,
+                    -0.018
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    -3.8285686989269494e-16,
+                    0.007
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.00296,
+                    -1e-05,
+                    0.0
+                  ],
+                  [
+                    -1e-05,
+                    0.00222,
+                    -0.00024
+                  ],
+                  [
+                    0.0,
+                    -0.00024,
+                    0.00258
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        -0.135
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist1.stl",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        -0.135
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_wrist_2_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 1.98,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -3.8285686989269494e-16,
+                    1.0,
+                    0.018
+                  ],
+                  [
+                    -0.0,
+                    -1.0,
+                    -3.8285686989269494e-16,
+                    -0.007
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.00296,
+                    -1e-05,
+                    0.0
+                  ],
+                  [
+                    -1e-05,
+                    0.00222,
+                    -0.00024
+                  ],
+                  [
+                    0.0,
+                    -0.00024,
+                    0.00258
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        -0.12
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist2.stl",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        0.0,
+                        1.0,
+                        -0.12
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_wrist_3_link",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 0.615,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    -0.026
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    0.0004,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.00041,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.00034
+                  ]
+                ],
+                "visuals": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        -0.1168
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "collisions": [
+                  {
+                    "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist3.stl",
+                    "origin": [
+                      [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      [
+                        0.0,
+                        6.123233995736766e-17,
+                        -1.0,
+                        0.0
+                      ],
+                      [
+                        -0.0,
+                        1.0,
+                        6.123233995736766e-17,
+                        -0.1168
+                      ],
+                      [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "idShort": "Link_base",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 1.0,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Link_flange",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 1.0,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Link_tool0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "link",
+                "mass": 1.0,
+                "com": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "inertia": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "idShort": "Joint_base_link-base_link_inertia",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "fixed",
+                "parent": "base_link",
+                "child": "base_link_inertia",
+                "origin": {
+                  "xyz": [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "idShort": "Joint_shoulder_pan_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "base_link_inertia",
+                "child": "shoulder_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -6.283185307179586,
+                  "upper": 6.283185307179586,
+                  "effort": 330.0,
+                  "velocity": 2.0943951023931953
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_shoulder_lift_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "shoulder_link",
+                "child": "upper_arm_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    0.0,
+                    -2.0510342851533115e-10,
+                    -1.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -6.283185307179586,
+                  "upper": 6.283185307179586,
+                  "effort": 330.0,
+                  "velocity": 2.0943951023931953
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_elbow_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "upper_arm_link",
+                "child": "forearm_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.6127
+                  ],
+                  "rpy": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -3.141592653589793,
+                  "upper": 3.141592653589793,
+                  "effort": 150.0,
+                  "velocity": 3.141592653589793
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_wrist_1_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "forearm_link",
+                "child": "wrist_1_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.57155
+                  ],
+                  "rpy": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -6.283185307179586,
+                  "upper": 6.283185307179586,
+                  "effort": 54.0,
+                  "velocity": 3.141592653589793
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_wrist_2_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "wrist_1_link",
+                "child": "wrist_2_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    0.0,
+                    -2.0510342851533115e-10,
+                    -1.0,
+                    -0.11985
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -6.283185307179586,
+                  "upper": 6.283185307179586,
+                  "effort": 54.0,
+                  "velocity": 3.141592653589793
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_wrist_3_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "revolute",
+                "parent": "wrist_2_link",
+                "child": "wrist_3_link",
+                "origin": {
+                  "xyz": [
+                    1.0,
+                    -1.2246467993985327e-16,
+                    1.2246467988961737e-16,
+                    0.0
+                  ],
+                  "rpy": [
+                    -1.2246467991473532e-16,
+                    -2.0510355098001109e-10,
+                    1.0,
+                    0.11655
+                  ]
+                },
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "limit": {
+                  "lower": -6.283185307179586,
+                  "upper": 6.283185307179586,
+                  "effort": 54.0,
+                  "velocity": 3.141592653589793
+                },
+                "dynamics": {
+                  "damping": 0.0,
+                  "friction": 0.0
+                }
+              }
+            },
+            {
+              "idShort": "Joint_base_link-base_fixed_joint",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "fixed",
+                "parent": "base_link",
+                "child": "base",
+                "origin": {
+                  "xyz": [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "idShort": "Joint_wrist_3-flange",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "fixed",
+                "parent": "wrist_3_link",
+                "child": "flange",
+                "origin": {
+                  "xyz": [
+                    3.749399456654644e-33,
+                    1.0,
+                    -6.123233995736766e-17,
+                    0.0
+                  ],
+                  "rpy": [
+                    -6.123233995736766e-17,
+                    6.123233995736766e-17,
+                    1.0,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "idShort": "Joint_flange-tool0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "type": "fixed",
+                "parent": "flange",
+                "child": "tool0",
+                "origin": {
+                  "xyz": [
+                    6.123233995736766e-17,
+                    -6.123233995736766e-17,
+                    1.0,
+                    0.0
+                  ],
+                  "rpy": [
+                    1.0,
+                    3.749399456654644e-33,
+                    -6.123233995736766e-17,
+                    0.0
+                  ]
+                },
+                "axis": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "idShort": "VisualizationSubmodel",
+          "submodelElements": [
+            {
+              "idShort": "Visual_base_link_inertia_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_shoulder_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_upper_arm_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_forearm_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_wrist_1_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_wrist_2_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+                "color": null,
+                "material": null
+              }
+            },
+            {
+              "idShort": "Visual_wrist_3_link_0",
+              "modelType": "SubmodelElementCollection",
+              "value": {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+                "color": null,
+                "material": null
+              }
+            }
+          ]
+        }
+      ],
+      "conceptDescriptions": []
+    },
+    {
+      "idShort": "KinematicsSubmodel",
+      "submodelElements": [
+        {
+          "idShort": "Kinematics_kinematics",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "shoulder": {
+              "x": 0,
+              "y": 0,
+              "z": 0.1807,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "upper_arm": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 1.570796327,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "forearm": {
+              "x": -0.6127,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "wrist_1": {
+              "x": -0.57155,
+              "y": 0,
+              "z": 0.17415,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "wrist_2": {
+              "x": 0,
+              "y": -0.11985,
+              "z": -2.458164590756244e-11,
+              "roll": 1.570796327,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "wrist_3": {
+              "x": 0,
+              "y": 0.11655,
+              "z": -2.390480459346185e-11,
+              "roll": 1.570796326589793,
+              "pitch": 3.141592653589793,
+              "yaw": 3.141592653589793
+            },
+            "hash": "calib_5119701370761913513"
+          }
+        }
+      ]
+    },
+    {
+      "idShort": "SafetySubmodel",
+      "submodelElements": [
+        {
+          "idShort": "Joint_shoulder_pan_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586
+          }
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586
+          }
+        },
+        {
+          "idShort": "Joint_elbow_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -3.141592653589793,
+            "upper": 3.141592653589793
+          }
+        },
+        {
+          "idShort": "Joint_wrist_1_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586
+          }
+        },
+        {
+          "idShort": "Joint_wrist_2_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586
+          }
+        },
+        {
+          "idShort": "Joint_wrist_3_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "lower": -6.283185307179586,
+            "upper": 6.283185307179586
+          }
+        }
+      ]
+    },
+    {
+      "idShort": "StructureSubmodelFull",
+      "submodelElements": [
+        {
+          "idShort": "Link_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 1.0,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Link_base_link_inertia",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 4.0,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.0061063308908,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0061063308908,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.01125
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+                "origin": [
+                  [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/base.stl",
+                "origin": [
+                  [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_shoulder_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 7.369,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.021
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                -1.0,
+                -0.027
+              ],
+              [
+                -0.0,
+                1.0,
+                -3.8285686989269494e-16,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.03408,
+                2e-05,
+                -0.00425
+              ],
+              [
+                2e-05,
+                0.03529,
+                8e-05
+              ],
+              [
+                -0.00425,
+                8e-05,
+                0.02156
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+                "origin": [
+                  [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/shoulder.stl",
+                "origin": [
+                  [
+                    -1.0,
+                    -1.2246467991473532e-16,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.2246467991473532e-16,
+                    -1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_upper_arm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 13.051,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.2327
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.02814,
+                5e-05,
+                -0.01561
+              ],
+              [
+                5e-05,
+                0.77068,
+                2e-05
+              ],
+              [
+                -0.01561,
+                2e-05,
+                0.76943
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+                "origin": [
+                  [
+                    6.123233995736766e-17,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -1.0,
+                    3.749399456654644e-33,
+                    -6.123233995736766e-17,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    0.1762
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/upperarm.stl",
+                "origin": [
+                  [
+                    6.123233995736766e-17,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -1.0,
+                    3.749399456654644e-33,
+                    -6.123233995736766e-17,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    0.1762
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_forearm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 3.989,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -0.33155
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                0.068
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.01014,
+                8e-05,
+                0.00916
+              ],
+              [
+                8e-05,
+                0.30928,
+                0.0
+              ],
+              [
+                0.00916,
+                0.0,
+                0.30646
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+                "origin": [
+                  [
+                    6.123233995736766e-17,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -1.0,
+                    3.749399456654644e-33,
+                    -6.123233995736766e-17,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    0.0393
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/forearm.stl",
+                "origin": [
+                  [
+                    6.123233995736766e-17,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -1.0,
+                    3.749399456654644e-33,
+                    -6.123233995736766e-17,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    0.0393
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_wrist_1_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 2.1,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                -1.0,
+                -0.018
+              ],
+              [
+                -0.0,
+                1.0,
+                -3.8285686989269494e-16,
+                0.007
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.00296,
+                -1e-05,
+                0.0
+              ],
+              [
+                -1e-05,
+                0.00222,
+                -0.00024
+              ],
+              [
+                0.0,
+                -0.00024,
+                0.00258
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    -0.135
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist1.stl",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    -0.135
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_wrist_2_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 1.98,
+            "com": [
+              [
+                1.0,
+                0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -3.8285686989269494e-16,
+                1.0,
+                0.018
+              ],
+              [
+                -0.0,
+                -1.0,
+                -3.8285686989269494e-16,
+                -0.007
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.00296,
+                -1e-05,
+                0.0
+              ],
+              [
+                -1e-05,
+                0.00222,
+                -0.00024
+              ],
+              [
+                0.0,
+                -0.00024,
+                0.00258
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    -0.12
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist2.stl",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    0.0,
+                    1.0,
+                    -0.12
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_wrist_3_link",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 0.615,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                0.0,
+                1.0,
+                -0.026
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                0.0004,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.00041,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.00034
+              ]
+            ],
+            "visuals": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    -0.1168
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ],
+            "collisions": [
+              {
+                "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/collision/wrist3.stl",
+                "origin": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    6.123233995736766e-17,
+                    -1.0,
+                    0.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    6.123233995736766e-17,
+                    -0.1168
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "idShort": "Link_base",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 1.0,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Link_flange",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 1.0,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Link_tool0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "link",
+            "mass": 1.0,
+            "com": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "inertia": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "idShort": "Joint_base_link-base_link_inertia",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "fixed",
+            "parent": "base_link",
+            "child": "base_link_inertia",
+            "origin": {
+              "xyz": [
+                -1.0,
+                -1.2246467991473532e-16,
+                0.0,
+                0.0
+              ],
+              "rpy": [
+                1.2246467991473532e-16,
+                -1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "idShort": "Joint_shoulder_pan_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "base_link_inertia",
+            "child": "shoulder_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy": [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -6.283185307179586,
+              "upper": 6.283185307179586,
+              "effort": 330.0,
+              "velocity": 2.0943951023931953
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "shoulder_link",
+            "child": "upper_arm_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy": [
+                0.0,
+                -2.0510342851533115e-10,
+                -1.0,
+                0.0
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -6.283185307179586,
+              "upper": 6.283185307179586,
+              "effort": 330.0,
+              "velocity": 2.0943951023931953
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_elbow_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "upper_arm_link",
+            "child": "forearm_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                0.0,
+                0.0,
+                -0.6127
+              ],
+              "rpy": [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -3.141592653589793,
+              "upper": 3.141592653589793,
+              "effort": 150.0,
+              "velocity": 3.141592653589793
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_wrist_1_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "forearm_link",
+            "child": "wrist_1_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                0.0,
+                0.0,
+                -0.57155
+              ],
+              "rpy": [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -6.283185307179586,
+              "upper": 6.283185307179586,
+              "effort": 54.0,
+              "velocity": 3.141592653589793
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_wrist_2_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "wrist_1_link",
+            "child": "wrist_2_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy": [
+                0.0,
+                -2.0510342851533115e-10,
+                -1.0,
+                -0.11985
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -6.283185307179586,
+              "upper": 6.283185307179586,
+              "effort": 54.0,
+              "velocity": 3.141592653589793
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_wrist_3_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "revolute",
+            "parent": "wrist_2_link",
+            "child": "wrist_3_link",
+            "origin": {
+              "xyz": [
+                1.0,
+                -1.2246467993985327e-16,
+                1.2246467988961737e-16,
+                0.0
+              ],
+              "rpy": [
+                -1.2246467991473532e-16,
+                -2.0510355098001109e-10,
+                1.0,
+                0.11655
+              ]
+            },
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "limit": {
+              "lower": -6.283185307179586,
+              "upper": 6.283185307179586,
+              "effort": 54.0,
+              "velocity": 3.141592653589793
+            },
+            "dynamics": {
+              "damping": 0.0,
+              "friction": 0.0
+            }
+          }
+        },
+        {
+          "idShort": "Joint_base_link-base_fixed_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "fixed",
+            "parent": "base_link",
+            "child": "base",
+            "origin": {
+              "xyz": [
+                -1.0,
+                -1.2246467991473532e-16,
+                0.0,
+                0.0
+              ],
+              "rpy": [
+                1.2246467991473532e-16,
+                -1.0,
+                0.0,
+                0.0
+              ]
+            },
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "idShort": "Joint_wrist_3-flange",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "fixed",
+            "parent": "wrist_3_link",
+            "child": "flange",
+            "origin": {
+              "xyz": [
+                3.749399456654644e-33,
+                1.0,
+                -6.123233995736766e-17,
+                0.0
+              ],
+              "rpy": [
+                -6.123233995736766e-17,
+                6.123233995736766e-17,
+                1.0,
+                0.0
+              ]
+            },
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "idShort": "Joint_flange-tool0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "type": "fixed",
+            "parent": "flange",
+            "child": "tool0",
+            "origin": {
+              "xyz": [
+                6.123233995736766e-17,
+                -6.123233995736766e-17,
+                1.0,
+                0.0
+              ],
+              "rpy": [
+                1.0,
+                3.749399456654644e-33,
+                -6.123233995736766e-17,
+                0.0
+              ]
+            },
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "idShort": "VisualizationSubmodel",
+      "submodelElements": [
+        {
+          "idShort": "Visual_base_link_inertia_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_shoulder_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_upper_arm_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/upperarm.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_forearm_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/forearm.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_wrist_1_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_wrist_2_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+            "color": null,
+            "material": null
+          }
+        },
+        {
+          "idShort": "Visual_wrist_3_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": {
+            "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+            "color": null,
+            "material": null
+          }
+        }
+      ]
+    }
+  ],
+  "conceptDescriptions": []
+}

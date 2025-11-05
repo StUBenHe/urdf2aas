@@ -2077,42 +2077,102 @@
             }
           ]
         }
-      ]
+      ],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     },
     {
       "modelType": "Submodel",
       "id": "urn:submodel:robot:kinematics:IGUS_REBEL_6DOF:safe",
       "idShort": "IGUS_REBEL_6DOF_KinematicsSafe",
       "category": "Robot:IGUS_REBEL_6DOF",
-      "submodelElements": []
+      "submodelElements": [],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     },
     {
       "modelType": "Submodel",
       "id": "urn:submodel:robot:dynamics:IGUS_REBEL_6DOF:safe",
       "idShort": "IGUS_REBEL_6DOF_DynamicsSafe",
       "category": "Robot:IGUS_REBEL_6DOF",
-      "submodelElements": []
+      "submodelElements": [],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     },
     {
       "modelType": "Submodel",
       "id": "urn:submodel:robot:control:IGUS_REBEL_6DOF:safe",
       "idShort": "IGUS_REBEL_6DOF_ControlSafe",
       "category": "Robot:IGUS_REBEL_6DOF",
-      "submodelElements": []
+      "submodelElements": [],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     },
     {
       "modelType": "Submodel",
       "id": "urn:submodel:robot:safety:IGUS_REBEL_6DOF:safe",
       "idShort": "IGUS_REBEL_6DOF_SafetySafe",
       "category": "Robot:IGUS_REBEL_6DOF",
-      "submodelElements": []
+      "submodelElements": [],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     },
     {
       "modelType": "Submodel",
       "id": "urn:submodel:robot:viz:IGUS_REBEL_6DOF:safe",
       "idShort": "IGUS_REBEL_6DOF_VizSafe",
       "category": "Robot:IGUS_REBEL_6DOF",
-      "submodelElements": []
+      "submodelElements": [],
+      "kind": "Template",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "urn:robot:submodel:Environment:1:0"
+          }
+        ]
+      }
     }
   ]
 }

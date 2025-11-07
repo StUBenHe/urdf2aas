@@ -1,0 +1,212 @@
+{
+  "idShort": "VisualizationSubmodel",
+  "submodelElements": [
+    {
+      "idShort": "Visual_base_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_base_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_shoulder_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_shoulder_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_upper_arm_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_upper_arm_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_forearm_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_forearm_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_1_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_1_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_2_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_2_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_3_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_wrist_3_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_tool0_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_tool0_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_soft_gripper_base_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_soft_gripper_base_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_soft_gripper_finger_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_soft_gripper_finger_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_camera_link_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_camera_link_1",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl",
+        "color": null,
+        "material": null
+      }
+    },
+    {
+      "idShort": "Visual_camera_optical_frame_0",
+      "modelType": "SubmodelElementCollection",
+      "value": {
+        "mesh": null,
+        "color": null,
+        "material": null
+      }
+    }
+  ]
+}

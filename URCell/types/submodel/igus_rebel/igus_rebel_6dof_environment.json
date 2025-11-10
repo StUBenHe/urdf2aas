@@ -1,0 +1,2704 @@
+{
+  "submodels": [
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Structure",
+      "idShort": "IGUS_REBEL_6DOF_StructureSubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Link_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.004, 0.0, 0.0], [0.0, 0.004, 0.0], [0.0, 0.0, 0.005]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "3.2"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/base.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_shoulder_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.006, 0.0, 0.0], [0.0, 0.006, 0.0], [0.0, 0.0, 0.004]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "2.8"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"0\", \"0\", \"3.1416\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"0\", \"0\", \"3.1416\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/shoulder.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_upper_arm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.022, 0.0, 0.0], [0.0, 0.022, 0.0], [0.0, 0.0, 0.01]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "3.6"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"1.571\", \"0\", \"-1.571\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"1.571\", \"0\", \"-1.571\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/upper_arm.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_forearm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.007, 0.0, 0.0], [0.0, 0.007, 0.0], [0.0, 0.0, 0.003]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "1.5"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.135\"], \"rpy\": [\"1.571\", \"0\", \"-1.571\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.135\"], \"rpy\": [\"1.571\", \"0\", \"-1.571\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/forearm.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_wrist_1_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0017, 0.0, 0.0], [0.0, 0.0017, 0.0], [0.0, 0.0, 0.0023]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.9"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.121\"], \"rpy\": [\"1.571\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.121\"], \"rpy\": [\"1.571\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_1.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_wrist_2_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0016, 0.0, 0.0], [0.0, 0.0016, 0.0], [0.0, 0.0, 0.0021]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.8"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.092\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.092\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_2.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_wrist_3_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.00013, 0.0, 0.0], [0.0, 0.00013, 0.0], [0.0, 0.0, 0.00018]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.5"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.083\"], \"rpy\": [\"1.571\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.083\"], \"rpy\": [\"1.571\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_3.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_tool0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[8e-05, 0.0, 0.0], [0.0, 8e-05, 0.0], [0.0, 0.0, 0.0001]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.25"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/flange.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_soft_gripper_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.00012, 0.0, 0.0], [0.0, 0.00012, 0.0], [0.0, 0.0, 0.00015]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.3"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_base.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_soft_gripper_finger_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[1e-05, 0.0, 0.0], [0.0, 1e-05, 0.0], [0.0, 0.0, 1.5e-05]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.05"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.03\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.03\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_finger.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_camera_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0001, 0.0, 0.0], [0.0, 0.0001, 0.0], [0.0, 0.0, 0.00015]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.25"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                },
+                {
+                  "idShort": "visual_1",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/collision/camera_body.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Link_camera_optical_frame",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": ""
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_shoulder_pan_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "base_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "shoulder_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "shoulder_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "upper_arm_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.089\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_elbow_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "upper_arm_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "forearm_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.135\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_1_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "forearm_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "wrist_1_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.121\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_2_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "wrist_1_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "wrist_2_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.092\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_3_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "wrist_2_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "wrist_3_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.083\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_tool0_fixed",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "fixed"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "wrist_3_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "tool0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_soft_gripper_mount",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "fixed"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "tool0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "soft_gripper_base_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_soft_gripper_finger_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "prismatic"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "soft_gripper_base_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "soft_gripper_finger_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.03\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_camera_mount_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "fixed"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "tool0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "camera_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.05\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_camera_optical_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "fixed"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "parent",
+              "valueType": "xs:string",
+              "value": "camera_link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "child",
+              "valueType": "xs:string",
+              "value": "camera_optical_frame"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Control",
+      "idShort": "IGUS_REBEL_6DOF_ControlSubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Joint_shoulder_pan_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "80.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "80.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_elbow_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "50.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_1_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "40.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_2_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "40.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_3_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "40.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_tool0_fixed_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_soft_gripper_mount_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_soft_gripper_finger_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "0.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "0.02"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "effort",
+              "valueType": "xs:double",
+              "value": "10.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "velocity",
+              "valueType": "xs:double",
+              "value": "0.05"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_camera_mount_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_camera_optical_joint_Control",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "transmission",
+              "valueType": "xs:string",
+              "value": "{\"type\": \"transmission_interface/SimpleTransmission\", \"mechanicalReduction\": 1.0, \"hardwareInterface\": \"hardware_interface/PositionJointInterface\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Kinematics",
+      "idShort": "IGUS_REBEL_6DOF_KinematicsSubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Kinematics_shoulder_pan_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 0.0, 1.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_shoulder_lift_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 1.0, 0.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_elbow_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 1.0, 0.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_wrist_1_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 1.0, 0.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_wrist_2_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 0.0, 1.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_wrist_3_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 1.0, 0.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "revolute"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        },
+        {
+          "idShort": "Kinematics_soft_gripper_finger_joint",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "axis",
+              "valueType": "xs:string",
+              "value": "[0.0, 0.0, 1.0]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "prismatic"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [0, 0, 0], \"rpy\": [0, 0, 0]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Dynamics",
+      "idShort": "IGUS_REBEL_6DOF_DynamicsSubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Dynamics_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "3.2"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.004, 0.0, 0.0], [0.0, 0.004, 0.0], [0.0, 0.0, 0.005]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_shoulder_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "2.8"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.006, 0.0, 0.0], [0.0, 0.006, 0.0], [0.0, 0.0, 0.004]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, -0.02], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_upper_arm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "3.6"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.022, 0.0, 0.0], [0.0, 0.022, 0.0], [0.0, 0.0, 0.01]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, -0.11], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.12], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_forearm_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "1.5"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.007, 0.0, 0.0], [0.0, 0.007, 0.0], [0.0, 0.0, 0.003]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, -0.16], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.02], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_wrist_1_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.9"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0017, 0.0, 0.0], [0.0, 0.0017, 0.0], [0.0, 0.0, 0.0023]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, -0.01], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_wrist_2_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.8"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0016, 0.0, 0.0], [0.0, 0.0016, 0.0], [0.0, 0.0, 0.0021]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_wrist_3_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.5"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.00013, 0.0, 0.0], [0.0, 0.00013, 0.0], [0.0, 0.0, 0.00018]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, -0.02], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_tool0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.25"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[8e-05, 0.0, 0.0], [0.0, 8e-05, 0.0], [0.0, 0.0, 0.0001]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_soft_gripper_base_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.3"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.00012, 0.0, 0.0], [0.0, 0.00012, 0.0], [0.0, 0.0, 0.00015]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_soft_gripper_finger_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.05"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[1e-05, 0.0, 0.0], [0.0, 1e-05, 0.0], [0.0, 0.0, 1.5e-05]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_camera_link",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "0.25"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.0001, 0.0, 0.0], [0.0, 0.0001, 0.0], [0.0, 0.0, 0.00015]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        },
+        {
+          "idShort": "Dynamics_camera_optical_frame",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "1.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "origin",
+              "valueType": "xs:string",
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Safety",
+      "idShort": "IGUS_REBEL_6DOF_SafetySubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Joint_shoulder_pan_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_shoulder_lift_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "3.142"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_elbow_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-3.142"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "3.142"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_1_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_2_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_wrist_3_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "-6.283"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "6.283"
+            }
+          ]
+        },
+        {
+          "idShort": "Joint_soft_gripper_finger_joint_Safety",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "lower",
+              "valueType": "xs:double",
+              "value": "0.0"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "upper",
+              "valueType": "xs:double",
+              "value": "0.02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "urn:submodel:robot:IGUS_REBEL_6DOF:Visualization",
+      "idShort": "IGUS_REBEL_6DOF_VisualizationSubmodel",
+      "category": "Robot:IGUS_REBEL_6DOF",
+      "submodelElements": [
+        {
+          "idShort": "Visual_base_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_base_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_shoulder_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_shoulder_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_upper_arm_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_upper_arm_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_forearm_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_forearm_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_1_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_1_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_2_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_2_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_3_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "LightGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.7, 0.7, 0.7, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_wrist_3_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_tool0_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "DarkGrey"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.5, 0.5, 0.5, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_tool0_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_soft_gripper_base_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "Orange"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[1.0, 0.6, 0.2, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_soft_gripper_base_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_soft_gripper_finger_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "Orange"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[1.0, 0.6, 0.2, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_soft_gripper_finger_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_camera_link_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "Black"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.1, 0.1, 0.1, 1.0]"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_camera_link_1",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "mesh",
+              "valueType": "xs:string",
+              "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl"
+            }
+          ]
+        },
+        {
+          "idShort": "Visual_camera_optical_frame_0",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "material",
+              "valueType": "xs:string",
+              "value": "Invisible"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "color",
+              "valueType": "xs:string",
+              "value": "[0.0, 0.0, 0.0, 0.0]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

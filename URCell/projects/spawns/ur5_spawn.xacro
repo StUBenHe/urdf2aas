@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xacro:macro name="spawn_ur5" params="instance xyz rpy robot_ip base_port">
+  <robot name="UR5" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!--自动生成的 spawn 文件-->
+    <!--机器人类型: UR5-->
+    <!--生成时间: 2025-11-10 01:43:05-->
+    <xacro:include filename="${urcell_root}/types/robots/ur5/ur5.xacro" />
+    <link name="base_link" />
+    <link name="base_link_inertia" />
+    <link name="shoulder_link" />
+    <link name="upper_arm_link" />
+    <link name="forearm_link" />
+    <link name="wrist_1_link" />
+    <link name="wrist_2_link" />
+    <link name="wrist_3_link" />
+    <link name="base" />
+    <link name="flange" />
+    <link name="tool0" />
+    <joint name="base_link-base_link_inertia" type="fixed">
+      <parent link="base_link" />
+      <child link="base_link_inertia" />
+      <origin xyz="-1.000000 0.000000 0.000000 0.000000" rpy="0.000000 -1.000000 0.000000 0.000000" />
+      <axis xyz="1.0 0.0 0.0" />
+    </joint><joint name="shoulder_pan_joint" type="revolute">
+      <parent link="base_link_inertia" />
+      <child link="shoulder_link" />
+      <origin xyz="1.000000 0.000000 0.000000 0.000000" rpy="0.000000 1.000000 0.000000 0.000000" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-6.283185307179586" upper="6.283185307179586" effort="150.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="shoulder_lift_joint" type="revolute">
+      <parent link="shoulder_link" />
+      <child link="upper_arm_link" />
+      <origin xyz="1.000000 0.000000 0.000000 0.000000" rpy="0.000000 0.000000 -1.000000 0.000000" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-6.283185307179586" upper="6.283185307179586" effort="150.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="elbow_joint" type="revolute">
+      <parent link="upper_arm_link" />
+      <child link="forearm_link" />
+      <origin xyz="1.000000 0.000000 0.000000 -0.425000" rpy="0.000000 1.000000 0.000000 0.000000" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-3.141592653589793" upper="3.141592653589793" effort="150.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="wrist_1_joint" type="revolute">
+      <parent link="forearm_link" />
+      <child link="wrist_1_link" />
+      <origin xyz="1.000000 0.000000 0.000000 -0.392250" rpy="0.000000 1.000000 0.000000 0.000000" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-6.283185307179586" upper="6.283185307179586" effort="28.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="wrist_2_joint" type="revolute">
+      <parent link="wrist_1_link" />
+      <child link="wrist_2_link" />
+      <origin xyz="1.000000 0.000000 0.000000 0.000000" rpy="0.000000 0.000000 -1.000000 -0.094650" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-6.283185307179586" upper="6.283185307179586" effort="28.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="wrist_3_joint" type="revolute">
+      <parent link="wrist_2_link" />
+      <child link="wrist_3_link" />
+      <origin xyz="1.000000 0.000000 0.000000 0.000000" rpy="0.000000 0.000000 1.000000 0.082300" />
+      <axis xyz="0.0 0.0 1.0" />
+      <limit lower="-6.283185307179586" upper="6.283185307179586" effort="28.0" velocity="3.141592653589793" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint><joint name="base_link-base_fixed_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="base" />
+      <origin xyz="-1.000000 0.000000 0.000000 0.000000" rpy="0.000000 -1.000000 0.000000 0.000000" />
+      <axis xyz="1.0 0.0 0.0" />
+    </joint><joint name="wrist_3-flange" type="fixed">
+      <parent link="wrist_3_link" />
+      <child link="flange" />
+      <origin xyz="0.000000 1.000000 0.000000 0.000000" rpy="0.000000 0.000000 1.000000 0.000000" />
+      <axis xyz="1.0 0.0 0.0" />
+    </joint><joint name="flange-tool0" type="fixed">
+      <parent link="flange" />
+      <child link="tool0" />
+      <origin xyz="0.000000 0.000000 1.000000 0.000000" rpy="1.000000 0.000000 0.000000 0.000000" />
+      <axis xyz="1.0 0.0 0.0" />
+    </joint><!--以下 transmission 为自动生成-->
+    <transmission name="shoulder_pan_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="shoulder_pan_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="shoulder_pan_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><transmission name="shoulder_lift_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="shoulder_lift_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="shoulder_lift_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><transmission name="elbow_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="elbow_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="elbow_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><transmission name="wrist_1_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist_1_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="wrist_1_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><transmission name="wrist_2_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist_2_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="wrist_2_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><transmission name="wrist_3_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist_3_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint><actuator name="wrist_3_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission><gazebo>
+      <plugin name="ros_control" filename="libgazebo_ros_control.so" />
+    </gazebo>
+  </robot>
+</xacro:macro>

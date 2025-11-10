@@ -1,5 +1,5 @@
 {
-  "idShort": "ControlSubmodel",
+  "idShort": "ControlSubmodelFull",
   "submodelElements": [
     {
       "idShort": "Joint_base_link-base_link_inertia_Control",
@@ -8,7 +8,12 @@
         "lower": null,
         "upper": null,
         "effort": null,
-        "velocity": null
+        "velocity": null,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -18,7 +23,12 @@
         "lower": -6.283185307179586,
         "upper": 6.283185307179586,
         "effort": 54.0,
-        "velocity": 3.141592653589793
+        "velocity": 3.141592653589793,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -28,7 +38,12 @@
         "lower": -6.283185307179586,
         "upper": 6.283185307179586,
         "effort": 54.0,
-        "velocity": 3.141592653589793
+        "velocity": 3.141592653589793,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -38,7 +53,12 @@
         "lower": -3.141592653589793,
         "upper": 3.141592653589793,
         "effort": 28.0,
-        "velocity": 3.141592653589793
+        "velocity": 3.141592653589793,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -48,7 +68,12 @@
         "lower": -6.283185307179586,
         "upper": 6.283185307179586,
         "effort": 9.0,
-        "velocity": 6.283185307179586
+        "velocity": 6.283185307179586,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -58,7 +83,12 @@
         "lower": -6.283185307179586,
         "upper": 6.283185307179586,
         "effort": 9.0,
-        "velocity": 6.283185307179586
+        "velocity": 6.283185307179586,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -68,7 +98,12 @@
         "lower": -6.283185307179586,
         "upper": 6.283185307179586,
         "effort": 9.0,
-        "velocity": 6.283185307179586
+        "velocity": 6.283185307179586,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -78,7 +113,12 @@
         "lower": null,
         "upper": null,
         "effort": null,
-        "velocity": null
+        "velocity": null,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -88,7 +128,12 @@
         "lower": null,
         "upper": null,
         "effort": null,
-        "velocity": null
+        "velocity": null,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     },
     {
@@ -98,7 +143,12 @@
         "lower": null,
         "upper": null,
         "effort": null,
-        "velocity": null
+        "velocity": null,
+        "transmission": {
+          "type": "transmission_interface/SimpleTransmission",
+          "mechanicalReduction": 1.0,
+          "hardwareInterface": "hardware_interface/PositionJointInterface"
+        }
       }
     }
   ]

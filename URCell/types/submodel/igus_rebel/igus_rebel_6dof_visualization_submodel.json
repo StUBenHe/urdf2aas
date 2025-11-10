@@ -6,8 +6,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -15,8 +20,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -24,8 +29,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -33,8 +43,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -42,8 +52,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -51,8 +66,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -60,8 +75,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -69,8 +89,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -78,8 +98,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -87,8 +112,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -96,8 +121,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -105,8 +135,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -114,8 +144,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae",
-        "color": null,
-        "material": null
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
@@ -123,8 +158,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -132,8 +167,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae",
-        "color": null,
-        "material": null
+        "material": "DarkGrey",
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ]
       }
     },
     {
@@ -141,8 +181,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -150,8 +190,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae",
-        "color": null,
-        "material": null
+        "material": "Orange",
+        "color": [
+          1.0,
+          0.6,
+          0.2,
+          1.0
+        ]
       }
     },
     {
@@ -159,8 +204,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -168,8 +213,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae",
-        "color": null,
-        "material": null
+        "material": "Orange",
+        "color": [
+          1.0,
+          0.6,
+          0.2,
+          1.0
+        ]
       }
     },
     {
@@ -177,8 +227,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -186,8 +236,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae",
-        "color": null,
-        "material": null
+        "material": "Black",
+        "color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ]
       }
     },
     {
@@ -195,8 +250,8 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl",
-        "color": null,
-        "material": null
+        "material": null,
+        "color": null
       }
     },
     {
@@ -204,8 +259,13 @@
       "modelType": "SubmodelElementCollection",
       "value": {
         "mesh": null,
-        "color": null,
-        "material": null
+        "material": "Invisible",
+        "color": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
       }
     }
   ]

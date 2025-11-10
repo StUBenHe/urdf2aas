@@ -194,94 +194,171 @@ def safe_list(value):
 # ===============================
 # 🧩 子模型生成函数
 # ===============================
-def generate_structure_submodel(robot):
-    """从 URDF 模型生成完整结构子模型（包含 link 与 joint 的实际数值）"""
-    elements = []
+def generate_structure_submodel(robot_name, xml_root):
+    """
+    生成符合 AAS 结构要求的 Structure Submodel。
+    - visuals 和 collisions 分离成集合
+    - origin 作为独立字段
+    - 自动过滤 inertia-only link
+    """
 
-    # === 解析 Link ===
-    for link in robot.links:
-        link_dict = {"type": "link"}
-        if link.inertial:
-            inertial = link.inertial
-            link_dict["mass"] = inertial.mass
-            if inertial.origin is not None:
-                link_dict["com"] = safe_list(inertial.origin)
-            if inertial.inertia is not None:
-                link_dict["inertia"] = safe_list(inertial.inertia)
+    def matrix_to_str(matrix):
+        return json.dumps(matrix, ensure_ascii=False)
 
-        visuals = []
-        for vis in link.visuals:
-            mesh_file = None
-            if hasattr(vis.geometry, "mesh") and vis.geometry.mesh:
-                mesh_file = vis.geometry.mesh.filename
-            visuals.append({
-                "mesh": mesh_file,
-                "origin": safe_list(vis.origin)
-            })
-        if visuals:
-            link_dict["visuals"] = visuals
+    structure_submodel = {
+        "modelType": "Submodel",
+        "id": f"urn:submodel:robot:{robot_name}:Structure",
+        "idShort": f"{robot_name}_StructureSubmodel",
+        "category": f"Robot:{robot_name}",
+        "submodelElements": []
+    }
 
-        collisions = []
-        for col in link.collisions:
-            mesh_file = None
-            if hasattr(col.geometry, "mesh") and col.geometry.mesh:
-                mesh_file = col.geometry.mesh.filename
-            collisions.append({
-                "mesh": mesh_file,
-                "origin": safe_list(col.origin)
-            })
-        if collisions:
-            link_dict["collisions"] = collisions
+    # 解析 links
+    for link in xml_root.findall("link"):
+        link_name = link.attrib["name"]
 
-        elements.append({
-            "idShort": f"Link_{link.name}",
+        # 跳过 inertia-only link
+        if "inertia" in link_name.lower():
+            continue
+
+        link_collection = {
+            "idShort": f"Link_{link_name}",
             "modelType": "SubmodelElementCollection",
-            "value": link_dict
-        })
-
-    # === 解析 Joint ===
-    for joint in robot.joints:
-        joint_dict = {
-            "type": joint.joint_type,
-            "parent": joint.parent,
-            "child": joint.child
+            "value": []
         }
 
-        if joint.origin is not None:
-            origin_data = safe_list(joint.origin)
-            if isinstance(origin_data, (list, tuple)) and len(origin_data) >= 2:
-                joint_dict["origin"] = {
-                    "xyz": safe_list(origin_data[0]),
-                    "rpy": safe_list(origin_data[1])
-                }
-
-        if hasattr(joint, "axis") and joint.axis is not None:
-            joint_dict["axis"] = safe_list(joint.axis)
-
-        if hasattr(joint, "limit") and joint.limit is not None:
-            limit = joint.limit
-            joint_dict["limit"] = {
-                "lower": limit.lower,
-                "upper": limit.upper,
-                "effort": limit.effort,
-                "velocity": limit.velocity
-            }
-
-        if hasattr(joint, "dynamics") and joint.dynamics is not None:
-            dyn = joint.dynamics
-            joint_dict["dynamics"] = {
-                "damping": getattr(dyn, "damping", None),
-                "friction": getattr(dyn, "friction", None)
-            }
-
-        elements.append({
-            "idShort": f"Joint_{joint.name}",
-            "modelType": "SubmodelElementCollection",
-            "value": joint_dict
+        # 添加基本属性
+        link_collection["value"].append({
+            "modelType": "Property",
+            "idShort": "type",
+            "valueType": "xs:string",
+            "value": "link"
         })
 
-    return {"idShort": "StructureSubmodelFull", "submodelElements": elements}
+        # inertia 节点
+        inertia_node = link.find("inertial/inertia")
+        mass_node = link.find("inertial/mass")
 
+        if inertia_node is not None:
+            Ixx = float(inertia_node.attrib.get("ixx", 0))
+            Iyy = float(inertia_node.attrib.get("iyy", 0))
+            Izz = float(inertia_node.attrib.get("izz", 0))
+            Ixy = float(inertia_node.attrib.get("ixy", 0))
+            Ixz = float(inertia_node.attrib.get("ixz", 0))
+            Iyz = float(inertia_node.attrib.get("iyz", 0))
+
+            inertia_matrix = [
+                [Ixx, Ixy, Ixz],
+                [Ixy, Iyy, Iyz],
+                [Ixz, Iyz, Izz]
+            ]
+
+            link_collection["value"].append({
+                "modelType": "Property",
+                "idShort": "inertia",
+                "valueType": "xs:string",
+                "value": matrix_to_str(inertia_matrix)
+            })
+
+        if mass_node is not None:
+            link_collection["value"].append({
+                "modelType": "Property",
+                "idShort": "mass",
+                "valueType": "xs:double",
+                "value": mass_node.attrib.get("value", "0")
+            })
+
+        # visuals
+        visuals_node = link.findall("visual")
+        if visuals_node:
+            visuals_collection = {
+                "idShort": "visuals",
+                "modelType": "SubmodelElementCollection",
+                "value": []
+            }
+            for idx, v in enumerate(visuals_node):
+                mesh_node = v.find("geometry/mesh")
+                origin_node = v.find("origin")
+                mesh_path = mesh_node.attrib.get("filename", "") if mesh_node is not None else ""
+
+                origin = {
+                    "xyz": origin_node.attrib.get("xyz", "0 0 0").split(),
+                    "rpy": origin_node.attrib.get("rpy", "0 0 0").split()
+                } if origin_node is not None else None
+
+                visuals_collection["value"].append({
+                    "idShort": f"visual_{idx}",
+                    "modelType": "SubmodelElementCollection",
+                    "value": [
+                        {"modelType": "Property", "idShort": "mesh", "valueType": "xs:string", "value": mesh_path},
+                        {"modelType": "Property", "idShort": "origin", "valueType": "xs:string", "value": json.dumps(origin)}
+                    ]
+                })
+            link_collection["value"].append(visuals_collection)
+
+        # collisions
+        collisions_node = link.findall("collision")
+        if collisions_node:
+            collisions_collection = {
+                "idShort": "collisions",
+                "modelType": "SubmodelElementCollection",
+                "value": []
+            }
+            for idx, c in enumerate(collisions_node):
+                mesh_node = c.find("geometry/mesh")
+                origin_node = c.find("origin")
+                mesh_path = mesh_node.attrib.get("filename", "") if mesh_node is not None else ""
+
+                origin = {
+                    "xyz": origin_node.attrib.get("xyz", "0 0 0").split(),
+                    "rpy": origin_node.attrib.get("rpy", "0 0 0").split()
+                } if origin_node is not None else None
+
+                collisions_collection["value"].append({
+                    "idShort": f"collision_{idx}",
+                    "modelType": "SubmodelElementCollection",
+                    "value": [
+                        {"modelType": "Property", "idShort": "mesh", "valueType": "xs:string", "value": mesh_path},
+                        {"modelType": "Property", "idShort": "origin", "valueType": "xs:string", "value": json.dumps(origin)}
+                    ]
+                })
+            link_collection["value"].append(collisions_collection)
+
+        structure_submodel["submodelElements"].append(link_collection)
+
+    # joints
+    for joint in xml_root.findall("joint"):
+        joint_name = joint.attrib["name"]
+        joint_type = joint.attrib.get("type", "fixed")
+        parent = joint.find("parent").attrib.get("link", "")
+        child = joint.find("child").attrib.get("link", "")
+
+        joint_collection = {
+            "idShort": f"Joint_{joint_name}",
+            "modelType": "SubmodelElementCollection",
+            "value": [
+                {"modelType": "Property", "idShort": "type", "valueType": "xs:string", "value": joint_type},
+                {"modelType": "Property", "idShort": "parent", "valueType": "xs:string", "value": parent},
+                {"modelType": "Property", "idShort": "child", "valueType": "xs:string", "value": child},
+            ]
+        }
+
+        origin_node = joint.find("origin")
+        if origin_node is not None:
+            origin = {
+                "xyz": origin_node.attrib.get("xyz", "0 0 0").split(),
+                "rpy": origin_node.attrib.get("rpy", "0 0 0").split()
+            }
+            joint_collection["value"].append({
+                "modelType": "Property",
+                "idShort": "origin",
+                "valueType": "xs:string",
+                "value": json.dumps(origin)
+            })
+
+        structure_submodel["submodelElements"].append(joint_collection)
+
+    return structure_submodel
 
 def generate_control_submodel(robot, control_template_path, joint_limits):
     """从 URDF + 控制模板（JSON）生成完整控制子模型"""
@@ -314,6 +391,12 @@ def generate_control_submodel(robot, control_template_path, joint_limits):
             "upper": limit.upper if limit else limits_yaml.get("upper"),
             "effort": limit.effort if limit else limits_yaml.get("effort"),
             "velocity": limit.velocity if limit else limits_yaml.get("velocity"),
+            # ✅ transmission 信息
+            "transmission": {
+                "type": "transmission_interface/SimpleTransmission",
+                "mechanicalReduction": 1.0,
+                "hardwareInterface": "hardware_interface/PositionJointInterface"
+            }
         }
 
         # 控制器匹配
@@ -377,6 +460,7 @@ def generate_safety_submodel(robot):
 
 
 def generate_visualization_submodel(robot, visual_params):
+    """包含 mesh、材质、颜色的可视化子模型"""
     elements = []
     for link in robot.links:
         vis_param = visual_params.get(link.name, {})
@@ -384,16 +468,28 @@ def generate_visualization_submodel(robot, visual_params):
             mesh_file = None
             if hasattr(vis.geometry, "mesh") and vis.geometry.mesh:
                 mesh_file = vis.geometry.mesh.filename
+
+            # ✅ 读取材质信息
+            material = getattr(vis, "material", None)
+            mat_name = getattr(material, "name", None)
+            color = None
+            if material and hasattr(material, "color") and material.color is not None:
+                if hasattr(material.color, "rgba"):
+                    color = safe_list(material.color.rgba)
+                else:
+                    color = safe_list(material.color)
+
             elements.append({
                 "idShort": f"Visual_{link.name}_{i}",
                 "modelType": "SubmodelElementCollection",
                 "value": {
                     "mesh": mesh_file,
-                    "color": vis_param.get("color"),
-                    "material": vis_param.get("material")
+                    "material": mat_name or vis_param.get("material"),
+                    "color": color or vis_param.get("color")
                 }
             })
     return {"idShort": "VisualizationSubmodel", "submodelElements": elements}
+
 
 import uuid
 import json
@@ -493,7 +589,9 @@ def main(urdf_path, yaml_dir, output_dir="output"):
     base_name = os.path.splitext(os.path.basename(urdf_path))[0]
     control_template_path = os.path.join(yaml_dir, f"{base_name}_control.json")
 
-    save_submodel(generate_structure_submodel(robot), f"{base_name}_structure_submodel", output_dir)
+    save_submodel(generate_structure_submodel(robot, root),
+                  f"{base_name}_structure_submodel", output_dir)
+
     save_submodel(generate_control_submodel(robot, control_template_path, joint_limits), f"{base_name}_control_submodel", output_dir)
     save_submodel(generate_kinematics_submodel(kinematics), f"{base_name}_kinematics_submodel", output_dir)
     save_submodel(generate_dynamics_submodel(robot, physical), f"{base_name}_dynamics_submodel", output_dir)
@@ -511,7 +609,20 @@ if __name__ == "__main__":
     config_root = os.path.join(base_dir, "types", "ur_description", "config")
     submodel_root = os.path.join(base_dir, "types", "submodel")
 
-    ur_names = ["ur3"]  # 可扩展为 ["ur3", "ur5", "ur10", "ur30", ...]
+    ur_names = [
+        "ur3",
+        "ur3e",
+        "ur5",
+        "ur5e",
+        "ur7e",
+        "ur10",
+        "ur10e",
+        "ur12e",
+        "ur15",
+        "ur16e",
+        "ur20",
+        "ur30"
+    ]
     for name in ur_names:
         urdf_file = os.path.join(urdf_root, f"{name}.urdf")
         yaml_dir = os.path.join(config_root, name)

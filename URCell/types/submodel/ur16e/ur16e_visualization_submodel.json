@@ -5,63 +5,98 @@
       "idShort": "Visual_base_link_inertia_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/base.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_shoulder_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/shoulder.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_upper_arm_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur16e/visual/upperarm.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur16e/visual/upperarm.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_forearm_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur16e/visual/forearm.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur16e/visual/forearm.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_wrist_1_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist1.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_wrist_2_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist2.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     },
     {
       "idShort": "Visual_wrist_3_link_0",
       "modelType": "SubmodelElementCollection",
       "value": {
-        "mesh": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
-        "color": null,
-        "material": null
+        "mesh": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur10e/visual/wrist3.dae",
+        "material": "LightGrey",
+        "color": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
       }
     }
   ]

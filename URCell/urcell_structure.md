@@ -3,25 +3,19 @@
 ```
 URCell/
 ├─ projects
-│   ├─ cellA
-│   │   ├─ igus_rebel_spawn.xacro
-│   │   └─ ur5_spawn.xacro
-│   └─ system
-│       ├─ config
-│       ├─ launch
-│       ├─ multi_ur.xacro
-│       ├─ rviz
-│       └─ urdf
+│   ├─ multi_ur.xacro
+│   └─ spawns
+│       ├─ igus_rebel_spawn.xacro
+│       └─ ur5_spawn.xacro
 ├─ tools
-│   ├─ README.txt
-│   ├─ add_kind_template.py
+│   ├─ __pycache__
+│   │   └─ generate_aas_submodels_ur.cpython-312.pyc
 │   ├─ check_env.py
 │   ├─ env_report.txt
-│   ├─ fix_aas_json.py
-│   ├─ generate_aas_environment_rebel_v3.py
+│   ├─ generate_aas_submodels_igus_rebel.py
 │   ├─ generate_aas_submodels_ur.py
+│   ├─ generate_spawn_xacro.py
 │   ├─ generate_structure_doc.py
-│   ├─ kind_semantic_tool.py
 │   ├─ output
 │   │   ├─ debug_ur10_fixed.urdf
 │   │   ├─ debug_ur10e_fixed.urdf
@@ -35,12 +29,17 @@ URCell/
 │   │   ├─ debug_ur5_fixed.urdf
 │   │   ├─ debug_ur5e_fixed.urdf
 │   │   └─ debug_ur7e_fixed.urdf
-│   ├─ patch_aas_shells.py
-│   ├─ patch_env_json.py
-│   ├─ set_kind_and_semantic.py
-│   └─ validate.py
+│   └─ probe program
+│       ├─ add_kind_template.py
+│       ├─ fix_aas_json.py
+│       ├─ generate_aas_environment_ur.py
+│       ├─ generate_aas_from_urdf.py
+│       ├─ kind_semantic_tool.py
+│       ├─ patch_aas_shells.py
+│       ├─ patch_env_json.py
+│       └─ set_kind_and_semantic.py
 ├─ types
-│   ├─ UR_types.aasx
+│   ├─ Ropot_types.aasx
 │   ├─ backup
 │   │   └─ backup007.aasx
 │   ├─ igus_rebel_description_ros2
@@ -55,10 +54,17 @@ URCell/
 │   │   └─ urdf
 │   ├─ submodel
 │   │   ├─ igus_rebel
-│   │   │   └─ igus_rebel_environment.json
+│   │   │   ├─ igus_rebel_6dof_control_submodel.json
+│   │   │   ├─ igus_rebel_6dof_dynamics_submodel.json
+│   │   │   ├─ igus_rebel_6dof_environment.json
+│   │   │   ├─ igus_rebel_6dof_kinematics_submodel.json
+│   │   │   ├─ igus_rebel_6dof_safety_submodel.json
+│   │   │   ├─ igus_rebel_6dof_structure_submodel.json
+│   │   │   └─ igus_rebel_6dof_visualization_submodel.json
 │   │   ├─ ur10
 │   │   │   ├─ ur10_control_submodel.json
 │   │   │   ├─ ur10_dynamics_submodel.json
+│   │   │   ├─ ur10_environment.json
 │   │   │   ├─ ur10_kinematics_submodel.json
 │   │   │   ├─ ur10_safety_submodel.json
 │   │   │   ├─ ur10_structure_submodel.json
@@ -66,6 +72,7 @@ URCell/
 │   │   ├─ ur10e
 │   │   │   ├─ ur10e_control_submodel.json
 │   │   │   ├─ ur10e_dynamics_submodel.json
+│   │   │   ├─ ur10e_environment.json
 │   │   │   ├─ ur10e_kinematics_submodel.json
 │   │   │   ├─ ur10e_safety_submodel.json
 │   │   │   ├─ ur10e_structure_submodel.json
@@ -73,6 +80,7 @@ URCell/
 │   │   ├─ ur12e
 │   │   │   ├─ ur12e_control_submodel.json
 │   │   │   ├─ ur12e_dynamics_submodel.json
+│   │   │   ├─ ur12e_environment.json
 │   │   │   ├─ ur12e_kinematics_submodel.json
 │   │   │   ├─ ur12e_safety_submodel.json
 │   │   │   ├─ ur12e_structure_submodel.json
@@ -80,6 +88,7 @@ URCell/
 │   │   ├─ ur15
 │   │   │   ├─ ur15_control_submodel.json
 │   │   │   ├─ ur15_dynamics_submodel.json
+│   │   │   ├─ ur15_environment.json
 │   │   │   ├─ ur15_kinematics_submodel.json
 │   │   │   ├─ ur15_safety_submodel.json
 │   │   │   ├─ ur15_structure_submodel.json
@@ -87,6 +96,7 @@ URCell/
 │   │   ├─ ur16e
 │   │   │   ├─ ur16e_control_submodel.json
 │   │   │   ├─ ur16e_dynamics_submodel.json
+│   │   │   ├─ ur16e_environment.json
 │   │   │   ├─ ur16e_kinematics_submodel.json
 │   │   │   ├─ ur16e_safety_submodel.json
 │   │   │   ├─ ur16e_structure_submodel.json
@@ -94,6 +104,7 @@ URCell/
 │   │   ├─ ur20
 │   │   │   ├─ ur20_control_submodel.json
 │   │   │   ├─ ur20_dynamics_submodel.json
+│   │   │   ├─ ur20_environment.json
 │   │   │   ├─ ur20_kinematics_submodel.json
 │   │   │   ├─ ur20_safety_submodel.json
 │   │   │   ├─ ur20_structure_submodel.json
@@ -101,6 +112,7 @@ URCell/
 │   │   ├─ ur3
 │   │   │   ├─ ur3_control_submodel.json
 │   │   │   ├─ ur3_dynamics_submodel.json
+│   │   │   ├─ ur3_environment.json
 │   │   │   ├─ ur3_kinematics_submodel.json
 │   │   │   ├─ ur3_safety_submodel.json
 │   │   │   ├─ ur3_structure_submodel.json
@@ -108,6 +120,7 @@ URCell/
 │   │   ├─ ur30
 │   │   │   ├─ ur30_control_submodel.json
 │   │   │   ├─ ur30_dynamics_submodel.json
+│   │   │   ├─ ur30_environment.json
 │   │   │   ├─ ur30_kinematics_submodel.json
 │   │   │   ├─ ur30_safety_submodel.json
 │   │   │   ├─ ur30_structure_submodel.json
@@ -115,6 +128,7 @@ URCell/
 │   │   ├─ ur3e
 │   │   │   ├─ ur3e_control_submodel.json
 │   │   │   ├─ ur3e_dynamics_submodel.json
+│   │   │   ├─ ur3e_environment.json
 │   │   │   ├─ ur3e_kinematics_submodel.json
 │   │   │   ├─ ur3e_safety_submodel.json
 │   │   │   ├─ ur3e_structure_submodel.json
@@ -122,6 +136,7 @@ URCell/
 │   │   ├─ ur5
 │   │   │   ├─ ur5_control_submodel.json
 │   │   │   ├─ ur5_dynamics_submodel.json
+│   │   │   ├─ ur5_environment.json
 │   │   │   ├─ ur5_kinematics_submodel.json
 │   │   │   ├─ ur5_safety_submodel.json
 │   │   │   ├─ ur5_structure_submodel.json
@@ -129,6 +144,7 @@ URCell/
 │   │   ├─ ur5e
 │   │   │   ├─ ur5e_control_submodel.json
 │   │   │   ├─ ur5e_dynamics_submodel.json
+│   │   │   ├─ ur5e_environment.json
 │   │   │   ├─ ur5e_kinematics_submodel.json
 │   │   │   ├─ ur5e_safety_submodel.json
 │   │   │   ├─ ur5e_structure_submodel.json
@@ -136,6 +152,7 @@ URCell/
 │   │   └─ ur7e
 │   │       ├─ ur7e_control_submodel.json
 │   │       ├─ ur7e_dynamics_submodel.json
+│   │       ├─ ur7e_environment.json
 │   │       ├─ ur7e_kinematics_submodel.json
 │   │       ├─ ur7e_safety_submodel.json
 │   │       ├─ ur7e_structure_submodel.json
@@ -184,7 +201,6 @@ URCell/
 │   │       │       ├─ Scripts
 │   │       │       ├─ pyvenv.cfg
 │   │       │       └─ share
-│   │       ├─ spawn_ur5.xacro
 │   │       ├─ ur.ros2_control.xacro
 │   │       ├─ ur.urdf.xacro
 │   │       ├─ ur10.urdf

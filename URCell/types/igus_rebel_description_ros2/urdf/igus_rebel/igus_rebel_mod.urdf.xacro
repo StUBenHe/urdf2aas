@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="igus_rebel_mod">
 
 	<!-- Controller settings, only enable a single one in the launch file -->

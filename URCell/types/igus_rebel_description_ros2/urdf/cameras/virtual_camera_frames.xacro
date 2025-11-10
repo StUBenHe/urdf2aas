@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <robot name="virtual_camera_frames" xmlns:xacro="http://ros.org/wiki/xacro">
 
 	<!-- Dummy inertia for virtual camera frames -->

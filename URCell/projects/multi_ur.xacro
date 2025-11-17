@@ -1,104 +1,34 @@
-﻿<?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="multi_ur">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="multi_ur">
 
-  <xacro:arg name="urcell_root" default="../../../"/>
-
-  <xacro:include filename="$(arg urcell_root)/projects/spawns/ur5_spawn.xacro"/>
-  <xacro:include filename="$(arg urcell_root)/projects/spawns/igus_rebel_spawn.xacro"/>
+  <!-- 正确的 include 写法 -->
+  <xacro:include filename="spawns/ur5_spawn_hand.xacro"/>
 
   <link name="world"/>
 
-  <xacro:if value="true">
-    <joint name="world_to_robot1" type="fixed">
-      <parent link="world"/>
-      <child link="robot1_base_link"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </joint>
-    
-    <xacro:ur5_spawn ns="robot1" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.101" 
-                    base_port="50000"/>
-  </xacro:if>
 
-  <xacro:if value="true">
-    <joint name="world_to_robot2" type="fixed">
-      <parent link="world"/>
-      <child link="robot2_base_link"/>
-      <origin xyz="0 1 0" rpy="0 0 0"/>
-    </joint>
-    
-    <xacro:igus_rebel_spawn ns="robot2" 
-                           xyz="0 0 0" 
-                           rpy="0 0 0"
-                           robot_ip="192.168.88.201" 
-                           base_port="70000"/>
-  </xacro:if>
 
-  <xacro:if value="false">
-    <joint name="world_to_ur_2" type="fixed">
-      <parent link="world"/>
-      <child link="ur_2_base_link"/>
-      <origin xyz="1 0 0" rpy="0 0 0"/>
-    </joint>
-    <xacro:ur5_spawn ns="ur_2" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.102" 
-                    base_port="60000"/>
-  </xacro:if>
 
-  <xacro:if value="false">
-    <joint name="world_to_ur_3" type="fixed">
-      <parent link="world"/>
-      <child link="ur_3_base_link"/>
-      <origin xyz="1 1 0" rpy="0 0 0"/>
-    </joint>
-    <xacro:ur5_spawn ns="ur_3" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.103" 
-                    base_port="60100"/>
-  </xacro:if>
 
-  <xacro:if value="false">
-    <joint name="world_to_ur_4" type="fixed">
-      <parent link="world"/>
-      <child link="ur_4_base_link"/>
-      <origin xyz="-1 0 0" rpy="0 0 0"/>
-    </joint>
-    <xacro:ur5_spawn ns="ur_4" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.104" 
-                    base_port="60200"/>
-  </xacro:if>
 
-  <xacro:if value="false">
-    <joint name="world_to_ur_5" type="fixed">
-      <parent link="world"/>
-      <child link="ur_5_base_link"/>
-      <origin xyz="0 2 0" rpy="0 0 0"/>
-    </joint>
-    <xacro:ur5_spawn ns="ur_5" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.105" 
-                    base_port="60300"/>
-  </xacro:if>
+  <joint name="world_to_robot1" type="fixed">
+    <parent link="world"/>
+    <child link="robot1_base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
 
-  <xacro:if value="false">
-    <joint name="world_to_ur_6" type="fixed">
-      <parent link="world"/>
-      <child link="ur_6_base_link"/>
-      <origin xyz="0 -2 0" rpy="0 0 0"/>
-    </joint>
-    <xacro:ur5_spawn ns="ur_6" 
-                    xyz="0 0 0" 
-                    rpy="0 0 0"
-                    robot_ip="192.168.88.106" 
-                    base_port="60400"/>
-  </xacro:if>
+  <xacro:ur5_spawn_hand prefix="robot1_" xyz="0 0 0" rpy="0 0 0"/>
+
+
+
+
+
+  <joint name="world_to_robot2" type="fixed">
+    <parent link="world"/>
+    <child link="robot2_base_link"/>
+    <origin xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:ur5_spawn_hand prefix="robot2_" xyz="0 1 0" rpy="0 0 0"/>
 
 </robot>

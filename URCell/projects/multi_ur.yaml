@@ -1,0 +1,16 @@
+robots:
+  - name: robot1
+    type: ur5
+    xyz: [0, 0, 0]
+    rpy: [0, 0, 0]
+    ip: 192.168.88.101
+    port: 50000
+    enable: true
+
+  - name: robot2
+    type: igus_rebel
+    xyz: [0, 1, 0]
+    rpy: [0, 0, 0]
+    ip: 192.168.88.201
+    port: 70000
+    enable: true

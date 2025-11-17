@@ -5,7 +5,7 @@
 <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/ur_description/meshes" />
   <!-- 加载 UR5 关节限制参数 -->
   <xacro:property name="joint_limits"
-                  value="${xacro.load_yaml('spawns/ur5_joint_limits.yaml')}" />
+                  value="${xacro.load_yaml('spawns/joint_limits.yaml')}" />
 
   <!-- ============================= -->
   <!--            LINKS             -->

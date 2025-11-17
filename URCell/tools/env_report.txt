@@ -1,0 +1,20 @@
+===================================================
+🔍 AAS & URCell Environment Check Utility
+Generated: 2025-11-05 20:36:52
+===================================================
+🐍 Python Version: 3.12.10
+💻 Platform: Windows 11
+---------------------------------------------------
+❌ urdfpy          NOT FOUND (No module named 'urdfpy')
+❌ networkx        NOT FOUND (No module named 'networkx')
+❌ numpy           NOT FOUND (No module named 'numpy')
+❌ scipy           NOT FOUND (No module named 'scipy')
+❌ pandas          NOT FOUND (No module named 'pandas')
+❌ numba           NOT FOUND (No module named 'numba')
+❌ PyYAML          NOT FOUND (No module named 'PyYAML')
+❌ trimesh         NOT FOUND (No module named 'trimesh')
+❌ pyrender        NOT FOUND (No module named 'pyrender')
+❌ torch           NOT FOUND (No module named 'torch')
+❌ transformers    NOT FOUND (No module named 'transformers')
+---------------------------------------------------
+⚠️ Environment check found missing packages.

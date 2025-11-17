@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="igus_rebel">
+  <!--Auto-generated prefixed XACRO for IGUS_REBEL-->
+  <!--Generated at 2025-11-14 02:18:06-->
+  <xacro:arg name="tf_prefix" default="igus_rebel_" />
+  <xacro:property name="joint_limits" value="${{load_yaml('$(find ur_description)/config/igus_rebel_joint_limits.yaml')}}" />
+  <joint name="${tf_prefix}Link_base_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_shoulder_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_upper_arm_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_forearm_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_wrist_1_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_wrist_2_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_wrist_3_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_tool0" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_soft_gripper_base_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_soft_gripper_finger_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_camera_link" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Link_camera_optical_frame" type="link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_shoulder_pan_joint" type="revolute">
+    <parent link="${tf_prefix}base_link" />
+    <origin xyz="0 0 0.089" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_shoulder_lift_joint" type="revolute">
+    <parent link="${tf_prefix}shoulder_link" />
+    <origin xyz="0 0 0.089" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_elbow_joint" type="revolute">
+    <parent link="${tf_prefix}upper_arm_link" />
+    <origin xyz="0 0 0.135" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_wrist_1_joint" type="revolute">
+    <parent link="${tf_prefix}forearm_link" />
+    <origin xyz="0 0 0.121" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_wrist_2_joint" type="revolute">
+    <parent link="${tf_prefix}wrist_1_link" />
+    <origin xyz="0 0 0.092" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_wrist_3_joint" type="revolute">
+    <parent link="${tf_prefix}wrist_2_link" />
+    <origin xyz="0 0 0.083" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_tool0_fixed" type="fixed">
+    <parent link="${tf_prefix}wrist_3_link" />
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_soft_gripper_mount" type="fixed">
+    <parent link="${tf_prefix}tool0" />
+    <origin xyz="0 0 0.02" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_soft_gripper_finger_joint" type="prismatic">
+    <parent link="${tf_prefix}soft_gripper_base_link" />
+    <origin xyz="0 0 0.03" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_camera_mount_joint" type="fixed">
+    <parent link="${tf_prefix}tool0" />
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_camera_optical_joint" type="fixed">
+    <parent link="${tf_prefix}camera_link" />
+    <origin xyz="0 0 0.02" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_shoulder_pan_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" effort="80.0" velocity="3.142" />
+  </joint><joint name="${tf_prefix}Joint_shoulder_lift_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-3.142" upper="3.142" effort="80.0" velocity="3.142" />
+  </joint><joint name="${tf_prefix}Joint_elbow_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-3.142" upper="3.142" effort="50.0" velocity="3.142" />
+  </joint><joint name="${tf_prefix}Joint_wrist_1_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+  </joint><joint name="${tf_prefix}Joint_wrist_2_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+  </joint><joint name="${tf_prefix}Joint_wrist_3_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+  </joint><joint name="${tf_prefix}Joint_tool0_fixed_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_soft_gripper_mount_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_soft_gripper_finger_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="0.0" upper="0.02" effort="10.0" velocity="0.05" />
+  </joint><joint name="${tf_prefix}Joint_camera_mount_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Joint_camera_optical_joint_Control" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_shoulder_pan_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_shoulder_lift_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_elbow_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_wrist_1_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_wrist_2_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_wrist_3_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Kinematics_soft_gripper_finger_joint" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Dynamics_base_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_shoulder_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_upper_arm_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_forearm_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_wrist_1_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_wrist_2_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_wrist_3_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_tool0" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_soft_gripper_base_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_soft_gripper_finger_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_camera_link" type="revolute" />
+  <joint name="${tf_prefix}Dynamics_camera_optical_frame" type="revolute" />
+  <joint name="${tf_prefix}Joint_shoulder_pan_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" />
+  </joint><joint name="${tf_prefix}Joint_shoulder_lift_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-3.142" upper="3.142" />
+  </joint><joint name="${tf_prefix}Joint_elbow_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-3.142" upper="3.142" />
+  </joint><joint name="${tf_prefix}Joint_wrist_1_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" />
+  </joint><joint name="${tf_prefix}Joint_wrist_2_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" />
+  </joint><joint name="${tf_prefix}Joint_wrist_3_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="-6.283" upper="6.283" />
+  </joint><joint name="${tf_prefix}Joint_soft_gripper_finger_joint_Safety" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <limit lower="0.0" upper="0.02" />
+  </joint><joint name="${tf_prefix}Visual_base_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_base_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_shoulder_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_shoulder_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_upper_arm_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_upper_arm_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_forearm_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_forearm_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_1_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_1_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_2_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_2_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_3_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_wrist_3_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_tool0_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_tool0_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_soft_gripper_base_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_soft_gripper_base_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_soft_gripper_finger_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_soft_gripper_finger_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_camera_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_camera_link_1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><joint name="${tf_prefix}Visual_camera_optical_frame_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint><link name="${tf_prefix}base_link" />
+  <link name="${tf_prefix}camera_link" />
+  <link name="${tf_prefix}forearm_link" />
+  <link name="${tf_prefix}shoulder_link" />
+  <link name="${tf_prefix}soft_gripper_base_link" />
+  <link name="${tf_prefix}tool0" />
+  <link name="${tf_prefix}upper_arm_link" />
+  <link name="${tf_prefix}wrist_1_link" />
+  <link name="${tf_prefix}wrist_2_link" />
+  <link name="${tf_prefix}wrist_3_link" />
+</robot>

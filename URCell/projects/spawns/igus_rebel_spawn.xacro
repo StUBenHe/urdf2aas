@@ -1,0 +1,863 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="IGUS_REBEL" xmlns:xacro="http://wiki.ros.org/xacro">
+  <!--Auto-generated pure data-driven macro (with links + transmissions)-->
+  <!--Robot: IGUS_REBEL-->
+  <!--Generated at: 2025-11-11 17:43:21-->
+  <xacro:macro name="igus_spawn">
+    <link name="base_link" />
+    <link name="camera_link" />
+    <link name="forearm_link" />
+    <link name="shoulder_link" />
+    <link name="soft_gripper_base_link" />
+    <link name="tool0" />
+    <link name="upper_arm_link" />
+    <link name="wrist_1_link" />
+    <link name="wrist_2_link" />
+    <link name="wrist_3_link" />
+    <joint name="Link_base_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_shoulder_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_upper_arm_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_forearm_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_wrist_1_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_wrist_2_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_wrist_3_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_tool0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_soft_gripper_base_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_soft_gripper_finger_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_camera_link" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Link_camera_optical_frame" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Joint_shoulder_pan_joint" type="revolute">
+      <parent link="base_link" />
+      <origin xyz="0 0 0.089" rpy="0 0 0" />
+    </joint><joint name="Joint_shoulder_lift_joint" type="revolute">
+      <parent link="shoulder_link" />
+      <origin xyz="0 0 0.089" rpy="0 0 0" />
+    </joint><joint name="Joint_elbow_joint" type="revolute">
+      <parent link="upper_arm_link" />
+      <origin xyz="0 0 0.135" rpy="0 0 0" />
+    </joint><joint name="Joint_wrist_1_joint" type="revolute">
+      <parent link="forearm_link" />
+      <origin xyz="0 0 0.121" rpy="0 0 0" />
+    </joint><joint name="Joint_wrist_2_joint" type="revolute">
+      <parent link="wrist_1_link" />
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+    </joint><joint name="Joint_wrist_3_joint" type="revolute">
+      <parent link="wrist_2_link" />
+      <origin xyz="0 0 0.083" rpy="0 0 0" />
+    </joint><joint name="Joint_tool0_fixed" type="revolute">
+      <parent link="wrist_3_link" />
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+    </joint><joint name="Joint_soft_gripper_mount" type="revolute">
+      <parent link="tool0" />
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+    </joint><joint name="Joint_soft_gripper_finger_joint" type="revolute">
+      <parent link="soft_gripper_base_link" />
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+    </joint><joint name="Joint_camera_mount_joint" type="revolute">
+      <parent link="tool0" />
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+    </joint><joint name="Joint_camera_optical_joint" type="revolute">
+      <parent link="camera_link" />
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+    </joint><joint name="Joint_shoulder_pan_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" effort="80.0" velocity="3.142" />
+    </joint><joint name="Joint_shoulder_lift_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-3.142" upper="3.142" effort="80.0" velocity="3.142" />
+    </joint><joint name="Joint_elbow_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-3.142" upper="3.142" effort="50.0" velocity="3.142" />
+    </joint><joint name="Joint_wrist_1_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+    </joint><joint name="Joint_wrist_2_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+    </joint><joint name="Joint_wrist_3_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" effort="40.0" velocity="6.283" />
+    </joint><joint name="Joint_tool0_fixed_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Joint_soft_gripper_mount_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Joint_soft_gripper_finger_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="0.0" upper="0.02" effort="10.0" velocity="0.05" />
+    </joint><joint name="Joint_camera_mount_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Joint_camera_optical_joint_Control" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_shoulder_pan_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_shoulder_lift_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_elbow_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_wrist_1_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_wrist_2_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_wrist_3_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Kinematics_soft_gripper_finger_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Dynamics_base_link" type="revolute" />
+    <joint name="Dynamics_shoulder_link" type="revolute" />
+    <joint name="Dynamics_upper_arm_link" type="revolute" />
+    <joint name="Dynamics_forearm_link" type="revolute" />
+    <joint name="Dynamics_wrist_1_link" type="revolute" />
+    <joint name="Dynamics_wrist_2_link" type="revolute" />
+    <joint name="Dynamics_wrist_3_link" type="revolute" />
+    <joint name="Dynamics_tool0" type="revolute" />
+    <joint name="Dynamics_soft_gripper_base_link" type="revolute" />
+    <joint name="Dynamics_soft_gripper_finger_link" type="revolute" />
+    <joint name="Dynamics_camera_link" type="revolute" />
+    <joint name="Dynamics_camera_optical_frame" type="revolute" />
+    <joint name="Joint_shoulder_pan_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" />
+    </joint><joint name="Joint_shoulder_lift_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-3.142" upper="3.142" />
+    </joint><joint name="Joint_elbow_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-3.142" upper="3.142" />
+    </joint><joint name="Joint_wrist_1_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" />
+    </joint><joint name="Joint_wrist_2_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" />
+    </joint><joint name="Joint_wrist_3_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="-6.283" upper="6.283" />
+    </joint><joint name="Joint_soft_gripper_finger_joint_Safety" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <limit lower="0.0" upper="0.02" />
+    </joint><joint name="Visual_base_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_base_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_shoulder_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_shoulder_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_upper_arm_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_upper_arm_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_forearm_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_forearm_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_1_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_1_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_2_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_2_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_3_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_wrist_3_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_tool0_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_tool0_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_soft_gripper_base_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_soft_gripper_base_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_soft_gripper_finger_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_soft_gripper_finger_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_camera_link_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_camera_link_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint><joint name="Visual_camera_optical_frame_0" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+  </xacro:macro><!--Auto-generated transmission blocks-->
+  <transmission name="Link_base_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_base_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_base_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_shoulder_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_shoulder_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_shoulder_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_upper_arm_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_upper_arm_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_upper_arm_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_forearm_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_forearm_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_forearm_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_wrist_1_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_wrist_1_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_wrist_1_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_wrist_2_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_wrist_2_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_wrist_2_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_wrist_3_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_wrist_3_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_wrist_3_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_tool0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_tool0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_tool0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_soft_gripper_base_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_soft_gripper_base_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_soft_gripper_base_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_soft_gripper_finger_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_soft_gripper_finger_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_soft_gripper_finger_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_camera_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_camera_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_camera_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Link_camera_optical_frame_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Link_camera_optical_frame">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Link_camera_optical_frame_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_pan_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_pan_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_pan_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_lift_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_lift_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_lift_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_elbow_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_elbow_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_elbow_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_1_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_2_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_3_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_3_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_3_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_tool0_fixed_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_tool0_fixed">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_tool0_fixed_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_soft_gripper_mount_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_soft_gripper_mount">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_soft_gripper_mount_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_soft_gripper_finger_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_soft_gripper_finger_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_soft_gripper_finger_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_camera_mount_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_camera_mount_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_camera_mount_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_camera_optical_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_camera_optical_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_camera_optical_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_pan_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_pan_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_pan_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_lift_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_lift_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_lift_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_elbow_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_elbow_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_elbow_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_1_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_1_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_1_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_2_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_2_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_2_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_3_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_3_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_3_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_tool0_fixed_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_tool0_fixed_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_tool0_fixed_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_soft_gripper_mount_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_soft_gripper_mount_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_soft_gripper_mount_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_soft_gripper_finger_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_soft_gripper_finger_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_soft_gripper_finger_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_camera_mount_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_camera_mount_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_camera_mount_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_camera_optical_joint_Control_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_camera_optical_joint_Control">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_camera_optical_joint_Control_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_shoulder_pan_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_shoulder_pan_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_shoulder_pan_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_shoulder_lift_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_shoulder_lift_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_shoulder_lift_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_elbow_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_elbow_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_elbow_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_wrist_1_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_wrist_1_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_wrist_1_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_wrist_2_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_wrist_2_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_wrist_2_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_wrist_3_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_wrist_3_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_wrist_3_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Kinematics_soft_gripper_finger_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Kinematics_soft_gripper_finger_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Kinematics_soft_gripper_finger_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_base_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_base_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_base_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_shoulder_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_shoulder_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_shoulder_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_upper_arm_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_upper_arm_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_upper_arm_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_forearm_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_forearm_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_forearm_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_wrist_1_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_wrist_1_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_wrist_1_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_wrist_2_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_wrist_2_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_wrist_2_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_wrist_3_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_wrist_3_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_wrist_3_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_tool0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_tool0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_tool0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_soft_gripper_base_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_soft_gripper_base_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_soft_gripper_base_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_soft_gripper_finger_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_soft_gripper_finger_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_soft_gripper_finger_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_camera_link_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_camera_link">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_camera_link_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Dynamics_camera_optical_frame_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Dynamics_camera_optical_frame">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Dynamics_camera_optical_frame_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_pan_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_pan_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_pan_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_shoulder_lift_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_shoulder_lift_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_shoulder_lift_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_elbow_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_elbow_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_elbow_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_1_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_1_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_1_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_2_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_2_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_2_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_wrist_3_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_wrist_3_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_wrist_3_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Joint_soft_gripper_finger_joint_Safety_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint_soft_gripper_finger_joint_Safety">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Joint_soft_gripper_finger_joint_Safety_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_base_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_base_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_base_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_base_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_base_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_base_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_shoulder_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_shoulder_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_shoulder_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_shoulder_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_shoulder_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_shoulder_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_upper_arm_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_upper_arm_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_upper_arm_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_upper_arm_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_upper_arm_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_upper_arm_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_forearm_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_forearm_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_forearm_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_forearm_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_forearm_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_forearm_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_1_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_1_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_1_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_1_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_1_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_1_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_2_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_2_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_2_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_2_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_2_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_2_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_3_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_3_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_3_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_wrist_3_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_wrist_3_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_wrist_3_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_tool0_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_tool0_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_tool0_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_tool0_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_tool0_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_tool0_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_soft_gripper_base_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_soft_gripper_base_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_soft_gripper_base_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_soft_gripper_base_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_soft_gripper_base_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_soft_gripper_base_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_soft_gripper_finger_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_soft_gripper_finger_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_soft_gripper_finger_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_soft_gripper_finger_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_soft_gripper_finger_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_soft_gripper_finger_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_camera_link_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_camera_link_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_camera_link_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_camera_link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_camera_link_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_camera_link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission><transmission name="Visual_camera_optical_frame_0_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Visual_camera_optical_frame_0">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint><actuator name="Visual_camera_optical_frame_0_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>

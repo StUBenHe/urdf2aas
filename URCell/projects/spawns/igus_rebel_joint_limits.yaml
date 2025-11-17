@@ -1,0 +1,71 @@
+joints:
+  Joint_shoulder_pan_joint_Control:
+    lower: -6.283
+    upper: 6.283
+    effort: 80.0
+    velocity: 3.142
+  Joint_shoulder_lift_joint_Control:
+    lower: -3.142
+    upper: 3.142
+    effort: 80.0
+    velocity: 3.142
+  Joint_elbow_joint_Control:
+    lower: -3.142
+    upper: 3.142
+    effort: 50.0
+    velocity: 3.142
+  Joint_wrist_1_joint_Control:
+    lower: -6.283
+    upper: 6.283
+    effort: 40.0
+    velocity: 6.283
+  Joint_wrist_2_joint_Control:
+    lower: -6.283
+    upper: 6.283
+    effort: 40.0
+    velocity: 6.283
+  Joint_wrist_3_joint_Control:
+    lower: -6.283
+    upper: 6.283
+    effort: 40.0
+    velocity: 6.283
+  Joint_soft_gripper_finger_joint_Control:
+    lower: 0.0
+    upper: 0.02
+    effort: 10.0
+    velocity: 0.05
+  Joint_shoulder_pan_joint_Safety:
+    lower: -6.283
+    upper: 6.283
+    effort: null
+    velocity: null
+  Joint_shoulder_lift_joint_Safety:
+    lower: -3.142
+    upper: 3.142
+    effort: null
+    velocity: null
+  Joint_elbow_joint_Safety:
+    lower: -3.142
+    upper: 3.142
+    effort: null
+    velocity: null
+  Joint_wrist_1_joint_Safety:
+    lower: -6.283
+    upper: 6.283
+    effort: null
+    velocity: null
+  Joint_wrist_2_joint_Safety:
+    lower: -6.283
+    upper: 6.283
+    effort: null
+    velocity: null
+  Joint_wrist_3_joint_Safety:
+    lower: -6.283
+    upper: 6.283
+    effort: null
+    velocity: null
+  Joint_soft_gripper_finger_joint_Safety:
+    lower: 0.0
+    upper: 0.02
+    effort: null
+    velocity: null

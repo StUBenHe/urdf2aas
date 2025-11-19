@@ -1,61 +1,75 @@
-joints:
-  Joint_shoulder_pan_joint_Control:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: 150.0
-    velocity: 3.141592653589793
-  Joint_shoulder_lift_joint_Control:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: 150.0
-    velocity: 3.141592653589793
-  Joint_elbow_joint_Control:
-    lower: -3.141592653589793
-    upper: 3.141592653589793
-    effort: 150.0
-    velocity: 3.141592653589793
-  Joint_wrist_1_joint_Control:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: 28.0
-    velocity: 3.141592653589793
-  Joint_wrist_2_joint_Control:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: 28.0
-    velocity: 3.141592653589793
-  Joint_wrist_3_joint_Control:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: 28.0
-    velocity: 3.141592653589793
-  Joint_shoulder_pan_joint_Safety:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: null
-    velocity: null
-  Joint_shoulder_lift_joint_Safety:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: null
-    velocity: null
-  Joint_elbow_joint_Safety:
-    lower: -3.141592653589793
-    upper: 3.141592653589793
-    effort: null
-    velocity: null
-  Joint_wrist_1_joint_Safety:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: null
-    velocity: null
-  Joint_wrist_2_joint_Safety:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: null
-    velocity: null
-  Joint_wrist_3_joint_Safety:
-    lower: -6.283185307179586
-    upper: 6.283185307179586
-    effort: null
-    velocity: null
+joint_limits:
+  base_link-base_link_inertia:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  shoulder_pan_joint:
+    min_position: '!degrees -360.0'
+    max_position: '!degrees 360.0'
+    max_effort: 150.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  shoulder_lift_joint:
+    min_position: '!degrees -360.0'
+    max_position: '!degrees 360.0'
+    max_effort: 150.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  elbow_joint:
+    min_position: '!degrees -180.0'
+    max_position: '!degrees 180.0'
+    max_effort: 150.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_1_joint:
+    min_position: '!degrees -360.0'
+    max_position: '!degrees 360.0'
+    max_effort: 28.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_2_joint:
+    min_position: '!degrees -360.0'
+    max_position: '!degrees 360.0'
+    max_effort: 28.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_3_joint:
+    min_position: '!degrees -360.0'
+    max_position: '!degrees 360.0'
+    max_effort: 28.0
+    max_velocity: '!degrees 180.0'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  base_link-base_fixed_joint:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  wrist_3-flange:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  flange-tool0:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false

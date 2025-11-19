@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="multi_ur">
 
-  <xacro:include filename="spawns/igus_rebel_6dof_spawn_hand.xacro"/>
+  <!-- 正确的 include 写法 -->
   <xacro:include filename="spawns/ur5_spawn_hand.xacro"/>
 
   <link name="world"/>
+
+
+
+
+
 
   <joint name="world_to_robot1" type="fixed">
     <parent link="world"/>
@@ -14,12 +19,16 @@
 
   <xacro:ur5_spawn_hand prefix="robot1_" xyz="0 0 0" rpy="0 0 0"/>
 
+
+
+
+
   <joint name="world_to_robot2" type="fixed">
     <parent link="world"/>
     <child link="robot2_base_link"/>
     <origin xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
-  <xacro:igus_rebel_6dof_spawn_hand prefix="robot2_" xyz="0 1 0" rpy="0 0 0"/>
+  <xacro:ur5_spawn_hand prefix="robot2_" xyz="0 1 0" rpy="0 0 0"/>
 
 </robot>

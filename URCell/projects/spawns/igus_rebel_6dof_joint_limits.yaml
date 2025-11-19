@@ -1,0 +1,84 @@
+joint_limits:
+  shoulder_pan_joint:
+    min_position: '!degrees -359.9893826806963'
+    max_position: '!degrees 359.9893826806963'
+    max_effort: 80.0
+    max_velocity: '!degrees 180.02333923010465'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  shoulder_lift_joint:
+    min_position: '!degrees -180.02333923010465'
+    max_position: '!degrees 180.02333923010465'
+    max_effort: 80.0
+    max_velocity: '!degrees 180.02333923010465'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  elbow_joint:
+    min_position: '!degrees -180.02333923010465'
+    max_position: '!degrees 180.02333923010465'
+    max_effort: 50.0
+    max_velocity: '!degrees 180.02333923010465'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_1_joint:
+    min_position: '!degrees -359.9893826806963'
+    max_position: '!degrees 359.9893826806963'
+    max_effort: 40.0
+    max_velocity: '!degrees 359.9893826806963'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_2_joint:
+    min_position: '!degrees -359.9893826806963'
+    max_position: '!degrees 359.9893826806963'
+    max_effort: 40.0
+    max_velocity: '!degrees 359.9893826806963'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  wrist_3_joint:
+    min_position: '!degrees -359.9893826806963'
+    max_position: '!degrees 359.9893826806963'
+    max_effort: 40.0
+    max_velocity: '!degrees 359.9893826806963'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  tool0_fixed:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  soft_gripper_mount:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  soft_gripper_finger_joint:
+    min_position: '!degrees 0.0'
+    max_position: '!degrees 1.1459155902616465'
+    max_effort: 10.0
+    max_velocity: '!degrees 2.864788975654116'
+    has_acceleration_limits: false
+    has_effort_limits: true
+    has_position_limits: true
+    has_velocity_limits: true
+  camera_mount_joint:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false
+  camera_optical_joint:
+    has_acceleration_limits: false
+    has_effort_limits: false
+    has_position_limits: false
+    has_velocity_limits: false

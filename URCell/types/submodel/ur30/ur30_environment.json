@@ -2,9 +2,9 @@
   "submodels": [
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Structure",
-      "idShort": "UR3E_StructureSubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Structure",
+      "idShort": "UR30_StructureSubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Link_base_link",
@@ -32,7 +32,7 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0030531654454, 0.0, 0.0], [0.0, 0.0030531654454, 0.0], [0.0, 0.0, 0.005625]]"
+              "value": "[[0.0061063308908, 0.0, 0.0], [0.0, 0.0061063308908, 0.0], [0.0, 0.0, 0.01125]]"
             },
             {
               "modelType": "Property",
@@ -44,7 +44,7 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "2.0"
+              "value": "4.0"
             },
             {
               "idShort": "visuals",
@@ -58,7 +58,7 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/base.dae"
+                      "value": "package://ur_description/meshes/ur20/visual/base.dae"
                     },
                     {
                       "modelType": "Property",
@@ -82,7 +82,7 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/base.stl"
+                      "value": "package://ur_description/meshes/ur20/collision/base.stl"
                     },
                     {
                       "modelType": "Property",
@@ -110,19 +110,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0027657, 9.6e-06, -1.49e-05], [9.6e-06, 0.0021501, 0.0001873], [-1.49e-05, 0.0001873, 0.0025626]]"
+              "value": "[[0.03351, 2e-05, -1e-05], [2e-05, 0.03374, 0.00374], [-1e-05, 0.00374, 0.021]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0.0\", \"0.0\", \"-0.02\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"-0.0001\", \"-0.0069\", \"-0.06\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "1.98"
+              "value": "16.343"
             },
             {
               "idShort": "visuals",
@@ -136,7 +136,7 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/shoulder.dae"
+                      "value": "package://ur_description/meshes/ur20/visual/shoulder.dae"
                     },
                     {
                       "modelType": "Property",
@@ -160,7 +160,7 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/shoulder.stl"
+                      "value": "package://ur_description/meshes/ur20/collision/shoulder.stl"
                     },
                     {
                       "modelType": "Property",
@@ -188,19 +188,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0042623, -4.09e-05, -0.001496], [-4.09e-05, 0.0460284, -1.29e-05], [-0.001496, -1.29e-05, 0.0448947]]"
+              "value": "[[0.02796, -0.0001, -0.0072], [-0.0001, 0.47558, 3e-05], [-0.0072, 3e-05, 0.47635]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"-0.11355\", \"0.0\", \"0.1157\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"-0.2476\", \"0.0\", \"0.2103\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "3.4445"
+              "value": "28.542"
             },
             {
               "idShort": "visuals",
@@ -214,13 +214,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/upperarm.dae"
+                      "value": "package://ur_description/meshes/ur30/visual/upperarm.dae"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"0.12\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.26\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                     }
                   ]
                 }
@@ -238,13 +238,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/upperarm.stl"
+                      "value": "package://ur_description/meshes/ur30/collision/upperarm.stl"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"0.12\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.26\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                     }
                   ]
                 }
@@ -266,19 +266,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0010511, 0.0, -3.31e-05], [0.0, 0.0113396, 2.2e-06], [-3.31e-05, 2.2e-06, 0.0110895]]"
+              "value": "[[0.01091, 6e-05, 0.01012], [6e-05, 0.1206, 1e-05], [0.01012, 1e-05, 0.11714]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"-0.1632\", \"0.0\", \"0.0238\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"-0.278\", \"0.0\", \"0.0629\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "1.437"
+              "value": "7.156"
             },
             {
               "idShort": "visuals",
@@ -292,13 +292,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/forearm.dae"
+                      "value": "package://ur_description/meshes/ur30/visual/forearm.dae"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"0.027\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.043\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                     }
                   ]
                 }
@@ -316,13 +316,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/forearm.stl"
+                      "value": "package://ur_description/meshes/ur30/collision/forearm.stl"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"0.027\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0.043\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                     }
                   ]
                 }
@@ -344,19 +344,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0008174, -5e-07, 2.1e-06], [-5e-07, 0.0006844, 6.17e-05], [2.1e-06, 6.17e-05, 0.0005497]]"
+              "value": "[[0.00609, -1e-05, 0.0], [-1e-05, 0.00245, 0.00083], [0.0, 0.00083, 0.00579]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0.0\", \"-0.01\", \"0.0\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"0.0\", \"-0.0353\", \"-0.0048\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.871"
+              "value": "3.054"
             },
             {
               "idShort": "visuals",
@@ -370,13 +370,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/wrist1.dae"
+                      "value": "package://ur_description/meshes/ur20/visual/wrist1.dae"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.104\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0775\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -394,13 +394,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/wrist1.stl"
+                      "value": "package://ur_description/meshes/ur20/collision/wrist1.stl"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.104\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0775\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -422,19 +422,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0006059, -6e-07, -6e-07], [-6e-07, 0.0005837, -2.71e-05], [-6e-07, -2.71e-05, 0.0003831]]"
+              "value": "[[0.00389, 1e-05, 0.0], [1e-05, 0.00219, -0.00045], [0.0, -0.00045, 0.00363]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0.0\", \"0.01\", \"0.0\"], \"rpy\": [\"-1.570796326794897\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"0.0\", \"0.0341\", \"-0.0046\"], \"rpy\": [\"-1.570796326794897\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.805"
+              "value": "3.126"
             },
             {
               "idShort": "visuals",
@@ -448,13 +448,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/wrist2.dae"
+                      "value": "package://ur_description/meshes/ur20/visual/wrist2.dae"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.08535\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0749\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -472,13 +472,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/wrist2.stl"
+                      "value": "package://ur_description/meshes/ur20/collision/wrist2.stl"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.08535\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0749\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -500,19 +500,19 @@
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.000108, -1e-07, -1e-07], [-1e-07, 0.0001086, -2e-07], [-1e-07, -2e-07, 0.0001371]]"
+              "value": "[[0.00117, 0.0, 0.0], [0.0, 0.00118, 0.0], [0.0, 0.0, 0.00084]]"
             },
             {
               "modelType": "Property",
               "idShort": "inertia_origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0.0\", \"0.0\", \"-0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"0.0\", \"0.0\", \"-0.0293\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.261"
+              "value": "0.926"
             },
             {
               "idShort": "visuals",
@@ -526,13 +526,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/visual/wrist3.dae"
+                      "value": "package://ur_description/meshes/ur20/visual/wrist3.dae"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0921\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.07\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -550,13 +550,13 @@
                       "modelType": "Property",
                       "idShort": "mesh",
                       "valueType": "xs:string",
-                      "value": "package://ur_description/meshes/ur3e/collision/wrist3.stl"
+                      "value": "package://ur_description/meshes/ur20/collision/wrist3.stl"
                     },
                     {
                       "modelType": "Property",
                       "idShort": "origin",
                       "valueType": "xs:string",
-                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.0921\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                      "value": "{\"xyz\": [\"0\", \"0\", \"-0.07\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                     }
                   ]
                 }
@@ -656,7 +656,7 @@
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0\", \"0\", \"0.15185\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"0\", \"0\", \"0.2363\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             }
           ]
         },
@@ -716,7 +716,7 @@
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"-0.24355\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"-0.637\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             }
           ]
         },
@@ -746,7 +746,7 @@
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"-0.2132\", \"0\", \"0.13105\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"-0.5037\", \"0\", \"0.201\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             }
           ]
         },
@@ -776,7 +776,7 @@
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0\", \"-0.08535\", \"-1.750557762378351e-11\"], \"rpy\": [\"1.570796327\", \"0\", \"0\"]}"
+              "value": "{\"xyz\": [\"0\", \"-0.1593\", \"-3.267297616249225e-11\"], \"rpy\": [\"1.570796327\", \"0\", \"0\"]}"
             }
           ]
         },
@@ -806,7 +806,7 @@
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "{\"xyz\": [\"0\", \"0.0921\", \"-1.8890025766262e-11\"], \"rpy\": [\"1.570796326589793\", \"3.141592653589793\", \"3.141592653589793\"]}"
+              "value": "{\"xyz\": [\"0\", \"0.1543\", \"-3.16474590199156e-11\"], \"rpy\": [\"1.570796326589793\", \"3.141592653589793\", \"3.141592653589793\"]}"
             }
           ]
         },
@@ -904,9 +904,9 @@
     },
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Control",
-      "idShort": "UR3E_ControlSubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Control",
+      "idShort": "UR30_ControlSubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Joint_base_link-base_link_inertia_Control",
@@ -940,13 +940,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "54.0"
+              "value": "738.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "3.141592653589793"
+              "value": "2.0943951023931953"
             },
             {
               "modelType": "Property",
@@ -976,13 +976,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "54.0"
+              "value": "738.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "3.141592653589793"
+              "value": "2.0943951023931953"
             },
             {
               "modelType": "Property",
@@ -1012,13 +1012,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "28.0"
+              "value": "433.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "3.141592653589793"
+              "value": "2.6179938779914944"
             },
             {
               "modelType": "Property",
@@ -1048,13 +1048,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "9.0"
+              "value": "107.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "6.283185307179586"
+              "value": "3.6651914291880923"
             },
             {
               "modelType": "Property",
@@ -1084,13 +1084,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "9.0"
+              "value": "107.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "6.283185307179586"
+              "value": "3.6651914291880923"
             },
             {
               "modelType": "Property",
@@ -1120,13 +1120,13 @@
               "modelType": "Property",
               "idShort": "effort",
               "valueType": "xs:double",
-              "value": "9.0"
+              "value": "107.0"
             },
             {
               "modelType": "Property",
               "idShort": "velocity",
               "valueType": "xs:double",
-              "value": "6.283185307179586"
+              "value": "3.6651914291880923"
             },
             {
               "modelType": "Property",
@@ -1176,9 +1176,9 @@
     },
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Kinematics",
-      "idShort": "UR3E_KinematicsSubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Kinematics",
+      "idShort": "UR30_KinematicsSubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Kinematics_kinematics",
@@ -1188,7 +1188,7 @@
               "modelType": "Property",
               "idShort": "shoulder",
               "valueType": "xs:string",
-              "value": "{\"x\": 0, \"y\": 0, \"z\": 0.15185, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
+              "value": "{\"x\": 0, \"y\": 0, \"z\": 0.2363, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
             },
             {
               "modelType": "Property",
@@ -1200,31 +1200,31 @@
               "modelType": "Property",
               "idShort": "forearm",
               "valueType": "xs:string",
-              "value": "{\"x\": -0.24355, \"y\": 0, \"z\": 0, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
+              "value": "{\"x\": -0.637, \"y\": 0, \"z\": 0, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
             },
             {
               "modelType": "Property",
               "idShort": "wrist_1",
               "valueType": "xs:string",
-              "value": "{\"x\": -0.2132, \"y\": 0, \"z\": 0.13105, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
+              "value": "{\"x\": -0.5037, \"y\": 0, \"z\": 0.201, \"roll\": 0, \"pitch\": 0, \"yaw\": 0}"
             },
             {
               "modelType": "Property",
               "idShort": "wrist_2",
               "valueType": "xs:string",
-              "value": "{\"x\": 0, \"y\": -0.08535, \"z\": -1.750557762378351e-11, \"roll\": 1.570796327, \"pitch\": 0, \"yaw\": 0}"
+              "value": "{\"x\": 0, \"y\": -0.1593, \"z\": -3.267297616249225e-11, \"roll\": 1.570796327, \"pitch\": 0, \"yaw\": 0}"
             },
             {
               "modelType": "Property",
               "idShort": "wrist_3",
               "valueType": "xs:string",
-              "value": "{\"x\": 0, \"y\": 0.0921, \"z\": -1.8890025766262e-11, \"roll\": 1.570796326589793, \"pitch\": 3.141592653589793, \"yaw\": 3.141592653589793}"
+              "value": "{\"x\": 0, \"y\": 0.1543, \"z\": -3.1647459019915597e-11, \"roll\": 1.570796326589793, \"pitch\": 3.141592653589793, \"yaw\": 3.141592653589793}"
             },
             {
               "modelType": "Property",
               "idShort": "hash",
               "valueType": "xs:string",
-              "value": "calib_16756443741236045476"
+              "value": "calib_12001109639981648826"
             }
           ]
         }
@@ -1232,9 +1232,9 @@
     },
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Dynamics",
-      "idShort": "UR3E_DynamicsSubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Dynamics",
+      "idShort": "UR30_DynamicsSubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Dynamics_base_link",
@@ -1268,13 +1268,13 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "2.0"
+              "value": "4.0"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0030531654454, 0.0, 0.0], [0.0, 0.0030531654454, 0.0], [0.0, 0.0, 0.005625]]"
+              "value": "[[0.0061063308908, 0.0, 0.0], [0.0, 0.0061063308908, 0.0], [0.0, 0.0, 0.01125]]"
             },
             {
               "modelType": "Property",
@@ -1292,19 +1292,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "1.98"
+              "value": "16.343"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0027657, 9.6e-06, -1.49e-05], [9.6e-06, 0.0021501, 0.0001873], [-1.49e-05, 0.0001873, 0.0025626]]"
+              "value": "[[0.03351, 2e-05, -1e-05], [2e-05, 0.03374, 0.00374], [-1e-05, 0.00374, 0.021]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, -3.8285686989269494e-16, -1.0, 0.0], [-0.0, 1.0, -3.8285686989269494e-16, -0.02], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, 0.0, -0.0001], [0.0, -3.8285686989269494e-16, -1.0, -0.0069], [-0.0, 1.0, -3.8285686989269494e-16, -0.06], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1316,19 +1316,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "3.4445"
+              "value": "28.542"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0042623, -4.09e-05, -0.001496], [-4.09e-05, 0.0460284, -1.29e-05], [-0.001496, -1.29e-05, 0.0448947]]"
+              "value": "[[0.02796, -0.0001, -0.0072], [-0.0001, 0.47558, 3e-05], [-0.0072, 3e-05, 0.47635]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, 0.0, -0.11355], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, 0.1157], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, 0.0, -0.2476], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, 0.2103], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1340,19 +1340,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "1.437"
+              "value": "7.156"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0010511, 0.0, -3.31e-05], [0.0, 0.0113396, 2.2e-06], [-3.31e-05, 2.2e-06, 0.0110895]]"
+              "value": "[[0.01091, 6e-05, 0.01012], [6e-05, 0.1206, 1e-05], [0.01012, 1e-05, 0.11714]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, 0.0, -0.1632], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, 0.0238], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, 0.0, -0.278], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, 0.0629], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1364,19 +1364,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.871"
+              "value": "3.054"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0008174, -5e-07, 2.1e-06], [-5e-07, 0.0006844, 6.17e-05], [2.1e-06, 6.17e-05, 0.0005497]]"
+              "value": "[[0.00609, -1e-05, 0.0], [-1e-05, 0.00245, 0.00083], [0.0, 0.00083, 0.00579]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, -3.8285686989269494e-16, -1.0, -0.01], [-0.0, 1.0, -3.8285686989269494e-16, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, -3.8285686989269494e-16, -1.0, -0.0353], [-0.0, 1.0, -3.8285686989269494e-16, -0.0048], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1388,19 +1388,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.805"
+              "value": "3.126"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.0006059, -6e-07, -6e-07], [-6e-07, 0.0005837, -2.71e-05], [-6e-07, -2.71e-05, 0.0003831]]"
+              "value": "[[0.00389, 1e-05, 0.0], [1e-05, 0.00219, -0.00045], [0.0, -0.00045, 0.00363]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, -0.0, 0.0], [0.0, -3.8285686989269494e-16, 1.0, 0.01], [-0.0, -1.0, -3.8285686989269494e-16, 0.0], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, -0.0, 0.0], [0.0, -3.8285686989269494e-16, 1.0, 0.0341], [-0.0, -1.0, -3.8285686989269494e-16, -0.0046], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1412,19 +1412,19 @@
               "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
-              "value": "0.261"
+              "value": "0.926"
             },
             {
               "modelType": "Property",
               "idShort": "inertia",
               "valueType": "xs:string",
-              "value": "[[0.000108, -1e-07, -1e-07], [-1e-07, 0.0001086, -2e-07], [-1e-07, -2e-07, 0.0001371]]"
+              "value": "[[0.00117, 0.0, 0.0], [0.0, 0.00118, 0.0], [0.0, 0.0, 0.00084]]"
             },
             {
               "modelType": "Property",
               "idShort": "origin",
               "valueType": "xs:string",
-              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, -0.02], [0.0, 0.0, 0.0, 1.0]]"
+              "value": "[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [-0.0, 0.0, 1.0, -0.0293], [0.0, 0.0, 0.0, 1.0]]"
             }
           ]
         },
@@ -1504,9 +1504,9 @@
     },
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Safety",
-      "idShort": "UR3E_SafetySubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Safety",
+      "idShort": "UR30_SafetySubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Joint_shoulder_pan_joint_Safety",
@@ -1620,9 +1620,9 @@
     },
     {
       "modelType": "Submodel",
-      "id": "urn:submodel:robot:UR3E:Visualization",
-      "idShort": "UR3E_VisualizationSubmodel",
-      "category": "Robot:UR3E",
+      "id": "urn:submodel:robot:UR30:Visualization",
+      "idShort": "UR30_VisualizationSubmodel",
+      "category": "Robot:UR30",
       "submodelElements": [
         {
           "idShort": "Visual_base_link_inertia_0",
@@ -1632,7 +1632,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/base.dae"
+              "value": "package://ur_description/meshes/ur20/visual/base.dae"
             },
             {
               "modelType": "Property",
@@ -1656,7 +1656,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/shoulder.dae"
+              "value": "package://ur_description/meshes/ur20/visual/shoulder.dae"
             },
             {
               "modelType": "Property",
@@ -1680,7 +1680,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/upperarm.dae"
+              "value": "package://ur_description/meshes/ur30/visual/upperarm.dae"
             },
             {
               "modelType": "Property",
@@ -1704,7 +1704,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/forearm.dae"
+              "value": "package://ur_description/meshes/ur30/visual/forearm.dae"
             },
             {
               "modelType": "Property",
@@ -1728,7 +1728,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/wrist1.dae"
+              "value": "package://ur_description/meshes/ur20/visual/wrist1.dae"
             },
             {
               "modelType": "Property",
@@ -1752,7 +1752,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/wrist2.dae"
+              "value": "package://ur_description/meshes/ur20/visual/wrist2.dae"
             },
             {
               "modelType": "Property",
@@ -1776,7 +1776,7 @@
               "modelType": "Property",
               "idShort": "mesh",
               "valueType": "xs:string",
-              "value": "package://ur_description/meshes/ur3e/visual/wrist3.dae"
+              "value": "package://ur_description/meshes/ur20/visual/wrist3.dae"
             },
             {
               "modelType": "Property",

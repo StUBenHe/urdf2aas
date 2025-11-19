@@ -19,6 +19,84 @@
           ]
         },
         {
+          "idShort": "Link_base_link_inertia",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "type",
+              "valueType": "xs:string",
+              "value": "link"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia",
+              "valueType": "xs:string",
+              "value": "[[0.032233320440000005, 0.0, 0.0], [0.0, 0.032233320440000005, 0.0], [0.0, 0.0, 0.05780000000000001]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "mass",
+              "valueType": "xs:double",
+              "value": "4.0"
+            },
+            {
+              "idShort": "visuals",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "visual_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "package://ur_description/meshes/ur15/visual/base.dae"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"3.141592653589793\"]}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "idShort": "collisions",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "collision_0",
+                  "modelType": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "modelType": "Property",
+                      "idShort": "mesh",
+                      "valueType": "xs:string",
+                      "value": "package://ur_description/meshes/ur15/collision/base.stl"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "origin",
+                      "valueType": "xs:string",
+                      "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"3.141592653589793\"]}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "idShort": "Link_shoulder_link",
           "modelType": "SubmodelElementCollection",
           "value": [
@@ -33,6 +111,12 @@
               "idShort": "inertia",
               "valueType": "xs:string",
               "value": "[[0.051334, 2.5e-05, -1.6e-05], [2.5e-05, 0.047702, 0.008805], [-1.6e-05, 0.008805, 0.034263]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"2.4e-05\", \"-0.025304\", \"-0.033309\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
@@ -108,6 +192,12 @@
             },
             {
               "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"-0.228491\", \"-8.3e-05\", \"0.192787\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+            },
+            {
+              "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
               "value": "14.9255"
@@ -177,6 +267,12 @@
               "idShort": "inertia",
               "valueType": "xs:string",
               "value": "[[0.018481, -5e-06, 0.013601], [-5e-06, 0.303502, 3e-06], [0.013601, 3e-06, 0.296843]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"-0.210929\", \"1.9e-05\", \"0.070552\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",
@@ -252,6 +348,12 @@
             },
             {
               "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"2.5e-05\", \"-0.016413\", \"-0.019695\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
+            },
+            {
+              "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
               "value": "2.089"
@@ -324,6 +426,12 @@
             },
             {
               "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"2.5e-05\", \"0.015886\", \"-0.01996\"], \"rpy\": [\"-1.570796326794897\", \"0\", \"0\"]}"
+            },
+            {
+              "modelType": "Property",
               "idShort": "mass",
               "valueType": "xs:double",
               "value": "2.0869"
@@ -393,6 +501,12 @@
               "idShort": "inertia",
               "valueType": "xs:string",
               "value": "[[0.001406, -3e-06, 1e-05], [-3e-06, 0.001404, -2.4e-05], [1e-05, -2.4e-05, 0.001002]]"
+            },
+            {
+              "modelType": "Property",
+              "idShort": "inertia_origin",
+              "valueType": "xs:string",
+              "value": "{\"xyz\": [\"-1.8e-05\", \"-0.000112\", \"-0.053397\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
             },
             {
               "modelType": "Property",

@@ -1,8 +1,8 @@
 {
   "modelType": "Submodel",
-  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001F6951A3E00>:Structure",
-  "idShort": "<urdfpy.urdf.URDF object at 0x000001F6951A3E00>_StructureSubmodel",
-  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001F6951A3E00>",
+  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001A000FE5370>:Structure",
+  "idShort": "<urdfpy.urdf.URDF object at 0x000001A000FE5370>_StructureSubmodel",
+  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001A000FE5370>",
   "submodelElements": [
     {
       "idShort": "Link_base_link",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "idShort": "Link_shoulder_link",
+      "idShort": "Link_base_link_inertia",
       "modelType": "SubmodelElementCollection",
       "value": [
         {
@@ -30,13 +30,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.051334, 2.5e-05, -1.6e-05], [2.5e-05, 0.047702, 0.008805], [-1.6e-05, 0.008805, 0.034263]]"
+          "value": "[[0.032233320440000005, 0.0, 0.0], [0.0, 0.032233320440000005, 0.0], [0.0, 0.0, 0.05780000000000001]]"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "9.9883"
+          "value": "4.0"
         },
         {
           "idShort": "visuals",
@@ -50,7 +56,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/shoulder.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/base.dae"
                 },
                 {
                   "modelType": "Property",
@@ -74,7 +80,85 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/shoulder.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/base.stl"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "origin",
+                  "valueType": "xs:string",
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"3.141592653589793\"]}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idShort": "Link_shoulder_link",
+      "modelType": "SubmodelElementCollection",
+      "value": [
+        {
+          "modelType": "Property",
+          "idShort": "type",
+          "valueType": "xs:string",
+          "value": "link"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "inertia",
+          "valueType": "xs:string",
+          "value": "[[0.051334, 2.5e-05, -1.6e-05], [2.5e-05, 0.047702, 0.008805], [-1.6e-05, 0.008805, 0.034263]]"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"2.4e-05\", \"-0.025304\", \"-0.033309\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
+          "idShort": "mass",
+          "valueType": "xs:double",
+          "value": "9.9883"
+        },
+        {
+          "idShort": "visuals",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "idShort": "visual_0",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mesh",
+                  "valueType": "xs:string",
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/shoulder.dae"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "origin",
+                  "valueType": "xs:string",
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"3.141592653589793\"]}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "idShort": "collisions",
+          "modelType": "SubmodelElementCollection",
+          "value": [
+            {
+              "idShort": "collision_0",
+              "modelType": "SubmodelElementCollection",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "mesh",
+                  "valueType": "xs:string",
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/shoulder.stl"
                 },
                 {
                   "modelType": "Property",
@@ -106,6 +190,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"-0.228491\", \"-8.3e-05\", \"0.192787\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "14.9255"
@@ -122,7 +212,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/upperarm.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/upperarm.dae"
                 },
                 {
                   "modelType": "Property",
@@ -146,7 +236,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/upperarm.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/upperarm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -178,6 +268,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"-0.210929\", \"1.9e-05\", \"0.070552\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "6.1015"
@@ -194,7 +290,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/forearm.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/forearm.dae"
                 },
                 {
                   "modelType": "Property",
@@ -218,7 +314,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/forearm.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/forearm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -250,6 +346,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"2.5e-05\", \"-0.016413\", \"-0.019695\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "2.089"
@@ -266,7 +368,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist1.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist1.dae"
                 },
                 {
                   "modelType": "Property",
@@ -290,7 +392,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist1.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist1.stl"
                 },
                 {
                   "modelType": "Property",
@@ -322,6 +424,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"2.5e-05\", \"0.015886\", \"-0.01996\"], \"rpy\": [\"-1.570796326794897\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "2.0869"
@@ -338,7 +446,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist2.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist2.dae"
                 },
                 {
                   "modelType": "Property",
@@ -362,7 +470,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist2.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist2.stl"
                 },
                 {
                   "modelType": "Property",
@@ -394,6 +502,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"-1.8e-05\", \"-0.000112\", \"-0.053397\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "1.0666"
@@ -410,7 +524,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist3.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/visual/wrist3.dae"
                 },
                 {
                   "modelType": "Property",
@@ -434,7 +548,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist3.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur15/collision/wrist3.stl"
                 },
                 {
                   "modelType": "Property",

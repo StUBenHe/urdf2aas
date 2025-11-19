@@ -1,8 +1,8 @@
 {
   "modelType": "Submodel",
-  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001A07B912120>:Structure",
-  "idShort": "<urdfpy.urdf.URDF object at 0x000001A07B912120>_StructureSubmodel",
-  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001A07B912120>",
+  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001A0010453D0>:Structure",
+  "idShort": "<urdfpy.urdf.URDF object at 0x000001A0010453D0>_StructureSubmodel",
+  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001A0010453D0>",
   "submodelElements": [
     {
       "idShort": "Link_base_link",
@@ -30,7 +30,7 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.00443333156, 0.0, 0.0], [0.0, 0.00443333156, 0.0], [0.0, 0.0, 0.0072]]"
+          "value": "[[0.0061063308908, 0.0, 0.0], [0.0, 0.0061063308908, 0.0], [0.0, 0.0, 0.01125]]"
         },
         {
           "modelType": "Property",
@@ -56,7 +56,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/base.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/visual/base.dae"
                 },
                 {
                   "modelType": "Property",
@@ -80,7 +80,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/base.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/collision/base.stl"
                 },
                 {
                   "modelType": "Property",
@@ -108,19 +108,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.014972358333333331, 0.0, 0.0], [0.0, 0.014972358333333331, 0.0], [0.0, 0.0, 0.01040625]]"
+          "value": "[[0.03351, 2e-05, -1e-05], [2e-05, 0.03374, 0.00374], [-1e-05, 0.00374, 0.021]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0.0\", \"-0.00193\", \"-0.02561\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"-0.0001\", \"-0.0069\", \"-0.06\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "3.7"
+          "value": "16.343"
         },
         {
           "idShort": "visuals",
@@ -134,7 +134,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/shoulder.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/visual/shoulder.dae"
                 },
                 {
                   "modelType": "Property",
@@ -158,7 +158,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/shoulder.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/collision/shoulder.stl"
                 },
                 {
                   "modelType": "Property",
@@ -186,19 +186,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.13388583541666665, 0.0, 0.0], [0.0, 0.13388583541666665, 0.0], [0.0, 0.0, 0.0151074]]"
+          "value": "[[0.02796, -0.0001, -0.0072], [-0.0001, 0.47558, 3e-05], [-0.0072, 3e-05, 0.47635]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"-0.2125\", \"0.0\", \"0.11336\"], \"rpy\": [\"0\", \"1.570796326794897\", \"0\"]}"
+          "value": "{\"xyz\": [\"-0.2476\", \"0.0\", \"0.2103\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "8.393"
+          "value": "28.542"
         },
         {
           "idShort": "visuals",
@@ -212,13 +212,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/upperarm.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur30/visual/upperarm.dae"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"0.13585\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0.26\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                 }
               ]
             }
@@ -236,13 +236,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/upperarm.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur30/collision/upperarm.stl"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"0.13585\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0.26\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                 }
               ]
             }
@@ -264,19 +264,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.031216803515624995, 0.0, 0.0], [0.0, 0.031216803515624995, 0.0], [0.0, 0.0, 0.004095]]"
+          "value": "[[0.01091, 6e-05, 0.01012], [6e-05, 0.1206, 1e-05], [0.01012, 1e-05, 0.11714]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"-0.24225\", \"0.0\", \"0.0265\"], \"rpy\": [\"0\", \"1.570796326794897\", \"0\"]}"
+          "value": "{\"xyz\": [\"-0.278\", \"0.0\", \"0.0629\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "2.33"
+          "value": "7.156"
         },
         {
           "idShort": "visuals",
@@ -290,13 +290,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/forearm.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur30/visual/forearm.dae"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"0.0165\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0.043\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                 }
               ]
             }
@@ -314,13 +314,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/forearm.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur30/collision/forearm.stl"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"0.0165\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"0.043\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"-1.5707963267948966\"]}"
                 }
               ]
             }
@@ -342,19 +342,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.002013889583333333, 0.0, 0.0], [0.0, 0.002013889583333333, 0.0], [0.0, 0.0, 0.0021942]]"
+          "value": "[[0.00609, -1e-05, 0.0], [-1e-05, 0.00245, 0.00083], [0.0, 0.00083, 0.00579]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0.0\", \"-0.01634\", \"-0.0018\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"0.0\", \"-0.0353\", \"-0.0048\"], \"rpy\": [\"1.570796326794897\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "1.219"
+          "value": "3.054"
         },
         {
           "idShort": "visuals",
@@ -368,13 +368,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/wrist1.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/visual/wrist1.dae"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.093\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0775\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -392,13 +392,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/wrist1.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/collision/wrist1.stl"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.093\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0775\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -420,19 +420,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[0.0018310395833333333, 0.0, 0.0], [0.0, 0.0018310395833333333, 0.0], [0.0, 0.0, 0.0021942]]"
+          "value": "[[0.00389, 1e-05, 0.0], [1e-05, 0.00219, -0.00045], [0.0, -0.00045, 0.00363]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0.0\", \"0.01634\", \"-0.0018\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"0.0\", \"0.0341\", \"-0.0046\"], \"rpy\": [\"-1.570796326794897\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "1.219"
+          "value": "3.126"
         },
         {
           "idShort": "visuals",
@@ -446,13 +446,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/wrist2.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/visual/wrist2.dae"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.095\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0749\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -470,13 +470,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/wrist2.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/collision/wrist2.stl"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.095\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0749\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -498,19 +498,19 @@
           "modelType": "Property",
           "idShort": "inertia",
           "valueType": "xs:string",
-          "value": "[[8.062475833333332e-05, 0.0, 0.0], [0.0, 8.062475833333332e-05, 0.0], [0.0, 0.0, 0.0001321171875]]"
+          "value": "[[0.00117, 0.0, 0.0], [0.0, 0.00118, 0.0], [0.0, 0.0, 0.00084]]"
         },
         {
           "modelType": "Property",
           "idShort": "inertia_origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0.0\", \"0.0\", \"-0.001159\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"0.0\", \"0.0\", \"-0.0293\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         },
         {
           "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
-          "value": "0.1879"
+          "value": "0.926"
         },
         {
           "idShort": "visuals",
@@ -524,13 +524,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/visual/wrist3.dae"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/visual/wrist3.dae"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0818\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.07\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -548,13 +548,13 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur5/collision/wrist3.stl"
+                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/ur_description/meshes/ur20/collision/wrist3.stl"
                 },
                 {
                   "modelType": "Property",
                   "idShort": "origin",
                   "valueType": "xs:string",
-                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.0818\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
+                  "value": "{\"xyz\": [\"0\", \"0\", \"-0.07\"], \"rpy\": [\"1.5707963267948966\", \"0\", \"0\"]}"
                 }
               ]
             }
@@ -654,7 +654,7 @@
           "modelType": "Property",
           "idShort": "origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0\", \"0\", \"0.089159\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"0\", \"0\", \"0.2363\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         }
       ]
     },
@@ -714,7 +714,7 @@
           "modelType": "Property",
           "idShort": "origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"-0.425\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"-0.637\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         }
       ]
     },
@@ -744,7 +744,7 @@
           "modelType": "Property",
           "idShort": "origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"-0.39225\", \"0\", \"0.10915\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"-0.5037\", \"0\", \"0.201\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
         }
       ]
     },
@@ -774,7 +774,7 @@
           "modelType": "Property",
           "idShort": "origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0\", \"-0.09465\", \"-1.941303950897609e-11\"], \"rpy\": [\"1.570796327\", \"0\", \"0\"]}"
+          "value": "{\"xyz\": [\"0\", \"-0.1593\", \"-3.267297616249225e-11\"], \"rpy\": [\"1.570796327\", \"0\", \"0\"]}"
         }
       ]
     },
@@ -804,7 +804,7 @@
           "modelType": "Property",
           "idShort": "origin",
           "valueType": "xs:string",
-          "value": "{\"xyz\": [\"0\", \"0.0823\", \"-1.688001216681175e-11\"], \"rpy\": [\"1.570796326589793\", \"3.141592653589793\", \"3.141592653589793\"]}"
+          "value": "{\"xyz\": [\"0\", \"0.1543\", \"-3.16474590199156e-11\"], \"rpy\": [\"1.570796326589793\", \"3.141592653589793\", \"3.141592653589793\"]}"
         }
       ]
     },

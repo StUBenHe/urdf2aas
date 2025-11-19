@@ -229,10 +229,6 @@ def generate_structure_submodel(robot_name, xml_root):
     for link in xml_root.findall("link"):
         link_name = link.attrib["name"]
 
-        # 跳过 inertia-only link
-        if "inertia" in link_name.lower():
-            continue
-
         link_collection = {
             "idShort": f"Link_{link_name}",
             "modelType": "SubmodelElementCollection",
@@ -246,10 +242,10 @@ def generate_structure_submodel(robot_name, xml_root):
             "valueType": "xs:string",
             "value": "link"
         })
-
         # inertia 节点
         inertia_node = link.find("inertial/inertia")
         mass_node = link.find("inertial/mass")
+        inertia_origin_node = link.find("inertial/origin")
 
         if inertia_node is not None:
             Ixx = float(inertia_node.attrib.get("ixx", 0))
@@ -272,6 +268,20 @@ def generate_structure_submodel(robot_name, xml_root):
                 "value": matrix_to_str(inertia_matrix)
             })
 
+        # inertia origin
+        if inertia_origin_node is not None:
+            origin = {
+                "xyz": inertia_origin_node.attrib.get("xyz", "0 0 0").split(),
+                "rpy": inertia_origin_node.attrib.get("rpy", "0 0 0").split()
+            }
+            link_collection["value"].append({
+                "modelType": "Property",
+                "idShort": "inertia_origin",
+                "valueType": "xs:string",
+                "value": json.dumps(origin)
+            })
+
+        # mass
         if mass_node is not None:
             link_collection["value"].append({
                 "modelType": "Property",

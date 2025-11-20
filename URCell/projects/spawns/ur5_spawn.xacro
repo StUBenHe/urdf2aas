@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:macro name="ur5_spawn_hand" params="prefix xyz rpy">
-  <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/ur_description/meshes" />
+  <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/" />
   <xacro:property name="joint_limits" value="${xacro.load_yaml('spawns/ur5_joint_limits.yaml')}" />
   <!-- LINKS -->
   <link name="${prefix}base_link" />
@@ -10,12 +10,12 @@
   <link name="${prefix}base_link_inertia">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/base.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/base.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/base.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/base.stl"/></geometry>
     </collision>
     <inertial>
       <mass value="4.0"/>
@@ -32,12 +32,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/shoulder.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/shoulder.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/shoulder.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/shoulder.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 
@@ -49,12 +52,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 0.13585" rpy="1.5707963267948966 0 -1.5707963267948966"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/upperarm.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/upperarm.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 0.13585" rpy="1.5707963267948966 0 -1.5707963267948966"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/upperarm.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/upperarm.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 
@@ -66,12 +72,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 0.0165" rpy="1.5707963267948966 0 -1.5707963267948966"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/forearm.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/forearm.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 0.0165" rpy="1.5707963267948966 0 -1.5707963267948966"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/forearm.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/forearm.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 
@@ -83,12 +92,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 -0.093" rpy="1.5707963267948966 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/wrist1.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/wrist1.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 -0.093" rpy="1.5707963267948966 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/wrist1.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/wrist1.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 
@@ -100,12 +112,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 -0.095" rpy="0 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/wrist2.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/wrist2.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 -0.095" rpy="0 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/wrist2.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/wrist2.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 
@@ -117,12 +132,15 @@
     </inertial>
     <visual>
 <origin xyz="0 0 -0.0818" rpy="1.5707963267948966 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/visual/wrist3.dae"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/visual/wrist3.dae"/></geometry>
+      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
+    </visual>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
     <collision>
 <origin xyz="0 0 -0.0818" rpy="1.5707963267948966 0 0"/>
-      <geometry><mesh filename="file://${mesh_root}/ur5/collision/wrist3.stl"/></geometry>
+      <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur5/collision/wrist3.stl"/></geometry>
+    </collision>
     </collision>
   </link>
 

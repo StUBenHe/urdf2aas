@@ -146,12 +146,39 @@ def generate_kinematics_submodel_fallback(kinematics_yaml, robot=None):
                 "value": params
             })
     return {"idShort": "KinematicsSubmodel", "submodelElements": elements}
+def restore_package_uri_recursive(obj, package_root, pkg_prefix="package://igus_rebel_description_ros2/"):
+    """
+    递归扫描 JSON，把所有绝对路径替换为 package://
+    """
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            obj[k] = restore_package_uri_recursive(v, package_root, pkg_prefix)
+        return obj
+
+    elif isinstance(obj, list):
+        return [restore_package_uri_recursive(x, package_root, pkg_prefix) for x in obj]
+
+    elif isinstance(obj, str):
+        # 替换路径
+        normalized = obj.replace("\\", "/")
+        package_root = package_root.replace("\\", "/")
+
+        if normalized.startswith(package_root):
+            rel = normalized[len(package_root):]
+            if rel.startswith("/"):
+                rel = rel[1:]
+            return pkg_prefix + rel
+        return obj
+
+    else:
+        return obj
+
 
 #Main pipeline for generating all AAS Submodels for the IGUS Rebel robot (Structure, Control, Kinematics, Dynamics, Safety, Visualization).
 def main_igus_rebel():
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     igus_root = os.path.join(base_dir, "types", "igus_rebel_description_ros2")
-    submodel_root = os.path.join(base_dir, "types", "submodel", "igus_rebel")
+    submodel_root = os.path.join(base_dir, "types", "submodel", "igus_rebel_6dof")
 
     urdf_path = os.path.join(igus_root, "urdf", "igus_rebel.urdf")
     yaml_dir = os.path.join(igus_root, "config", "igus_rebel_6dof")
@@ -198,7 +225,9 @@ def main_igus_rebel():
 
     # === ⚙️ 子模型生成 ===
     # StructureSubmodel 从 XML 提取（支持 axis / dynamics / 材质）
-    save_submodel(generate_structure_submodel(base_name, root), f"{base_name}_structure_submodel", output_dir)
+    structure = generate_structure_submodel(base_name, root)
+    structure = restore_package_uri_recursive(structure, package_root)
+    save_submodel(structure, f"{base_name}_structure_submodel", output_dir)
 
     # Control Submodel - 增加 transmission 兜底
     save_submodel(generate_control_submodel(robot, control_template_path, joint_limits), f"{base_name}_control_submodel", output_dir)

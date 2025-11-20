@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="multi_ur">
 
-  <xacro:include filename="spawns/igus_rebel_6dof_spawn.xacro"/>
   <xacro:include filename="spawns/ur5_spawn.xacro"/>
+  <xacro:include filename="spawns/igus_rebel_6dof_spawn.xacro"/>
+  <xacro:include filename="spawns/ur3_spawn.xacro"/>
 
   <link name="world"/>
 
@@ -21,5 +22,13 @@
   </joint>
 
   <xacro:igus_rebel_6dof_spawn prefix="robot2_" xyz="0 1 0" rpy="0 0 0"/>
+
+  <joint name="world_to_robot3" type="fixed">
+    <parent link="world"/>
+    <child link="robot3_base_link"/>
+    <origin xyz="0 3 0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:ur3_spawn prefix="robot3_" xyz="0 3 0" rpy="0 0 0"/>
 
 </robot>

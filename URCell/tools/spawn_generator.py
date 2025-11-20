@@ -1,6 +1,29 @@
 import os
 import json
 
+def extract_mesh_path(mesh_path: str) -> str:
+    """
+    输入示例:
+        package://ur_description/meshes/ur3/visual/base.dae
+        package:://igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae
+
+    输出:
+        ur_description/meshes/ur3/visual/base.dae
+        igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae
+    """
+    if not mesh_path or not isinstance(mesh_path, str):
+        return ""
+
+    # igus 里有 package::// 这种 typo，先统一修正
+    mesh_path = mesh_path.replace("package:://", "")
+    mesh_path = mesh_path.replace("package://", "")
+
+    # 防止开头还带 /
+    mesh_path = mesh_path.lstrip("/")
+
+    return mesh_path
+
+
 def parse_json_str(value):
     if isinstance(value, (dict, list)):
         return value
@@ -30,7 +53,7 @@ def extract_translation_from_matrix(mat):
     return {"xyz": [str(tx),str(ty),str(tz)], "rpy":["0","0","0"]}
 
 
-def generate_xacro_structure(env_json_path, robot_type, output_path):
+def generate_xacro_structure(env_json_path,robot_type,output_dir):
 
     with open(env_json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -86,8 +109,8 @@ def generate_xacro_structure(env_json_path, robot_type, output_path):
     lines.append('<?xml version="1.0"?>')
     lines.append('<robot xmlns:xacro="http://www.ros.org/wiki/xacro">')
     lines.append('')
-    lines.append('<xacro:macro name="ur5_spawn_hand" params="prefix xyz rpy">')
-    lines.append('  <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/ur_description/meshes" />')
+    lines.append(f'<xacro:macro name="{robot_type_lower}_spawn_hand" params="prefix xyz rpy">')
+    lines.append('  <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/" />')
     robot_type_lower = robot_type.lower()
     lines.append(
         f"  <xacro:property name=\"joint_limits\" value=\"${{xacro.load_yaml('spawns/{robot_type_lower}_joint_limits.yaml')}}\" />")
@@ -115,20 +138,45 @@ def generate_xacro_structure(env_json_path, robot_type, output_path):
         if link_name == "base_link_inertia":
             lines.append(f'  <link name="{tag}">')
 
+            # 从 StructureSubmodel 拿 mesh
+            visual_mesh = None
+            collision_mesh = None
+            if struct_elem:
+                for group in struct_elem.get("value", []):
+                    if group.get("idShort") == "visuals":
+                        for vis in group.get("value", []):
+                            props = {p["idShort"]: p.get("value") for p in vis.get("value", [])}
+                            if props.get("mesh"):
+                                visual_mesh = props["mesh"]
+                                break
+                    if group.get("idShort") == "collisions":
+                        for col in group.get("value", []):
+                            props = {p["idShort"]: p.get("value") for p in col.get("value", [])}
+                            if props.get("mesh"):
+                                collision_mesh = props["mesh"]
+                                break
+
+            # visual
             lines.append('    <visual>')
             lines.append('      <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>')
-            lines.append(
-                f'      <geometry><mesh filename="file://${{mesh_root}}/{robot_type_lower}/visual/base.dae"/></geometry>'
-            )
+            if visual_mesh:
+                rel_path = extract_mesh_path(visual_mesh)
+                lines.append(
+                    f'      <geometry><mesh filename="file://${{mesh_root}}{rel_path}"/></geometry>'
+                )
             lines.append('      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>')
             lines.append('    </visual>')
 
+            # collision
             lines.append('    <collision>')
             lines.append('      <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>')
-            lines.append(
-                f'      <geometry><mesh filename="file://${{mesh_root}}/{robot_type_lower}/collision/base.stl"/></geometry>'
-            )
+            if collision_mesh:
+                rel_path = extract_mesh_path(collision_mesh)
+                lines.append(
+                    f'      <geometry><mesh filename="file://${{mesh_root}}{rel_path}"/></geometry>'
+                )
             lines.append('    </collision>')
+            ...
 
             # inertial from AAS
             if dyn_elem:
@@ -200,12 +248,24 @@ def generate_xacro_structure(env_json_path, robot_type, output_path):
                         mesh = props.get("mesh")
                         origin = parse_json_str(props.get("origin"))
                         if mesh:
-                            fname = os.path.basename(mesh)
-                            lines.append('    <visual>')
-                            lines.append(make_origin(origin))
-                            lines.append(
-                                f'      <geometry><mesh filename="file://${{mesh_root}}/{robot_type_lower}/visual/{fname}"/></geometry>'
-                                )
+                            # visual
+                            if struct_elem:
+                                for group in struct_elem.get("value", []):
+                                    if group.get("idShort") == "visuals":
+                                        for vis in group.get("value", []):
+                                            props = {p["idShort"]: p.get("value") for p in vis.get("value", [])}
+                                            mesh = props.get("mesh")
+                                            origin = parse_json_str(props.get("origin"))
+                                            if mesh:
+                                                rel_path = extract_mesh_path(mesh)  # ← 关键：从 JSON value 中得到干净路径
+                                                lines.append('    <visual>')
+                                                lines.append(make_origin(origin))
+                                                lines.append(
+                                                    f'      <geometry><mesh filename="file://${{mesh_root}}{rel_path}"/></geometry>'
+                                                )
+                                                lines.append(
+                                                    '      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>')
+                                                lines.append('    </visual>')
 
                             lines.append('      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>')
                             lines.append('    </visual>')
@@ -219,12 +279,22 @@ def generate_xacro_structure(env_json_path, robot_type, output_path):
                         mesh = props.get("mesh")
                         origin = parse_json_str(props.get("origin"))
                         if mesh:
-                            fname = os.path.basename(mesh)
-                            lines.append('    <collision>')
-                            lines.append(make_origin(origin))
-                            lines.append(
-                                f'      <geometry><mesh filename="file://${{mesh_root}}/{robot_type_lower}/collision/{fname}"/></geometry>'
-                                )
+                            # collision
+                            if struct_elem:
+                                for group in struct_elem.get("value", []):
+                                    if group.get("idShort") == "collisions":
+                                        for col in group.get("value", []):
+                                            props = {p["idShort"]: p.get("value") for p in col.get("value", [])}
+                                            mesh = props.get("mesh")
+                                            origin = parse_json_str(props.get("origin"))
+                                            if mesh:
+                                                rel_path = extract_mesh_path(mesh)
+                                                lines.append('    <collision>')
+                                                lines.append(make_origin(origin))
+                                                lines.append(
+                                                    f'      <geometry><mesh filename="file://${{mesh_root}}{rel_path}"/></geometry>'
+                                                )
+                                                lines.append('    </collision>')
 
                             lines.append('    </collision>')
 
@@ -270,8 +340,17 @@ def generate_xacro_structure(env_json_path, robot_type, output_path):
     lines.append("</xacro:macro>")
     lines.append("</robot>")
 
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
+    # output_dir 应该是一个目录 → 我们在这里拼接成最终文件名
+    output_file = os.path.join(output_dir, f"{robot_type}_spawn.xacro")
+
+    # 确保该目录存在
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+    # 写入 spawn.xacro 文件
+    with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    print("生成成功:", output_path)
+    print("生成成功:", output_file)
+
+
+

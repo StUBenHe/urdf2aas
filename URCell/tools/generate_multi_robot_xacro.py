@@ -3,6 +3,8 @@ import yaml
 
 from joint_limit_generator import generate_joint_limits
 
+from spawn_generator import generate_xacro_structure
+
 
 def generate_robot_block(robot):
     """
@@ -46,16 +48,31 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
     spawn_dir = os.path.join(base_dir, "spawns")
     os.makedirs(spawn_dir, exist_ok=True)
 
-    submodel_base = os.path.join(base_dir, "../types/submodel")
-
+    submodel_base = os.path.abspath(
+        os.path.join(base_dir, "../types/submodel")
+    )
     # 收集所有类型 → include spawn xacro
     spawn_includes = set()
 
+    def is_ur_series(rtype: str) -> bool:
+        """
+        判断机器人是否为 UR 系列
+        """
+        r = rtype.lower()
+        return r.startswith("ur")  # ur3, ur5e, ur10e, ur20… 均匹配
+
     for robot in robots:
         rtype = robot["type"]
+
+        # ⭐ 1. 所有 robot 都加入 spawn_includes（你需要的）
         spawn_includes.add(rtype)
 
-        # 自动生成 joint limits
+        # ⭐ 2. 非 UR 系列：跳过生成
+        if not is_ur_series(rtype):
+            print(f"⏭ 非 UR 机器人，不生成 joint limits 和 xacro：{rtype}")
+            continue
+
+        # ⭐ 3. UR 系列：生成 joint limits + xacro
         env_json_path = os.path.join(
             submodel_base, rtype, f"{rtype}_environment.json"
         )
@@ -67,6 +84,12 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
         print(f"📄 发现 environment.json: {env_json_path}")
 
         generate_joint_limits(
+            env_json_path=env_json_path,
+            robot_type=rtype,
+            output_dir=spawn_dir
+        )
+
+        generate_xacro_structure(
             env_json_path=env_json_path,
             robot_type=rtype,
             output_dir=spawn_dir
@@ -98,6 +121,8 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
         f.write(xml_output)
 
     print(f"🎉 已生成: {output_file}")
+
+
 
 
 if __name__ == "__main__":

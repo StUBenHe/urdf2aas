@@ -22,6 +22,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "3.2"
@@ -38,7 +44,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/base.dae"
                 },
                 {
                   "modelType": "Property",
@@ -56,7 +62,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/base.stl"
                 },
                 {
                   "modelType": "Property",
@@ -80,7 +86,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/base.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/base.stl"
                 },
                 {
                   "modelType": "Property",
@@ -112,6 +118,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"-0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "2.8"
@@ -128,7 +140,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.dae"
                 },
                 {
                   "modelType": "Property",
@@ -146,7 +158,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/shoulder.stl"
                 },
                 {
                   "modelType": "Property",
@@ -170,7 +182,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/shoulder.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/shoulder.stl"
                 },
                 {
                   "modelType": "Property",
@@ -202,6 +214,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"-0.11\", \"0\", \"0.12\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "3.6"
@@ -218,7 +236,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.dae"
                 },
                 {
                   "modelType": "Property",
@@ -236,7 +254,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/upper_arm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -260,7 +278,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/upper_arm.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/upper_arm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -292,6 +310,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"-0.16\", \"0\", \"0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "1.5"
@@ -308,7 +332,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.dae"
                 },
                 {
                   "modelType": "Property",
@@ -326,7 +350,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/forearm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -350,7 +374,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/forearm.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/forearm.stl"
                 },
                 {
                   "modelType": "Property",
@@ -382,6 +406,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"-0.01\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.9"
@@ -398,7 +428,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.dae"
                 },
                 {
                   "modelType": "Property",
@@ -416,7 +446,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_1.stl"
                 },
                 {
                   "modelType": "Property",
@@ -440,7 +470,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_1.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_1.stl"
                 },
                 {
                   "modelType": "Property",
@@ -472,6 +502,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0.0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.8"
@@ -488,7 +524,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.dae"
                 },
                 {
                   "modelType": "Property",
@@ -506,7 +542,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_2.stl"
                 },
                 {
                   "modelType": "Property",
@@ -530,7 +566,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_2.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_2.stl"
                 },
                 {
                   "modelType": "Property",
@@ -562,6 +598,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"-0.02\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.5"
@@ -578,7 +620,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.dae"
                 },
                 {
                   "modelType": "Property",
@@ -596,7 +638,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/wrist_3.stl"
                 },
                 {
                   "modelType": "Property",
@@ -620,7 +662,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_3.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/wrist_3.stl"
                 },
                 {
                   "modelType": "Property",
@@ -652,6 +694,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.25"
@@ -668,7 +716,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.dae"
                 },
                 {
                   "modelType": "Property",
@@ -686,7 +734,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/visual/flange.stl"
                 },
                 {
                   "modelType": "Property",
@@ -710,7 +758,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/igus_rebel/collision/flange.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/igus_rebel/collision/flange.stl"
                 },
                 {
                   "modelType": "Property",
@@ -742,6 +790,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.3"
@@ -758,7 +812,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.dae"
                 },
                 {
                   "modelType": "Property",
@@ -776,7 +830,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_base.stl"
                 },
                 {
                   "modelType": "Property",
@@ -800,7 +854,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_base.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_base.stl"
                 },
                 {
                   "modelType": "Property",
@@ -832,6 +886,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0.01\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.05"
@@ -848,7 +908,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.dae"
                 },
                 {
                   "modelType": "Property",
@@ -866,7 +926,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/visual/soft_gripper_finger.stl"
                 },
                 {
                   "modelType": "Property",
@@ -890,7 +950,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_finger.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/end_effectors/collision/soft_gripper_finger.stl"
                 },
                 {
                   "modelType": "Property",
@@ -922,6 +982,12 @@
         },
         {
           "modelType": "Property",
+          "idShort": "inertia_origin",
+          "valueType": "xs:string",
+          "value": "{\"xyz\": [\"0\", \"0\", \"0\"], \"rpy\": [\"0\", \"0\", \"0\"]}"
+        },
+        {
+          "modelType": "Property",
           "idShort": "mass",
           "valueType": "xs:double",
           "value": "0.25"
@@ -938,7 +1004,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae"
+                  "value": "package://igus_rebel_description_ros2/meshes/cameras/visual/camera_body.dae"
                 },
                 {
                   "modelType": "Property",
@@ -956,7 +1022,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/cameras/visual/camera_body.stl"
                 },
                 {
                   "modelType": "Property",
@@ -980,7 +1046,7 @@
                   "modelType": "Property",
                   "idShort": "mesh",
                   "valueType": "xs:string",
-                  "value": "C:/Users/benhe/Desktop/abschlussarbeit/URCell/types/igus_rebel_description_ros2/meshes/cameras/collision/camera_body.stl"
+                  "value": "package://igus_rebel_description_ros2/meshes/cameras/collision/camera_body.stl"
                 },
                 {
                   "modelType": "Property",

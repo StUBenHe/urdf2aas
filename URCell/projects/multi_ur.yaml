@@ -13,5 +13,12 @@ robots:
     rpy: [0, 0, 0]
     ip: 192.168.88.201
     port: 70000
-    enable: false
+    enable: true
     
+  - name: robot3
+    type: ur3
+    xyz: [0, 3, 0]
+    rpy: [0, 0, 0]
+    ip: 192.168.88.301
+    port: 90000
+    enable: true

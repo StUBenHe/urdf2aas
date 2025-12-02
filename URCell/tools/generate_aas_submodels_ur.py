@@ -6,22 +6,22 @@ from lxml import etree
 from urdfpy import URDF
 import numpy as np
 import uuid
-import os
-import json
 from pathlib import Path
 
-#Guess the appropriate AAS valueType (e.g., xs:boolean, xs:double, xs:string) based on Python data type.
+# Guess the appropriate AAS valueType (e.g., xs:boolean, xs:double, xs:string)
+# based on native Python data type.
 def _guess_value_type(v):
     if isinstance(v, bool):
         return "xs:boolean"
     if isinstance(v, int) or isinstance(v, float):
         return "xs:double"
-    # 其它一律存成字符串
+    # Everything else will be stored as string
     return "xs:string"
 
-#Wrap a single scalar, list, or dict into an AAS Property element.
+# Wrap a scalar, list, or dict into an AAS Property element.
 def _to_property(id_short, v):
-    # 列表/字典 -> 序列化存成字符串，避免再次触发“期望数组”的错误
+    # list/dict -> serialize as string to avoid triggering
+    # “expected array” errors in AAS
     if isinstance(v, (list, tuple, dict)):
         value = json.dumps(v, ensure_ascii=False)
         value_type = "xs:string"
@@ -35,9 +35,8 @@ def _to_property(id_short, v):
         "value": value
     }
 
-#Convert a mesh file path into an AAS File element with MIME type.
+# Convert a mesh file path into an AAS File element.
 def _to_file(id_short, path_str):
-    # 依据扩展名给出一个合理的 contentType
     ext = Path(path_str).suffix.lower()
     mime = {
         ".stl": "model/stl",
@@ -53,15 +52,15 @@ def _to_file(id_short, path_str):
         "value": path_str
     }
 
-#Convert a key-value dict into a SubmodelElementCollection value list.
+# Convert key-value dict to an SMC value list.
 def _kv_to_smc_value(obj):
     """
-    把 dict 转为 AAS 合法的 SMC.value（数组）
-    规则：
+    Convert dict → SMC.value (as list)
+    Rules:
       - "mesh" -> File
-      - 其它键：
-          - 标量 -> Property
-          - 列表/字典 -> Property(字符串化) 以保证 AASX 不再要求子层也是数组
+      - Others:
+          - scalar -> Property
+          - list/dict -> Property (stringified)
     """
     items = []
     for k, v in obj.items():
@@ -71,11 +70,10 @@ def _kv_to_smc_value(obj):
             items.append(_to_property(k, v))
     return items
 
-#Fix AAS submodel structure recursively to enforce valid SMC array format.
+# Fix AAS submodel structure: ensure SMC.value is always a list.
 def fix_submodel_structure(node):
-    """递归修正所有 SubmodelElementCollection 的 value 为 list，避免空对象。"""
+    """Recursively enforce that all SubmodelElementCollection values are lists."""
     if isinstance(node, dict):
-        # 修正当前 SMC
         if node.get("modelType") == "SubmodelElementCollection":
             val = node.get("value")
             if isinstance(val, dict):
@@ -88,24 +86,23 @@ def fix_submodel_structure(node):
                         if isinstance(v, (list, dict)) else str(v)
                     }
                     for k, v in val.items()
-                    if v not in [None, {}, []]  # 跳过空值
+                    if v not in [None, {}, []]
                 ]
-        # 递归子项
         for v in node.values():
             fix_submodel_structure(v)
     elif isinstance(node, list):
         for v in node:
             fix_submodel_structure(v)
 
-#Recursively replace absolute file paths containing base_marker with relative package:// UR-style paths.
+# Replace absolute mesh paths with package:// UR-style paths.
 def make_paths_relative(node, base_marker="ur_description"):
     """
-    递归扫描所有 mesh 字段，把绝对路径改成以 package://ur_description/... 为前缀的相对路径
+    Recursively scan for "mesh" paths and convert absolute paths to:
+        package://ur_description/...
     """
     if isinstance(node, dict):
         for k, v in list(node.items()):
             if isinstance(v, str) and base_marker in v:
-                # 截取 ur_description 及其后面的路径部分
                 relative_part = v.split(base_marker, 1)[-1].lstrip("/\\")
                 node[k] = f"package://{base_marker}/{relative_part}"
             else:
@@ -114,41 +111,39 @@ def make_paths_relative(node, base_marker="ur_description"):
         for item in node:
             make_paths_relative(item, base_marker)
 
-#Recursively ensure all SubmodelElementCollection values are lists instead of dicts.
+# Ensure all SMC.value fields are lists.
 def _fix_smc_value_inplace(node):
     """
-    递归修正：凡是 modelType == 'SubmodelElementCollection' 的元素，
-    若 value 不是 list，则改造成 list；子层继续递归。
+    Recursively convert:
+       SMC.value: dict → list
+       SMC.value: scalar/None → list-wrapped Property
     """
     if isinstance(node, dict):
-        # 修正当前层
         if node.get("modelType") == "SubmodelElementCollection":
             val = node.get("value")
-            if isinstance(val, dict):          # 核心修复：dict -> list
+            if isinstance(val, dict):
                 node["value"] = _kv_to_smc_value(val)
-            elif not isinstance(val, list):    # None 或标量 -> 包一层 Property
+            elif not isinstance(val, list):
                 node["value"] = [_to_property("value", val)]
-        # 递归子字段
         for k, v in list(node.items()):
             _fix_smc_value_inplace(v)
     elif isinstance(node, list):
         for it in node:
             _fix_smc_value_inplace(it)
 
-#Wrap raw content into a valid AAS Submodel structure with required metadata (id, idShort, semanticId).
+# Wrap content into a valid AAS Submodel structure.
 def _wrap_as_submodel(content, base_name, fallback_idshort):
     """
-    把 {idShort, submodelElements: ...} 包成 AASX 可识别的 Submodel 对象。
-    并统一把所有 SMC 的 value 修正成数组。
+    Wrap:
+        {idShort, submodelElements}
+    into a full AAS Submodel object.
+    Ensures SMC.value is valid.
     """
-    # 1) 确保有 idShort 与 submodelElements
     id_short = content.get("idShort", fallback_idshort)
     sm_elements = content.get("submodelElements", [])
 
-    # 2) 递归修正所有 SMC.value
     _fix_smc_value_inplace(sm_elements)
 
-    # 3) 封装成 Submodel（AASX 接受 "modelType": "Submodel" 这一写法）
     return {
         "modelType": "Submodel",
         "id": f"urn:submodel:robot:{id_short}:{base_name}:safe",
@@ -157,41 +152,36 @@ def _wrap_as_submodel(content, base_name, fallback_idshort):
         "submodelElements": sm_elements
     }
 
-# === 自定义 YAML 解析器，支持 ROS 风格的 !degrees ===
-#Custom YAML constructor to support ROS-style !degrees notation and convert to radians.
+# Custom YAML constructor (!degrees → float)
 def degrees_constructor(loader, node):
     value = loader.construct_scalar(node)
     try:
         return float(value)
     except ValueError:
         return value
+
 yaml.SafeLoader.add_constructor('!degrees', degrees_constructor)
 
-# ====== 修复 numpy 兼容性问题 ======
+# Fix numpy compatibility
 if not hasattr(np, 'float'):
     np.float = float
-# ==================================
 
-# ===============================
-# 📘 工具函数
-# ===============================
-#Load YAML configuration file safely and return a dictionary.
+# Load YAML file safely
 def load_yaml(file_path):
     if not os.path.exists(file_path):
         return {}
     with open(file_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
-#Save the given submodel as a formatted JSON file to the output directory.
+# Save submodel JSON
 def save_submodel(submodel, name, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     file_path = os.path.join(output_dir, name + ".json")
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(submodel, f, indent=2, ensure_ascii=False)
-    print(f"💾 已生成: {file_path}")
+    print(f"Saved: {file_path}")
 
-
-#Convert numpy arrays or iterable objects into plain Python lists for safe JSON serialization.
+# Convert numpy arrays or iterable to plain list
 def safe_list(value):
     if value is None:
         return None
@@ -201,17 +191,15 @@ def safe_list(value):
         return list(value)
     return value
 
-
-# ===============================
-# 🧩 子模型生成函数
-# ===============================
-#Build the Structure Submodel from URDF data, including links, joints, inertial, and mesh info.
+# ================================================
+#  Structure Submodel Generator
+# ================================================
 def generate_structure_submodel(robot_name, xml_root):
     """
-    生成符合 AAS 结构要求的 Structure Submodel。
-    - visuals 和 collisions 分离成集合
-    - origin 作为独立字段
-    - 自动过滤 inertia-only link
+    Generate the Structure Submodel from URDF XML:
+      - separate visuals & collisions collections
+      - origin as property
+      - handle inertia, mass, joints
     """
 
     def matrix_to_str(matrix):
@@ -225,7 +213,9 @@ def generate_structure_submodel(robot_name, xml_root):
         "submodelElements": []
     }
 
-    # 解析 links
+    # -------------------------
+    # Links
+    # -------------------------
     for link in xml_root.findall("link"):
         link_name = link.attrib["name"]
 
@@ -235,14 +225,15 @@ def generate_structure_submodel(robot_name, xml_root):
             "value": []
         }
 
-        # 添加基本属性
+        # Basic type
         link_collection["value"].append({
             "modelType": "Property",
             "idShort": "type",
             "valueType": "xs:string",
             "value": "link"
         })
-        # inertia 节点
+
+        # Inertia
         inertia_node = link.find("inertial/inertia")
         mass_node = link.find("inertial/mass")
         inertia_origin_node = link.find("inertial/origin")
@@ -268,7 +259,7 @@ def generate_structure_submodel(robot_name, xml_root):
                 "value": matrix_to_str(inertia_matrix)
             })
 
-        # inertia origin
+        # Inertia origin
         if inertia_origin_node is not None:
             origin = {
                 "xyz": inertia_origin_node.attrib.get("xyz", "0 0 0").split(),
@@ -281,7 +272,7 @@ def generate_structure_submodel(robot_name, xml_root):
                 "value": json.dumps(origin)
             })
 
-        # mass
+        # Mass
         if mass_node is not None:
             link_collection["value"].append({
                 "modelType": "Property",
@@ -290,7 +281,7 @@ def generate_structure_submodel(robot_name, xml_root):
                 "value": mass_node.attrib.get("value", "0")
             })
 
-        # visuals
+        # Visuals
         visuals_node = link.findall("visual")
         if visuals_node:
             visuals_collection = {
@@ -318,7 +309,7 @@ def generate_structure_submodel(robot_name, xml_root):
                 })
             link_collection["value"].append(visuals_collection)
 
-        # collisions
+        # Collisions
         collisions_node = link.findall("collision")
         if collisions_node:
             collisions_collection = {
@@ -348,7 +339,9 @@ def generate_structure_submodel(robot_name, xml_root):
 
         structure_submodel["submodelElements"].append(link_collection)
 
-    # joints
+    # -------------------------
+    # Joints
+    # -------------------------
     for joint in xml_root.findall("joint"):
         joint_name = joint.attrib["name"]
         joint_type = joint.attrib.get("type", "fixed")
@@ -381,10 +374,9 @@ def generate_structure_submodel(robot_name, xml_root):
         structure_submodel["submodelElements"].append(joint_collection)
 
     return structure_submodel
-
-#Generate Control Submodel with controller configuration, joint limits, and transmission info
+# Generate Control Submodel with controller configuration, joint limits, and transmission info
 def generate_control_submodel(robot, control_template_path, joint_limits):
-    """从 URDF + 控制模板（JSON）生成完整控制子模型"""
+    """Generate the complete Control Submodel from URDF + control template (JSON)."""
     controllers_data = {}
     if os.path.exists(control_template_path):
         with open(control_template_path, "r", encoding="utf-8") as f:
@@ -414,7 +406,7 @@ def generate_control_submodel(robot, control_template_path, joint_limits):
             "upper": limit.upper if limit else limits_yaml.get("upper"),
             "effort": limit.effort if limit else limits_yaml.get("effort"),
             "velocity": limit.velocity if limit else limits_yaml.get("velocity"),
-            # ✅ transmission 信息
+            # Transmission info
             "transmission": {
                 "type": "transmission_interface/SimpleTransmission",
                 "mechanicalReduction": 1.0,
@@ -422,7 +414,7 @@ def generate_control_submodel(robot, control_template_path, joint_limits):
             }
         }
 
-        # 控制器匹配
+        # Controller matching
         for ctrl_id, params in controllers_data.items():
             if joint.name in params.get("targets", []):
                 joint_entry.update({
@@ -442,6 +434,7 @@ def generate_control_submodel(robot, control_template_path, joint_limits):
 
 
 def generate_kinematics_submodel(kinematics_yaml):
+    """Generate Kinematics Submodel from YAML."""
     elements = []
     for joint_name, params in kinematics_yaml.items():
         elements.append({
@@ -453,6 +446,7 @@ def generate_kinematics_submodel(kinematics_yaml):
 
 
 def generate_dynamics_submodel(robot, physical_params):
+    """Generate Dynamics Submodel from robot inertial parameters."""
     elements = []
     for link in robot.links:
         inertial = link.inertial
@@ -471,6 +465,7 @@ def generate_dynamics_submodel(robot, physical_params):
 
 
 def generate_safety_submodel(robot):
+    """Generate Safety Submodel: joint limit constraints only."""
     elements = []
     for joint in robot.joints:
         if joint.limit:
@@ -483,7 +478,7 @@ def generate_safety_submodel(robot):
 
 
 def generate_visualization_submodel(robot, visual_params):
-    """包含 mesh、材质、颜色的可视化子模型"""
+    """Generate Visualization Submodel including mesh, material, color."""
     elements = []
     for link in robot.links:
         vis_param = visual_params.get(link.name, {})
@@ -492,7 +487,7 @@ def generate_visualization_submodel(robot, visual_params):
             if hasattr(vis.geometry, "mesh") and vis.geometry.mesh:
                 mesh_file = vis.geometry.mesh.filename
 
-            # ✅ 读取材质信息
+            # Read material info
             material = getattr(vis, "material", None)
             mat_name = getattr(material, "name", None)
             color = None
@@ -520,8 +515,9 @@ import os
 
 def assemble_environment_v3(base_name, output_dir):
     """
-    汇总所有子模型并修正结构，每个子模型带上标签前缀（如 UR3_Structure）。
-    生成文件可直接通过 “Import Submodel from JSON” 导入。
+    Collect all Submodels and fix their structure.
+    Each Submodel receives a prefixed label (e.g., UR3_Structure).
+    The resulting file can be directly imported via “Import Submodel from JSON”.
     """
     submodel_files = [
         f"{base_name}_structure_submodel.json",
@@ -538,20 +534,19 @@ def assemble_environment_v3(base_name, output_dir):
     for file_name in submodel_files:
         path = os.path.join(output_dir, file_name)
         if not os.path.exists(path):
-            print(f"⚠️ 缺少子模型文件: {file_name}")
+            print(f"⚠️ Missing submodel file: {file_name}")
             continue
 
         with open(path, "r", encoding="utf-8") as f:
             content = json.load(f)
 
-        # 🧩 自动修复内部结构
+        # Auto fix internal structure
         fix_submodel_structure(content)
 
-        # 提取子模型类型标签，例如 "structure"
+        # Extract label, e.g., "structure"
         label_part = file_name.replace(f"{base_name}_", "").replace("_submodel.json", "")
         label_upper = label_part.capitalize()
 
-        # 🔖 拼接成标签名
         id_short = f"{base_upper}_{label_upper}Submodel"
         sm_id = f"urn:submodel:robot:{base_upper}:{label_upper}"
 
@@ -564,7 +559,8 @@ def assemble_environment_v3(base_name, output_dir):
         })
 
     environment = {"submodels": submodels}
-    # ✅ 在写入文件之前执行路径相对化修正
+
+    # Convert all mesh paths into relative package paths
     make_paths_relative(environment)
 
     output_path = os.path.join(output_dir, f"{base_name}_environment.json")
@@ -572,10 +568,11 @@ def assemble_environment_v3(base_name, output_dir):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(environment, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ 已生成带标签的可导入文件: {output_path}")
+    print(f"✅ Generated import-ready environment file: {output_path}")
+
 
 # ===============================
-# ⚙️ 主逻辑
+# Main logic
 # ===============================
 def main(urdf_path, yaml_dir, output_dir="output"):
     print(f"\n=== Generating AAS Submodels for {os.path.basename(urdf_path).split('.')[0]} ===")
@@ -584,27 +581,30 @@ def main(urdf_path, yaml_dir, output_dir="output"):
     urcell_root = base_dir.replace("\\", "/")
     package_root = os.path.join(urcell_root, "types", "ur_description").replace("\\", "/")
 
+    # Fix URDF package paths
     with open(urdf_path, "r", encoding="utf-8") as f:
         urdf_text = f.read().replace("\\", "/")
     urdf_text = urdf_text.replace("package://ur_description/", package_root + "/").replace("//", "/")
 
     if "package://" in urdf_text:
-        print("⚠️ 部分 package:// 路径未替换（保留 ROS 兼容格式）。")
+        print("⚠️ Some package:// paths were not replaced (ROS compatibility kept).")
     else:
-        print("✅ 路径解析成功，所有 mesh 均可解析。")
+        print("✅ Path replacement successful, all meshes resolvable.")
 
+    # Write debug URDF
     debug_dir = os.path.join(os.path.dirname(__file__), "output")
     os.makedirs(debug_dir, exist_ok=True)
     debug_path = os.path.join(debug_dir, f"debug_{os.path.basename(urdf_path).split('.')[0]}_fixed.urdf")
     with open(debug_path, "w", encoding="utf-8") as f:
         f.write(urdf_text)
-    print(f"📄 已输出调试文件: {debug_path}")
+    print(f"📄 Debug URDF written to: {debug_path}")
 
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(urdf_text.encode("utf-8"), parser=parser)
     robot = URDF._from_xml(root, None)
-    print(f"🤖 成功加载 URDF 模型: {robot.name}, 包含 {len(robot.links)} 个 link, {len(robot.joints)} 个 joint。")
+    print(f"🤖 Loaded URDF model: {robot.name}, with {len(robot.links)} links and {len(robot.joints)} joints.")
 
+    # Load config YAML files
     joint_limits = load_yaml(os.path.join(yaml_dir, "joint_limits.yaml"))
     kinematics = load_yaml(os.path.join(yaml_dir, "default_kinematics.yaml"))
     physical = load_yaml(os.path.join(yaml_dir, "physical_parameters.yaml"))
@@ -612,18 +612,28 @@ def main(urdf_path, yaml_dir, output_dir="output"):
     base_name = os.path.splitext(os.path.basename(urdf_path))[0]
     control_template_path = os.path.join(yaml_dir, f"{base_name}_control.json")
 
+    # Generate submodels
     save_submodel(generate_structure_submodel(robot, root),
                   f"{base_name}_structure_submodel", output_dir)
 
-    save_submodel(generate_control_submodel(robot, control_template_path, joint_limits), f"{base_name}_control_submodel", output_dir)
-    save_submodel(generate_kinematics_submodel(kinematics), f"{base_name}_kinematics_submodel", output_dir)
-    save_submodel(generate_dynamics_submodel(robot, physical), f"{base_name}_dynamics_submodel", output_dir)
-    save_submodel(generate_safety_submodel(robot), f"{base_name}_safety_submodel", output_dir)
-    save_submodel(generate_visualization_submodel(robot, visual), f"{base_name}_visualization_submodel", output_dir)
+    save_submodel(generate_control_submodel(robot, control_template_path, joint_limits),
+                  f"{base_name}_control_submodel", output_dir)
+
+    save_submodel(generate_kinematics_submodel(kinematics),
+                  f"{base_name}_kinematics_submodel", output_dir)
+
+    save_submodel(generate_dynamics_submodel(robot, physical),
+                  f"{base_name}_dynamics_submodel", output_dir)
+
+    save_submodel(generate_safety_submodel(robot),
+                  f"{base_name}_safety_submodel", output_dir)
+
+    save_submodel(generate_visualization_submodel(robot, visual),
+                  f"{base_name}_visualization_submodel", output_dir)
+
     assemble_environment_v3(base_name, output_dir)
 
-    print(f"🎯 已完成 {base_name} 的所有 AAS 子模型生成。\n")
-
+    print(f"🎯 Finished generating all AAS Submodels for {base_name}.\n")
 
 
 if __name__ == "__main__":
@@ -633,32 +643,23 @@ if __name__ == "__main__":
     submodel_root = os.path.join(base_dir, "types", "submodel")
 
     ur_names = [
-        "ur3",
-        "ur3e",
-        "ur5",
-        "ur5e",
-        "ur7e",
-        "ur10",
-        "ur10e",
-        "ur12e",
-        "ur15",
-        "ur16e",
-        "ur20",
-        "ur30"
+        "ur3", "ur3e", "ur5", "ur5e", "ur7e", "ur10",
+        "ur10e", "ur12e", "ur15", "ur16e", "ur20", "ur30"
     ]
+
     for name in ur_names:
         urdf_file = os.path.join(urdf_root, f"{name}.urdf")
         yaml_dir = os.path.join(config_root, name)
         output_dir = os.path.join(submodel_root, name)
 
         if not os.path.exists(urdf_file):
-            print(f"❌ 未找到 URDF: {urdf_file}")
+            print(f" URDF not found: {urdf_file}")
             continue
         if not os.path.exists(yaml_dir):
-            print(f"⚠️ YAML 配置缺失: {yaml_dir}（将使用空默认值）")
+            print(f"️ YAML directory missing: {yaml_dir} (using default empty values)")
             os.makedirs(yaml_dir, exist_ok=True)
 
         try:
             main(urdf_file, yaml_dir, output_dir)
         except Exception as e:
-            print(f"❌ 处理 {name} 时出错: {e}")
+            print(f" Error while processing {name}: {e}")

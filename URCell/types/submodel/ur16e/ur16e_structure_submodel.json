@@ -1,8 +1,8 @@
 {
   "modelType": "Submodel",
-  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001A000FEB3E0>:Structure",
-  "idShort": "<urdfpy.urdf.URDF object at 0x000001A000FEB3E0>_StructureSubmodel",
-  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001A000FEB3E0>",
+  "id": "urn:submodel:robot:<urdfpy.urdf.URDF object at 0x000001563202ECC0>:Structure",
+  "idShort": "<urdfpy.urdf.URDF object at 0x000001563202ECC0>_StructureSubmodel",
+  "category": "Robot:<urdfpy.urdf.URDF object at 0x000001563202ECC0>",
   "submodelElements": [
     {
       "idShort": "Link_base_link",

@@ -2,13 +2,22 @@ import os
 import yaml
 
 from joint_limit_generator import generate_joint_limits
-
 from spawn_generator import generate_xacro_structure
 
 
 def generate_robot_block(robot):
     """
-    根据 robot 字段生成 joint + xacro 实例
+    Generate a joint + xacro instance block for a robot entry.
+
+    Parameters:
+        robot (dict): A dictionary containing fields:
+            - name: robot instance name
+            - type: robot type (e.g., ur5, ur10e)
+            - xyz: position in world frame
+            - rpy: orientation (roll, pitch, yaw)
+
+    Returns:
+        str: XML string containing the joint and xacro macro call.
     """
     name = robot["name"]
     rtype = robot["type"]
@@ -18,7 +27,7 @@ def generate_robot_block(robot):
     xyz_str = " ".join(str(v) for v in xyz)
     rpy_str = " ".join(str(v) for v in rpy)
 
-    spawn_macro = f"{rtype}_spawn"  # 必须与 spawns/ 中的文件一致
+    spawn_macro = f"{rtype}_spawn"  # must match files in the `spawns/` directory
 
     xml = f"""
   <joint name="world_to_{name}" type="fixed">
@@ -34,10 +43,14 @@ def generate_robot_block(robot):
 
 def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
     """
-    主入口：
-     - 自动生成 joint_limits
-     - include spawn xacro
-     - 生成 multi_ur.xacro
+    Main entry point:
+      - Automatically generates joint limits
+      - Includes spawn xacros
+      - Builds the final multi_ur.xacro file
+
+    Parameters:
+        multi_yaml (str): Path to the YAML file describing multiple robots.
+        output_file (str): Output xacro filename.
     """
     with open(multi_yaml, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
@@ -51,37 +64,45 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
     submodel_base = os.path.abspath(
         os.path.join(base_dir, "../types/submodel")
     )
-    # 收集所有类型 → include spawn xacro
+
+    # Collect all robot types → we will include their spawn xacro
     spawn_includes = set()
 
     def is_ur_series(rtype: str) -> bool:
         """
-        判断机器人是否为 UR 系列
+        Determine if a robot type belongs to the UR series.
+        Matches: ur3, ur5e, ur10, ur20, ur30, etc.
+
+        Parameters:
+            rtype (str): Robot type name.
+
+        Returns:
+            bool: True if UR series, False otherwise.
         """
         r = rtype.lower()
-        return r.startswith("ur")  # ur3, ur5e, ur10e, ur20… 均匹配
+        return r.startswith("ur")
 
     for robot in robots:
         rtype = robot["type"]
 
-        # ⭐ 1. 所有 robot 都加入 spawn_includes（你需要的）
+        # 1. Add all robot types to spawn includes
         spawn_includes.add(rtype)
 
-        # ⭐ 2. 非 UR 系列：跳过生成
+        # 2. Skip non-UR series robots
         if not is_ur_series(rtype):
-            print(f"⏭ 非 UR 机器人，不生成 joint limits 和 xacro：{rtype}")
+            print(f"⏭ Skipping non-UR robot: {rtype}")
             continue
 
-        # ⭐ 3. UR 系列：生成 joint limits + xacro
+        # 3. UR series → generate joint limits & xacro files
         env_json_path = os.path.join(
             submodel_base, rtype, f"{rtype}_environment.json"
         )
 
         if not os.path.exists(env_json_path):
-            print(f"❌ 找不到 environment.json: {env_json_path}")
+            print(f" environment.json not found: {env_json_path}")
             continue
 
-        print(f"📄 发现 environment.json: {env_json_path}")
+        print(f" Found environment.json: {env_json_path}")
 
         generate_joint_limits(
             env_json_path=env_json_path,
@@ -95,14 +116,14 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
             output_dir=spawn_dir
         )
 
-    # ---- 生成 xacro 文件 ----
+    # ---- Build final xacro file ----
 
     xml_output = """<?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="multi_ur">
 
 """
 
-    # include 所有 spawn.xacro
+    # Include all spawn xacros
     for t in spawn_includes:
         xml_output += f'  <xacro:include filename="spawns/{t}_spawn.xacro"/>\n'
 
@@ -110,23 +131,21 @@ def generate_xacro(multi_yaml, output_file="multi_ur.xacro"):
   <link name="world"/>
 """
 
-    # 每个机器人 block
+    # Generate blocks for every robot
     for robot in robots:
         xml_output += generate_robot_block(robot)
 
     xml_output += "\n</robot>\n"
 
-    # 写入 multi_ur.xacro
+    # Write the output file
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(xml_output)
 
-    print(f"🎉 已生成: {output_file}")
-
-
+    print(f" Generated: {output_file}")
 
 
 if __name__ == "__main__":
-    # 默认路径（你可修改）
+    # Default paths (modify as needed)
     generate_xacro(
         "../projects/multi_ur.yaml",
         "../projects/multi_ur.xacro"

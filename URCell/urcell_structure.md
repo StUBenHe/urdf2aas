@@ -3,50 +3,38 @@
 ```
 URCell/
 ├─ projects
-│   ├─ multi_ur(模板).xacro
+│   ├─ multi_ur(BS).xacro
+│   ├─ multi_ur.xacro
 │   ├─ multi_ur.yaml
-│   ├─ robot(模板).urdf
+│   ├─ robot(BS).urdf
+│   ├─ robot.urdf
 │   └─ spawns
-│       ├─ igus_rebel_joint_limits.yaml
-│       ├─ joint_limits(模板).yaml
+│       ├─ igus_rebel_6dof_spawn.xacro
+│       ├─ joint_limits(BS).yaml
+│       ├─ ur3_joint_limits.yaml
+│       ├─ ur3_spawn.xacro
 │       ├─ ur5_joint_limits.yaml
-│       └─ ur5_spawn_hand(模板).xacro
+│       ├─ ur5_spawn(BS).xacro
+│       └─ ur5_spawn.xacro
 ├─ tools
 │   ├─ __pycache__
-│   │   └─ generate_aas_submodels_ur.cpython-312.pyc
+│   │   ├─ joint_limit_generator.cpython-313.pyc
+│   │   └─ spawn_generator.cpython-313.pyc
 │   ├─ check_env.py
 │   ├─ env_report.txt
 │   ├─ generate_aas_submodels_igus_rebel.py
 │   ├─ generate_aas_submodels_ur.py
 │   ├─ generate_multi_robot_xacro.py
-│   ├─ generate_spawn.py
-│   ├─ generate_spawn_xacro.py
 │   ├─ generate_structure_doc.py
-│   ├─ output
-│   │   ├─ debug_ur10_fixed.urdf
-│   │   ├─ debug_ur10e_fixed.urdf
-│   │   ├─ debug_ur12e_fixed.urdf
-│   │   ├─ debug_ur15_fixed.urdf
-│   │   ├─ debug_ur16e_fixed.urdf
-│   │   ├─ debug_ur20_fixed.urdf
-│   │   ├─ debug_ur30_fixed.urdf
-│   │   ├─ debug_ur3_fixed.urdf
-│   │   ├─ debug_ur3e_fixed.urdf
-│   │   ├─ debug_ur5_fixed.urdf
-│   │   ├─ debug_ur5e_fixed.urdf
-│   │   └─ debug_ur7e_fixed.urdf
-│   └─ probe program
-│       ├─ add_kind_template.py
-│       ├─ fix_aas_json.py
-│       ├─ generate_aas_environment_ur.py
-│       ├─ generate_aas_from_urdf.py
-│       ├─ kind_semantic_tool.py
-│       ├─ patch_aas_shells.py
-│       ├─ patch_env_json.py
-│       └─ set_kind_and_semantic.py
+│   ├─ joint_limit_generator.py
+│   └─ spawn_generator.py
 ├─ types
+│   ├─ Robot_types.aasx
 │   ├─ Ropot_types.aasx
 │   ├─ backup
+│   │   ├─ backup004.aasx
+│   │   ├─ backup005.aasx
+│   │   ├─ backup006.aasx
 │   │   └─ backup007.aasx
 │   ├─ igus_rebel_description_ros2
 │   │   ├─ CMakeLists.txt
@@ -59,7 +47,7 @@ URCell/
 │   │   ├─ rviz
 │   │   └─ urdf
 │   ├─ submodel
-│   │   ├─ igus_rebel
+│   │   ├─ igus_rebel_6dof
 │   │   │   ├─ igus_rebel_6dof_control_submodel.json
 │   │   │   ├─ igus_rebel_6dof_dynamics_submodel.json
 │   │   │   ├─ igus_rebel_6dof_environment.json
@@ -208,14 +196,12 @@ URCell/
 │   │       │   ├─ ur16e.urdf
 │   │       │   ├─ ur20.urdf
 │   │       │   ├─ ur3.urdf
-│   │       │   ├─ ur3.urdf.bak
 │   │       │   ├─ ur30.urdf
 │   │       │   ├─ ur3e.urdf
 │   │       │   ├─ ur5.urdf
 │   │       │   ├─ ur5e.urdf
 │   │       │   ├─ ur7e.urdf
 │   │       │   └─ urdfenv
-│   │       │       ├─ Include
 │   │       │       ├─ Lib
 │   │       │       ├─ Scripts
 │   │       │       ├─ pyvenv.cfg

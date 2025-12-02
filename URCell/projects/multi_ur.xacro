@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="multi_ur">
 
-  <xacro:include filename="spawns/ur5_spawn.xacro"/>
   <xacro:include filename="spawns/igus_rebel_6dof_spawn.xacro"/>
   <xacro:include filename="spawns/ur3_spawn.xacro"/>
+  <xacro:include filename="spawns/ur5_spawn.xacro"/>
 
   <link name="world"/>
 

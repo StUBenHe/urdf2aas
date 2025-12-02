@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:macro name="ur3_spawn_hand" params="prefix xyz rpy">
+<xacro:macro name="ur3_spawn" params="prefix xyz rpy">
   <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/" />
-  <xacro:property name="joint_limits" value="${xacro.load_yaml('spawns/ur3_joint_limits.yaml')}" />
+  <xacro:property name="joint_limits" value="${xacro.load_yaml('spawns/ur3_joint_limits.yaml')}"/>
   <!-- LINKS -->
   <link name="${prefix}base_link" />
 
@@ -35,12 +35,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/shoulder.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 0 0" rpy="0 0 3.141592653589793"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/shoulder.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -55,12 +52,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/upperarm.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 0 0.1198" rpy="1.5707963267948966 0 -1.5707963267948966"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/upperarm.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -75,12 +69,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/forearm.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 0 0.0275" rpy="1.5707963267948966 0 -1.5707963267948966"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/forearm.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -95,12 +86,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/wrist1.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 0 -0.085" rpy="1.5707963267948966 0 0"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/wrist1.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -115,12 +103,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/wrist2.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 0 -0.083" rpy="0 0 0"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/wrist2.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -135,12 +120,9 @@
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/visual/wrist3.dae"/></geometry>
       <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
     </visual>
-      <material name="LightGrey"><color rgba="0.7 0.7 0.7 1.0"/></material>
-    </visual>
     <collision>
 <origin xyz="0 -0.00255 -0.082" rpy="1.5707963267948966 0 0"/>
       <geometry><mesh filename="file://${mesh_root}ur_description/meshes/ur3/collision/wrist3.stl"/></geometry>
-    </collision>
     </collision>
   </link>
 
@@ -159,7 +141,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.shoulder_pan_joint.min_position}"
       upper="${joint_limits.joint_limits.shoulder_pan_joint.max_position}"
-      velocity="${joint_limits.joint_limits.shoulder_pan_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.shoulder_pan_joint.max_velocity}"/>
   </joint>
 
   <joint name="${prefix}shoulder_lift_joint" type="revolute">
@@ -170,7 +152,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.shoulder_lift_joint.min_position}"
       upper="${joint_limits.joint_limits.shoulder_lift_joint.max_position}"
-      velocity="${joint_limits.joint_limits.shoulder_lift_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.shoulder_lift_joint.max_velocity}"/>
   </joint>
 
   <joint name="${prefix}elbow_joint" type="revolute">
@@ -181,7 +163,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.elbow_joint.min_position}"
       upper="${joint_limits.joint_limits.elbow_joint.max_position}"
-      velocity="${joint_limits.joint_limits.elbow_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.elbow_joint.max_velocity}"/>
   </joint>
 
   <joint name="${prefix}wrist_1_joint" type="revolute">
@@ -192,7 +174,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.wrist_1_joint.min_position}"
       upper="${joint_limits.joint_limits.wrist_1_joint.max_position}"
-      velocity="${joint_limits.joint_limits.wrist_1_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.wrist_1_joint.max_velocity}"/>
   </joint>
 
   <joint name="${prefix}wrist_2_joint" type="revolute">
@@ -203,7 +185,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.wrist_2_joint.min_position}"
       upper="${joint_limits.joint_limits.wrist_2_joint.max_position}"
-      velocity="${joint_limits.joint_limits.wrist_2_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.wrist_2_joint.max_velocity}"/>
   </joint>
 
   <joint name="${prefix}wrist_3_joint" type="revolute">
@@ -214,7 +196,7 @@
     <limit effort="150.0"
       lower="${joint_limits.joint_limits.wrist_3_joint.min_position}"
       upper="${joint_limits.joint_limits.wrist_3_joint.max_position}"
-      velocity="${joint_limits.joint_limits.wrist_3_joint.max_velocity}" />
+      velocity="${joint_limits.joint_limits.wrist_3_joint.max_velocity}"/>
   </joint>
 
 </xacro:macro>

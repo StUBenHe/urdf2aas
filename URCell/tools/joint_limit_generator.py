@@ -3,22 +3,50 @@ import yaml
 import json
 import math
 
+# ---- Add YAML degrees tag support ----
+class Degrees(str):
+    """Wrapper type for the custom YAML tag !degrees."""
+    pass
+
+
+def degrees_representer(dumper, data):
+    return dumper.represent_scalar('!degrees', str(data))
+
+
+yaml.add_representer(Degrees, degrees_representer)
+# --------------------------------------
+
+
 def generate_joint_limits(env_json_path, robot_type, output_dir):
+    """
+    Load environment.json and generate joint limit definitions.
+
+    Parameters:
+        env_json_path (str): Path to the environment.json file.
+        robot_type (str): Robot type (e.g., ur5, ur10e).
+        output_dir (str): Directory to write the output YAML.
+
+    Returns:
+        dict: The generated joint limit dictionary.
+    """
     with open(env_json_path, "r", encoding="utf-8") as f:
         env_data = json.load(f)
     return load_joint_limits(robot_type, env_data, output_dir)
 
 
 def rad_to_deg(rad):
-    """弧度转角度"""
+    """Convert radians to degrees."""
     return rad * 180.0 / math.pi
 
 
 def clean_joint_name(jname):
     """
-    去掉 AAS JSON 自动加的:
-    Joint_XXX_Control → XXX
-    Joint_XXX_Safety → XXX
+    Normalize joint names exported in the AAS environment model.
+
+    Removes prefixes/suffixes:
+        - "Joint_"
+        - "_Control"
+        - "_Safety"
     """
     if jname.startswith("Joint_"):
         jname = jname[len("Joint_"):]
@@ -30,13 +58,22 @@ def clean_joint_name(jname):
 
 
 def load_joint_limits(robot_type, env_data, output_dir):
-    """生成接近 UR 官方格式的 joint_limits.yaml"""
+    """
+    Extract joint limit information from the AAS environment submodels
+    and generate a ROS-compatible YAML file.
 
+    Parameters:
+        robot_type (str): Robot type (e.g. ur5).
+        env_data (dict): Loaded JSON structure.
+        output_dir (str): Output directory.
+
+    Returns:
+        dict: YAML structure containing all joint limits.
+    """
     out_file = os.path.join(output_dir, f"{robot_type}_joint_limits.yaml")
-
     joints_tmp = {}
 
-    # 先从 Control Submodel 获取主数据
+    # Parse joint limits from the Control Submodel
     for submodel in env_data.get("submodels", []):
         sid = submodel.get("idShort", "")
         if "Control" not in sid:
@@ -69,21 +106,20 @@ def load_joint_limits(robot_type, env_data, output_dir):
             if velocity is not None:
                 joints_tmp[jname]["max_velocity"] = rad_to_deg(float(velocity))
 
-    # 补齐 missing fields（UR 官方格式）
+    # Fill missing fields with defaults
     for j, vals in joints_tmp.items():
         vals.setdefault("has_acceleration_limits", False)
         vals.setdefault("has_effort_limits", "max_effort" in vals)
         vals.setdefault("has_position_limits", "min_position" in vals and "max_position" in vals)
         vals.setdefault("has_velocity_limits", "max_velocity" in vals)
 
-    # 输出 YAML
+    # Prepare output YAML structure
     final_yaml = {"joint_limits": {}}
     for j, vals in joints_tmp.items():
-        # 使用 degree 标签输出
         formatted = {}
         for key, value in vals.items():
             if key in ["min_position", "max_position", "max_velocity"]:
-                formatted[key] = f"!degrees {value}"
+                formatted[key] = Degrees(value)  # use custom YAML tag
             else:
                 formatted[key] = value
 

@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-<xacro:macro name="igus_rebel_6dof" params="prefix xyz rpy">
-  <!-- 加载 UR5 vistion mesh -->
-<xacro:property name="mesh_root" value="/home/unvrx/URCell/types/igus_rebel_description_ros2" />
+<xacro:macro name="igus_rebel_6dof_spawn" params="prefix xyz rpy">
+  <!-- 加载 igus rebel mesh -->
+  <xacro:property name="mesh_root" value="/home/unvrx/URCell/types/igus_rebel_description_ros2" />
 
+  <!-- base_link -->
   <link name="${prefix}base_link">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint0.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint0.dae"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint0Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint0.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -20,23 +21,26 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+
+  <!-- joint1 -->
   <joint name="${prefix}joint1" type="revolute">
-    <parent link="base_link"/>
-    <child link="link_1"/>
+    <parent link="${prefix}base_link"/>
+    <child link="${prefix}link_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0 0.100"/>
     <axis xyz="0 0 -1"/>
     <limit effort="330.0" lower="-3.12413936106985" upper="3.12413936106985" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_1">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint1.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint1.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint1Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint1.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -45,24 +49,27 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint2 -->
   <joint name="${prefix}joint2" type="revolute">
-    <parent link="link_1"/>
-    <child link="link_2"/>
+    <parent link="${prefix}link_1"/>
+    <child link="${prefix}link_2"/>
     <origin rpy="0.0 0.5235987755982988 0.0" xyz="0.0 0 0.149"/>
     <axis xyz="0 1 0"/>
     <!-- pi*2/3 are the physical limits, but to avoid any collisions we set the actual limits lower -->
     <limit effort="330.0" lower="-1.9198621771937623" upper="1.9198621771937623" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_2">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint2.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint2.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint2Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint2.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -71,24 +78,26 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint3 -->
   <joint name="${prefix}joint3" type="revolute">
-    <parent link="link_2"/>
-    <child link="link_5"/>
+    <parent link="${prefix}link_2"/>
+    <child link="${prefix}link_5"/>
     <origin rpy="0.0 0.5235987755982988 0.0" xyz="0.0 0.0 0.2384"/>
     <axis xyz="0 1 0"/>
-    <!-- pi*2/3 are the physical limits, but to avoid any collisions we set the actual limits lower -->
     <limit effort="330.0" lower="-1.9198621771937623" upper="1.9198621771937623" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_5">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint3.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint3.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint3Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint3.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -97,24 +106,27 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint4 -->
   <joint name="${prefix}joint4" type="revolute">
-    <parent link="link_5"/>
-    <child link="link_6"/>
+    <parent link="${prefix}link_5"/>
+    <child link="${prefix}link_6"/>
     <!-- TODO The 0.03m offset are most likely caused by the mesh file (Issue 15)-->
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0 0.119"/>
     <axis xyz="0 0 1"/>
     <limit effort="330.0" lower="-3.12413936106985" upper="3.12413936106985" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_6">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint4.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint4.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint4Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint4.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -123,24 +135,27 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint5 -->
   <joint name="${prefix}joint5" type="revolute">
-    <parent link="link_6"/>
-    <child link="link_7"/>
+    <parent link="${prefix}link_6"/>
+    <child link="${prefix}link_7"/>
     <!-- TODO The 0.03m offset are most likely caused by the mesh file (Issue 15) -->
     <origin rpy="0.0 -0.1308996938995747 0.0" xyz="0.0 0 0.17"/>
     <axis xyz="0 1 0"/>
     <limit effort="330.0" lower="-1.5271630954950381" upper="1.7889624832941877" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_7">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint5.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint5.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint5Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint5.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -149,23 +164,26 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint6 -->
   <joint name="${prefix}joint6" type="revolute">
-    <parent link="link_7"/>
-    <child link="link_8"/>
+    <parent link="${prefix}link_7"/>
+    <child link="${prefix}link_8"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0 0.1208"/>
     <axis xyz="0 0 1"/>
     <limit effort="330.0" lower="-3.12413936106985" upper="3.12413936106985" velocity="0.7853981633974483"/>
   </joint>
+
   <link name="${prefix}link_8">
     <visual>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint6.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel/Joint6.dae"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.0 0 0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="file://${mesh_root}/meshes/igus_rebel_6dof_00/Joint6Coll.dae"/>
+        <mesh filename="file://${mesh_root}/meshes/igus_rebel_mod/Joint6.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.0 0 0"/>
     </collision>
@@ -174,22 +192,18 @@
       <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
     </inertial>
   </link>
+
+  <!-- joint7 → flange -->
   <joint name="${prefix}joint7" type="fixed">
-    <parent link="link_8"/>
-    <child link="flange"/>
+    <parent link="${prefix}link_8"/>
+    <child link="${prefix}flange"/>
     <origin rpy="0.0 -1.5707963267948966 0.0" xyz="0.0 0 0.0012"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="${prefix}flange">
-    </link>
-  <joint name="${prefix}flange_to_tool0" type="fixed">
-    <parent link="flange"/>
-    <child link="tool0"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    <axis xyz="0 0 0"/>
-  </joint>
-  <link name="${prefix}tool0">
-    </link>
+
+  <link name="${prefix}flange"/>
+
+  <!-- ros2_control -->
   <ros2_control name="igus_rebel_6dof" type="system">
     <hardware>
       <plugin>irc_hardware/IrcRosCan</plugin>
@@ -200,26 +214,15 @@
         <param name="min">-3.12413936106985</param>
         <param name="max">3.12413936106985</param>
       </command_interface>
-     
+    </joint>
   </ros2_control>
-  <!-- Add world link -->
 
+  <!-- world_to_base -->
   <joint name="${prefix}world_to_base" type="fixed">
     <parent link="world"/>
-    <child link="base_link"/>
+    <child link="${prefix}base_link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
   </joint>
-  <!-- Make sure tcp exists even if no tool is attached -->
-  <joint name="${prefix}flange_to_tcp" type="fixed">
-    <parent link="flange"/>
-    <child link="tcp"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    <axis xyz="0 0 0"/>
-  </joint>
-  <link name="${prefix}tcp">
-    <inertial>
-      <mass value="0.1"/>
-      <inertia ixx="0.03" ixy="0.0" ixz="0.0" iyy="0.03" iyz="0.0" izz="0.03"/>
-    </inertial>
-  </link>
+
+</xacro:macro>
 </robot>
